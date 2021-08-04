@@ -31,7 +31,7 @@
     <p>
         <a href="https://www.javascript.com/">
             <div>
-                <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" width="350" alt="JS logo">
+                <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" width="150" alt="JS logo">
             </div>
         </a>
     </p>
