@@ -15,11 +15,14 @@
 - [Chapter 2]
     - [Chrome Console](#Chrome-Console)
         - [copy](#copy)
-            - [Example Code](#copy)
+            - [Example Code](#https://github.com/sundharwinston/JavascriptGrammer/blob/main/chapter2/console-copy.js)
         - [console dir](#console-dir)
-        - [console.error](#console.error)
-        - [console.time](#console-time)
-        - [console.clear](#console-clear)
+            - [Example Code](#https://github.com/sundharwinston/JavascriptGrammer/blob/main/chapter2/console-dir.js)			
+        - [console error](#console-error)
+            - [Example Code](#https://github.com/sundharwinston/JavascriptGrammer/blob/main/chapter2/console-error.js)			
+        - [console time](#console-time)
+            - [Example Code](#https://github.com/sundharwinston/JavascriptGrammer/blob/main/chapter2/console-time.js)			
+        - [console clear](#console-clear)			
 
 <!-- <details>
 <summary>Dropdown:</summary>
@@ -102,7 +105,7 @@ you can look at the output DOM elements:
         ariaColCount: null
 
 
-## console.error
+## console error
     
     let value = 50;
     function start() {
@@ -126,7 +129,7 @@ console.error is provides the stack trace:
         (anonymous) @ VM429:12
 
 
-## console.time
+## console time
 
 The `console.time()` method starts a timer you can use to track how long an operation takes. You give each timer a unique name, and may have up to `10,000 timers running` on a given page. When you call `console.timeEnd()` with the same name, the browser will output the time, in `milliseconds`, that elapsed since the timer was started.
 
@@ -140,7 +143,7 @@ when optimizing code:
     }
     console.timeEnd();                                                                                         
 
-## console.clear
+## console clear
 This method clears the console
             
     console.clear();
