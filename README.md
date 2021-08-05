@@ -73,7 +73,7 @@ Copying JSON representation of an existing object to copy buffer:
 
 It returns only JSON. `JSON string format does not support methods,only properties and value pair`
 
-## console.dir
+## console dir
 
 If you want to look at all the object’s properties and methods,you can use console.dir method:
 
