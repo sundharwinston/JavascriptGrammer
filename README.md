@@ -16,7 +16,7 @@
     - [Chrome Console](#Chrome-Console)
         - [copy](#copy)
             - [Example Code](#copy)
-        - [console.dir](#console.dir)
+        - [console dir](#console-dir)
         - [console.error](#console.error)
         - [console.time](#console-time)
         - [console.clear](#console-clear)
