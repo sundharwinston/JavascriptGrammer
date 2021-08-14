@@ -15,13 +15,13 @@
 - [Chapter 2] Chrome Console
     - [Chrome Console](#Chrome-Console)
         - [copy](#copy)
-            - [Example Code](#https://github.com/sundharwinston/JavascriptGrammer/blob/main/chapter2/console-copy.js)
+            - [Example Code](https://github.com/sundharwinston/JavascriptGrammer/blob/main/chapter2/console-copy.js)
         - [console dir](#console-dir)
-            - [Example Code](#https://github.com/sundharwinston/JavascriptGrammer/blob/main/chapter2/console-dir.js)
+            - [Example Code](https://github.com/sundharwinston/JavascriptGrammer/blob/main/chapter2/console-dir.js)
         - [console error](#console-error)
-            - [Example Code](#https://github.com/sundharwinston/JavascriptGrammer/blob/main/chapter2/console-error.js)
+            - [Example Code](https://github.com/sundharwinston/JavascriptGrammer/blob/main/chapter2/console-error.js)
         - [console time](#console-time)
-            - [Example Code](#https://github.com/sundharwinston/JavascriptGrammer/blob/main/chapter2/console-time.js)
+            - [Example Code](https://github.com/sundharwinston/JavascriptGrammer/blob/main/chapter2/console-time.js)
         - [console clear](#console-clear)	
 - [Chapter 2] Welcome To JavaScript
     - [Entry Point](#Entry-Point)
@@ -34,6 +34,7 @@
     - [Variables](#Variables)
     - [Passing Values By Reference](#Passing-Values-By-Reference)
     - [Scope Quirks](#Scope-Quirks)
+
 
 
 <!-- <details>
