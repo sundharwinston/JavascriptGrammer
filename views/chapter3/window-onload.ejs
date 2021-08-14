@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Window onload test</title>
+
+    <script>
+      // function load() {
+      //   console.log("load event detected!");
+      // }
+      // window.onload = load;
+
+//Comparison 
+      window.addEventListener('load', (event) => {
+          console.log("document is fully loaded");
+      });
+
+      document.addEventListener('readystatechange', (event) => {
+         console.log("changes in DOM media");
+      });
+
+      document.addEventListener('DOMContentLoaded', (event) => {
+          console.log("only the DOM Tree loaded");
+      });
+
+    </script>
+
+  </head>
+  <body>
+    <p>The load event executed when the document has finished loading</p>
+  </body>
+</html>
