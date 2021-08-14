@@ -299,7 +299,7 @@ JavaScript Literals are constant values that can be assigned to the variables th
 
 Each literal value usually has a constructor function associated with it.
 <div align="center">
-    <img src="https://www.educative.io/api/edpresso/shot/5391633988190208/image/6039922861408256" width="300" alt="constructor-Img">
+    <img src="https://www.educative.io/api/edpresso/shot/5391633988190208/image/6039922861408256" width="500" alt="constructor-Img">
 </div>
 
 Check it out : 👉
