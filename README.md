@@ -351,10 +351,13 @@ Example Code : 👉 https://github.com/sundharwinston/JavascriptGrammer/blob/mai
 
 ## Scope Quirks
 The let keyword doesn’t `hoist definitions`.
-    - `Lexical Environment`
-        -This environment created whenever the execution context is created.
-        - It's a local memory + reference lexical environment parent
-        - Lexical Environment is a hierarchy (Sequence)
+
+`Lexical Environment :`
+- Do use the entry point to initialize the default state of your data and objects.
+- This environment created whenever the execution context is created.
+- It's a local memory + reference lexical environment parent
+- Lexical Environment is a hierarchy (Sequence).
+   
     `Lexical Example :`
 
      function a() {
