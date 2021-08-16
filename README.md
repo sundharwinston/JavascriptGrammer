@@ -49,17 +49,17 @@
     <strong>I Love Javascript ❤</strong><br>
     “Everyone in this country should learn how to program because it teaches you how to think” – Steve Jobs.
 </p>
-<div align="center">
-	
-    <p>
-        <a href="https://www.javascript.com/">
-            <div>
-                <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" width="150" alt="JS logo">
-            </div>
-        </a>
-    </p>
-    <br />
-    <hr />
+
+<div align="center">	
+<p>
+<a href="https://www.javascript.com/">
+<div>
+ <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" width="150" alt="JS logo">
+</div>
+</a>
+</p>
+<br />
+<hr />
 </div>
 
 ## content
@@ -173,7 +173,7 @@ In JavaScript all objects have .toString() method. When providing an object sto 
     console.log( `${obj}` );
 
 
-Check it out more : 👇
+Check it out more : 👉
 https://developer.mozilla.org/en-US/docs/Web/API/Console
 
 
@@ -196,7 +196,7 @@ The document.addEventListener() method attaches an event handler (event written 
 The DOMContentLoaded event fires when the initial HTML document has been completely loaded and parsed, without waiting for stylesheets, images, and subframes to finish loading.
 *A different event, load, should be used only to detect a fully-loaded page. It is a common mistake to use load where DOMContentLoaded would be more appropriate.*
 
-Check it out : 👉 https://github.com/sundharwinston/JavascriptGrammer/blob/main/views/chapter3/DOMContentLoaded.ejs
+Check it out : 👇 https://github.com/sundharwinston/JavascriptGrammer/blob/main/views/chapter3/DOMContentLoaded.ejs
 ## readyState
 
 The `document.readyState` property describes the loading state of the document.
@@ -210,8 +210,8 @@ The readyState of a document value can be following one
     The document has finished loading and the document has been parsed but sub-resources such as scripts, images, stylesheets and frames are still loading.
 `complete`
     The document and all sub-resources have finished loading. The state indicates that the load event is to execute.
-`Readystatechanges`
-Example : 👉 https://github.com/sundharwinston/JavascriptGrammer/blob/main/views/chapter3/readystate.ejs
+`Readystatechanges` <br>
+Example : 👉 https://github.com/sundharwinston/JavascriptGrammer/blob/main/views/chapter3/readystate.ejs <br>
 Refer   : 👉 https://html.spec.whatwg.org/multipage/indices.html#event-readystatechange
 
 ## DOM vs Media
@@ -230,11 +230,18 @@ The window object is supported by all browsers. It represents the browser's wind
 Examples : window.open(); | close() 
 
 `window.onload`
-This method can wait until all images and similar media have been fully downloaded.
+This method can wait until all images and similar media have been fully downloaded. <br>
 Check it out : 👉 https://github.com/sundharwinston/JavascriptGrammer/blob/main/views/chapter3/window-onload.ejs
 
 ## Including External Scripts
-Check it out : 👉
+
+      <!DOCTYPE html>
+      <html>
+          <head>
+              <title>Import Module</title>
+              <script src="your-External-Script-path"></script>
+          </head>
+      </html>
 
 ## Import  
 Starting from ES6 we should use import (and export) keyword to import variables,
@@ -261,8 +268,8 @@ Whenever to export the class and start using it in the application, we must make
       </html>
 
 ## Importing And Exporting Multiple Definitions
-To import multiple items (class/variable etc.) from two js files
-check it out : 👉
+To import multiple items (class/variable etc.) from two js files <br>
+check it out : 👉 https://github.com/sundharwinston/JavascriptGrammer/blob/main/views/chapter3/import.ejs
 
 ## Dynamic Import
         document.addEventListener("click", async() => {
@@ -306,8 +313,6 @@ Each literal value usually has a constructor function associated with it.
     <img src="https://www.educative.io/api/edpresso/shot/5391633988190208/image/6039922861408256" width="650" alt="constructor-Img">
 </div>
 
-Check it out : 👉
-
 ## Variables
 
 There are 3 ways to declare a JavaScript variable:
@@ -326,6 +331,8 @@ let and const are stored in different memory space. It's not in global space.
 `Temporal Dead Zone :`
 The time between undefined to store value action in let variable. To avoid temporal dead zone we must decleare a variable in top of the program (Top Initialization).
 
+Check it out : 👉 https://github.com/sundharwinston/JavascriptGrammer/blob/main/views/chapter3/variables.ejs
+
 `Dynamic Typing`
 
 JavaScript is a dynamically-typed language. It means that variables created using
@@ -334,13 +341,13 @@ some point later in your JavaScript program.
 
 In statically-typed languages doing that would generate an error.
 
-<!-- Check it out : 👉 -->
+
 
 ## Passing Values By Reference
 
 In Pass by reference, parameters passed as an arguments does not create its own copy, it refers to the original value so changes happens in any of the parameter it affect the original value.
 
-Check it out : 👉
+Example Code : 👉 https://github.com/sundharwinston/JavascriptGrammer/blob/main/views/chapter3/passby-reference.ejs
 
 ## Scope Quirks
 The let keyword doesn’t `hoist definitions`.
@@ -362,8 +369,8 @@ The let keyword doesn’t `hoist definitions`.
 Note :
     Here `b` function is inside `a` function. It is also called as `b` is Lexically inside `a` function.
 
-Reference :  👉 https://www.youtube.com/watch?v=uH-tVP8MUs8&list=PLlasXeu85E9cQ32gLCvAvr9vNaUccPVNP&index=8
-Check it out : 👉
+Reference :  👉 https://www.youtube.com/watch?v=uH-tVP8MUs8&list=PLlasXeu85E9cQ32gLCvAvr9vNaUccPVNP&index=8 <br>
+Example Code : 👉 https://github.com/sundharwinston/JavascriptGrammer/blob/main/views/chapter3/scope-quirks.ejs
 
 ## Dos and Dont’s
 
