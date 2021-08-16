@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Import</title>
+	</head>
+	<body>
+		<script type="module">
+
+			// Default member first
+			import hello, { num_set, Greeting } from "./export.js";
+			console.log(num_set);
+			hello();
+			let import_check = new checking ("Import");
+			console.log(import_check.checkfunction);
+
+			 // Use dot notation to access members
+            // console.log(exp.num_set);
+            // exp.hello();
+		</script>
+	</body>
+</html>

@@ -21,6 +21,22 @@ app.get('/window-onload', (req, res)=>{
 app.get('/strictmode', (req, res)=>{
 	res.render('chapter3/strictmode');
 });
+
+app.get('/variables', (req, res)=>{
+	res.render('chapter3/variables');
+});
+
+app.get('/passby-reference', (req, res)=>{
+	res.render('chapter3/passby-reference');
+});
+
+app.get('/scope-quirks', (req, res)=>{
+	res.render('chapter3/scope-quirks');
+});
+
+app.get('/import', (req, res)=>{
+	res.render('chapter3/import');
+});
  
 var server = app.listen(4000, function(){
     console.log('listening to port 4000')

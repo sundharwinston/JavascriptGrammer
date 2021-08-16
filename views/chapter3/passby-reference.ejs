@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Pass By Reference</title>
+        <script type="text/javascript">
+       		function callByReference(varObj) { 
+		  		console.log("Inside Call by Reference Method"); 
+		  		varObj.a = 100; 
+		  		console.log(varObj); 
+			} 
+			let varObj = {a:1,b:10};
+			console.log("Before Call by Reference Method"); 
+			console.log(varObj);
+			callByReference(varObj) 
+			console.log("After Call by Reference Method"); 
+			console.log(varObj);
+
+//Pass BY value
+		 	function callByValue(first_var,second_var) { 
+		  		console.log("Inside Call by Value Method"); 
+		  		first_var = 100; 
+		  		second_var = 200; 
+				console.log(first_var,second_var);
+			} 
+			let first_var = 1;
+			let second_var = 2;
+			console.log("Before Call by Value Method"); 
+			console.log(first_var,second_var);
+			callByValue(first_var,second_var) 
+			console.log("After Call by Value Method"); 
+			console.log(first_var,second_var);
+
+
+
+        </script>
+    </head>
+    <body>
+        <h1>Pass By Reference</h1>
+    </body>
+</html>

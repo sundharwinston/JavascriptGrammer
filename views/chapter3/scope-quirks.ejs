@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Scope Quirks</title>
+        <script type="text/javascript">
+			let a = "globe a";
+			let b = "globe b";
+			function check() {
+				console.log(a);
+				console.log(b);
+				let a = 1;  
+			}
+			check();
+
+// Note: 
+// The let keyword doesn’t hoist definitions, and we have a global variable a, so
+// logically, inside function x() variable a should be taken from global scope, before
+// it is defined later with let a = 1 but that’s not what happens.
+
+
+//Similiar example in Var
+			// var a = "globe a";
+			// var b = "globe b";
+			// function check() {
+			// 	console.log(b);
+			// 	console.log(a);
+			// 	var a = 1;  
+			// 	console.log(a);
+			// }
+			// check();
+        </script>
+    </head>
+    <body>
+        <h1>Scope Quirks</h1>
+    </body>
+     
+</html>	

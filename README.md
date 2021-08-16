@@ -44,11 +44,13 @@
 
 </details>
  -->
+<hr />
+<p>
+    <strong>I Love Javascript ❤</strong><br>
+    “Everyone in this country should learn how to program because it teaches you how to think” – Steve Jobs.
+</p>
 <div align="center">
-	<hr />
-    <p>
-        <strong>i Love Javascript:</strong>
-    </p>
+	
     <p>
         <a href="https://www.javascript.com/">
             <div>
@@ -213,7 +215,7 @@ Refer : 👉 https://html.spec.whatwg.org/multipage/indices.html#event-readystat
 ## DOM vs Media
 
 We’ve just created a safe place for initializing our application. But because DOM is simply a tree-like structure of all HTML elements on the page, it usually becomes available before the rest of the media such as images and various embeds.
-Even though <image src = "http://url" /> is a DOM element, the URL content specified in image’s src attribute might take more time to load.
+Even though `image src` is a DOM element, the URL content specified in image’s src attribute might take more time to load.
 To check if any non-DOM media content has finished downloading we can overload
 the native window.onload event as shown in the following example.
 
@@ -295,6 +297,8 @@ JavaScript Literals are constant values that can be assigned to the variables th
 4.Object Literals  - {};
 5.Boolean Literals  - true/false;
 
+The typeof(value) function can be used to determine type of the literal value.
+
 Each literal value usually has a constructor function associated with it.
 <div align="center">
     <img src="https://www.educative.io/api/edpresso/shot/5391633988190208/image/6039922861408256" width="150" alt="constructor-Img">
@@ -310,6 +314,16 @@ There are 3 ways to declare a JavaScript variable:
 3.const
 But These declaration don't determine the variable's type.
 
+Javascript is a Loosely Typed Language
+A loosely typed language is a programming language that does not require a variable to be defined. For example, `Javascript` is a loosely typed language, you can declare a variable, but it doesn't require you to classify the type of variable.
+
+`let & const :`
+const is much more strict compare to let variables.
+let and const are stored in different memory space. It's not in global space.
+
+`Temporal Dead Zone :`
+The time between undefined to store value action in let variable. To avoid temporal dead zone we must decleare a variable in top of the program (Top Initialization).
+
 `Dynamic Typing`
 
 JavaScript is a dynamically-typed language. It means that variables created using
@@ -318,7 +332,7 @@ some point later in your JavaScript program.
 
 In statically-typed languages doing that would generate an error.
 
-Check it out : 👉
+<!-- Check it out : 👉 -->
 
 ## Passing Values By Reference
 
@@ -328,7 +342,25 @@ Check it out : 👉
 
 ## Scope Quirks
 The let keyword doesn’t `hoist definitions`.
+    - `Lexical Environment`
+        -This environment created whenever the execution context is created.
+        - It's a local memory + reference lexical environment parent
+        - Lexical Environment is a hierarchy (Sequence)
+    `Lexical Example :`
 
+     function a() {
+        var a = 10;
+        b();
+        function b() { 
+            console.log(a);
+        }
+     }
+     a();    //function call
+
+Note :
+    Here `b` function is inside `a` function. It is also called as `b` is Lexically inside `a` function.
+
+Reference :  👉 https://www.youtube.com/watch?v=uH-tVP8MUs8&list=PLlasXeu85E9cQ32gLCvAvr9vNaUccPVNP&index=8
 Check it out : 👉
 
 ## Dos and Dont’s
@@ -336,5 +368,5 @@ Check it out : 👉
 - Do use the entry point to initialize the default state of your data and objects.
 - Do make your program entry point either DOMContentLoaded, readyState or
 - the native window.onload method for waiting on media (see next,) depending on
-whether you need to wait for just the DOM or the rest of media.
-- Do not write your code just in <script> tags, without entry point function.
+  whether you need to wait for just the DOM or the rest of media.
+- Do not write your code just in script tags, without entry point function.
