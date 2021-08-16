@@ -23,7 +23,7 @@
         - [console time](#console-time)
             - [Example Code](https://github.com/sundharwinston/JavascriptGrammer/blob/main/views/chapter2/console-time.js)
         - [console clear](#console-clear)	
-- [Chapter 2] Welcome To JavaScript
+- [Chapter 3] Welcome To JavaScript
     - [Entry Point](#Entry-Point)
     - [readyState](#readyState)
     - [Dos and Dont’s](#Dos-Dont’s)
@@ -34,7 +34,9 @@
     - [Variables](#Variables)
     - [Passing Values By Reference](#Passing-Values-By-Reference)
     - [Scope Quirks](#Scope-Quirks)
-
+- [Chapter 4] Statements
+    - [Evaluating Statements](#Evaluating-Statements)
+    - [Expressions](#Expressions)
 
 
 <!-- <details>
@@ -378,6 +380,41 @@ Example Code : 👉 https://github.com/sundharwinston/JavascriptGrammer/blob/mai
 
 - Do use the entry point to initialize the default state of your data and objects.
 - Do make your program entry point either DOMContentLoaded, readyState or
-- the native window.onload method for waiting on media (see next,) depending on
+  the native window.onload method for waiting on media (see next,) depending on
   whether you need to wait for just the DOM or the rest of media.
 - Do not write your code just in script tags, without entry point function.
+
+## Evaluating Statements
+
+- In a programming language, these programming instructions are called statements.
+- A JavaScript program is a list of programming statements. these are - Values | Operators | Expressions
+
+- Definitions made with var, let or const keywords return undefined because they
+behave only as value assignments: the value is simply stored in the variable name:
+Example :    `let a = 1;`    
+
+Statements usually produce a value. But when there isn’t anything to return, a statements will evaluate to undefined, which can be interpreted as ”no value.”
+
+Example Code : 👉
+
+## Expressions
+
+Expressions produce values, they can appear anywhere in a program where JavaScript expects a value such as the arguments of a function invocation.
+There are lots of expression types like Arithmetic Expressions,String Expressions,Logical Expressions, etc.
+
+Example :
+
+        10+10;  // This is another expression that is evaluated to produce the numeric value 20
+        'Hello' + 'javascript';
+        .
+        .
+        .
+        //function call needed
+        function check() { return 1; }
+        check();
+ 
+ Note :
+ Function check() evaluates to value 1, because it returns 1. This is why f() is often referred to as a function expression.
+
+
+

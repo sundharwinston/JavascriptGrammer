@@ -6,6 +6,7 @@ app.set('view engine', 'ejs');
 // app.set('views', path.join(__dirname, 'views'));
 
 
+//Chapter 3
 app.get('/dom', (req, res)=>{
 	res.render('chapter3/DOMContentLoaded');
 });
@@ -36,6 +37,11 @@ app.get('/scope-quirks', (req, res)=>{
 
 app.get('/import', (req, res)=>{
 	res.render('chapter3/import');
+});
+
+//Chapter 4
+app.get('/evaluate-statements', (req, res)=>{
+	res.render('chapter4/evaluate-statements');
 });
  
 var server = app.listen(4000, function(){
