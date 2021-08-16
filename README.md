@@ -358,17 +358,16 @@ The let keyword doesn’t `hoist definitions`.
 - It's a local memory + reference lexical environment parent
 - Lexical Environment is a hierarchy (Sequence).
    
-    `Lexical Example :`
+ `Lexical Example :`
    
-    function a() {
-        var a = 10;
-        b();
-        function b() { 
-            console.log(a);
+        function a() {
+            var a = 10;
+            b();
+            function b() { 
+                console.log(a);
+            }
         }
-     }
-     a();    //function call    
-
+        a();    //function call   
 Note :
     Here `b` function is inside `a` function. It is also called as `b` is Lexically inside `a` function.
 
