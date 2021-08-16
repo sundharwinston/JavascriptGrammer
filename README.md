@@ -15,13 +15,13 @@
 - [Chapter 2] Chrome Console
     - [Chrome Console](#Chrome-Console)
         - [copy](#copy)
-            - [Example Code](https://github.com/sundharwinston/JavascriptGrammer/blob/main/chapter2/console-copy.js)
+            - [Example Code](https://github.com/sundharwinston/JavascriptGrammer/blob/main/views/chapter2/console-copy.js)
         - [console dir](#console-dir)
-            - [Example Code](https://github.com/sundharwinston/JavascriptGrammer/blob/main/chapter2/console-dir.js)
+            - [Example Code](https://github.com/sundharwinston/JavascriptGrammer/blob/main/views/chapter2/console-dir.js)
         - [console error](#console-error)
-            - [Example Code](https://github.com/sundharwinston/JavascriptGrammer/blob/main/chapter2/console-error.js)
+            - [Example Code](https://github.com/sundharwinston/JavascriptGrammer/blob/main/views/chapter2/console-error.js)
         - [console time](#console-time)
-            - [Example Code](https://github.com/sundharwinston/JavascriptGrammer/blob/main/chapter2/console-time.js)
+            - [Example Code](https://github.com/sundharwinston/JavascriptGrammer/blob/main/views/chapter2/console-time.js)
         - [console clear](#console-clear)	
 - [Chapter 2] Welcome To JavaScript
     - [Entry Point](#Entry-Point)
@@ -196,6 +196,7 @@ The document.addEventListener() method attaches an event handler (event written 
 The DOMContentLoaded event fires when the initial HTML document has been completely loaded and parsed, without waiting for stylesheets, images, and subframes to finish loading.
 *A different event, load, should be used only to detect a fully-loaded page. It is a common mistake to use load where DOMContentLoaded would be more appropriate.*
 
+Check it out : 👉 https://github.com/sundharwinston/JavascriptGrammer/blob/main/views/chapter3/DOMContentLoaded.ejs
 ## readyState
 
 The `document.readyState` property describes the loading state of the document.
@@ -210,7 +211,8 @@ The readyState of a document value can be following one
 `complete`
     The document and all sub-resources have finished loading. The state indicates that the load event is to execute.
 `Readystatechanges`
-Refer : 👉 https://html.spec.whatwg.org/multipage/indices.html#event-readystatechange
+Example : 👉 https://github.com/sundharwinston/JavascriptGrammer/blob/main/views/chapter3/readystate.ejs
+Refer   : 👉 https://html.spec.whatwg.org/multipage/indices.html#event-readystatechange
 
 ## DOM vs Media
 
@@ -229,7 +231,7 @@ Examples : window.open(); | close()
 
 `window.onload`
 This method can wait until all images and similar media have been fully downloaded.
-
+Check it out : 👉 https://github.com/sundharwinston/JavascriptGrammer/blob/main/views/chapter3/window-onload.ejs
 
 ## Including External Scripts
 Check it out : 👉
@@ -286,7 +288,7 @@ How to use strict mode:
    - Function-level strict mode 
 
 
-Check it out : 👉
+Check it out : 👉 https://github.com/sundharwinston/JavascriptGrammer/blob/main/views/chapter3/strictmode.js
 
 ## Literal Values
 
@@ -301,7 +303,7 @@ The typeof(value) function can be used to determine type of the literal value.
 
 Each literal value usually has a constructor function associated with it.
 <div align="center">
-    <img src="https://www.educative.io/api/edpresso/shot/5391633988190208/image/6039922861408256" width="150" alt="constructor-Img">
+    <img src="https://www.educative.io/api/edpresso/shot/5391633988190208/image/6039922861408256" width="650" alt="constructor-Img">
 </div>
 
 Check it out : 👉
