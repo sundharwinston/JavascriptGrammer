@@ -359,15 +359,15 @@ The let keyword doesn’t `hoist definitions`.
 - Lexical Environment is a hierarchy (Sequence).
    
     `Lexical Example :`
-
-     function a() {
+   
+    function a() {
         var a = 10;
         b();
         function b() { 
             console.log(a);
         }
      }
-     a();    //function call
+     a();    //function call    
 
 Note :
     Here `b` function is inside `a` function. It is also called as `b` is Lexically inside `a` function.
