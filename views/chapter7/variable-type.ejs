@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Variable Types</title>
+        <script type="text/javascript">
+        //Var
+            var name = 'John Doe';
+            var name;
+        //Var Scoper    
+            // var name = "Javascript";
+            // function check() {
+            //   var name = "Js";
+            //   console.log(name); // js
+            // }
+            // console.log(name); // Javascript
+            // check();
+
+        //let
+            let text = 'John Doe';
+            let text;                   ///Uncaught SyntaxError: Identifier 'text' has already been declared
+
+        //let scope
+            if (true) {
+              var x = 1;
+              let y = 2;
+              console.log("Block Scope", x, y); // Block Scope 1 2
+            }
+            console.log(y);                     //Y is not defined    
+
+
+        //Const
+            const name = "Javascript";
+            if (true) {
+              console.log(name);                // Javascript
+              const age = 25;
+              console.log(age)                  // 25
+            }
+            console.log(name, age);             //age is not defined because of block scope
+        </script>
+    </head>
+    <body>
+        <h1>Variable Types</h1>
+    </body>
+     
+</html>	

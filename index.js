@@ -39,11 +39,41 @@ app.get('/import', (req, res)=>{
 	res.render('chapter3/import');
 });
 
+
 //Chapter 4
 app.get('/evaluate-statements', (req, res)=>{
 	res.render('chapter4/evaluate-statements');
 });
- 
+
+
+//Chapter 5
+app.get('/primitive-values', (req, res)=>{
+	res.render('chapter5/primitive-values');
+});
+
+app.get('/boolean', (req, res)=>{
+	res.render('chapter5/boolean');
+});
+
+app.get('/bigint', (req, res)=>{
+	res.render('chapter5/bigint');
+});
+
+app.get('/template-string', (req, res)=>{
+	res.render('chapter5/template-string');
+});
+
+
+//Chapter6
+app.get('/type-coercion', (req, res)=>{
+	res.render('chapter6/type-coercion');
+});
+app.get('/null-undefined', (req, res)=>{
+	res.render('chapter6/null-undefined');
+});
+
+
+//start Server port
 var server = app.listen(4000, function(){
     console.log('listening to port 4000')
 });

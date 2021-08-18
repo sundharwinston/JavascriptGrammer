@@ -37,6 +37,32 @@
 - [Chapter 4] Statements
     - [Evaluating Statements](#Evaluating-Statements)
     - [Expressions](#Expressions)
+- [Chapter 5]
+    - [Primitive Types](#Primitive-Types)
+    - [boolean](#boolean)
+    - [null](#null)
+    - [undefined](#undefined)
+    - [Number](#Number)
+    - [bigint](#bigint)
+    - [typeof](#typeof)
+    - [string](#string)
+    - [Template Strings](#Template-Strings)
+    - [Symbol](#Symbol)
+- [Chapter 6] Type Coercion Madness
+    - [Type Coercion Madness](#Type-Coercion-Madness)
+    - [Adding Multiple Values](#Adding-Multiple-Values)
+    - [L-value and R-value](#L-value-and-R-value)
+    - [null vs undefined](#null-vs-undefined)
+-[Chapter 7](#Scope)
+    -[Variable Definitions](#Variable-Definitions)
+        -[Variable Types](#Variable-Types)
+        -[ Scope Visibility Differences](#Scope-Visibility-Differences)
+        -[const and Arrays](#const-and-Arrays)
+        -[const and Object Literals](#const-and-Object-Literals)
+        -[Dos and Dont’s](#Dos-and-Dont’s)
+-[Chapter 8] Operators
+    -[Arithmetic](#Arithmetic)
+    -[Assignment](#Assignment)
 
 
 <!-- <details>
@@ -417,4 +443,418 @@ Example :
  Function check() evaluates to value 1, because it returns 1. This is why f() is often referred to as a function expression.
 
 
+## Primitive Types
 
+<div align="center">
+    <img src="images/datatypes.png" width="650" alt="datatypes-Img">
+</div>
+
+All JavaScript values, except primitives, are objects.
+
+`Mutable values` are those which can be modified after creation
+`Immutable values` are those which cannot be modified after creation
+
+Primitive type: <br>
+- primitive values are immutable.
+- Primitives are stored by value.
+
+Non-Primitive type: <br>
+- Non-primitive values are mutable.
+- Non-Primitive (objects) are stored by reference. 
+
+<div align="center">
+    <img src="images/primitive-values.png" width="650" alt="primitive-values-Img">
+</div>
+
+## boolean 
+
+    Possible Values : true | false
+    typeof(boolean) : "boolean" string
+    Constructor     : new Boolean(value)
+
+## null 
+
+    typeof(boolean) : "object"
+    Constructor     : none
+
+Some believe this is a bug in JavaScript because null is not an object since it doesn’t have a constructor. And they are probably right...
+
+## undefined 
+
+    typeof(boolean) : "undefined"  
+    Constructor     : none
+
+Undefined is a type of its own. It’s not an object. Just a value JavaScript will use when you named a variable but don’t assign a value to it. Your hoisted variables will also be automatically assigned a value of undefined.
+
+## Number 
+
+The number primitive helps us work with values in the numeric domain.
+
+    Possible Values : -1 | 3 | 3.42 | 9.66e | Infinity | - Infinity | NaN
+    typeof(boolean) : "number" string
+    Constructor     : new Number(value)   
+
+`Number Examples :`   
+
+    typeof -1                           //number
+    typeof 3                            //number
+    let number =  new Number(3)         //object
+    typeof number                       //object
+    typeof number.valueOf()             //"number"
+
+To get ”number” type from the object use typeof on the valueOf method as seen in the previous example typeof number.valueOf();
+
+- NaN
+The NaN property represents "Not-a-Number" value. This property indicates that a value is not a legal number. The NaN property is the same as the Number.Nan property.
+NaN is a property of the global object. In other words, it is a variable in global scope.
+
+- There are five different types of operations that return NaN :
+    - Number cannot be parsed `(e.g. parseInt("blabla")` or `Number(undefined))`
+    - Math operation where the result is not a real number `(e.g. Math.sqrt(-1))`
+    - Operand of an argument is NaN `(e.g. 7 ** NaN)`
+    - Indeterminate form `(e.g. 0 * Infinity, or undefined + undefined)`
+    - Any operation that involves a string and is not an addition operation `(e.g. "foo" / 3)`
+
+`NaN Examples :`
+
+        NaN === NaN;                                    // false
+        Number.NaN === NaN;                             // false
+        isNaN(NaN);                                     // true
+        isNaN(Number.NaN);                              // true
+        Number.isNaN(NaN);                              // true
+        valueIsNaN(1);                                  // false
+        valueIsNaN(NaN);                                // true
+        valueIsNaN(Number.NaN);                         // true
+
+`isNaN & Number.isNaN :`
+
+`isNaN` just checks whether the passed value is not a number or cannot be converted into a Number. `Number.isNaN` on the other hand only checks if the value is equal to `NaN` (it uses a different algorithm than === though).
+
+As you can see according to isNaN implementation treats string value as number and returns the result based on this. Check `isNaN(‘blabla’)`
+
+<div align="center">
+    <img src="images/confusing.gif" width="650" alt="Lol-Img">
+</div>
+
+        isNaN('hello world');        // true
+        Number.isNaN('hello world'); // false
+
+## bigint
+
+BigInt is a built-in object whose constructor returns a bigint primitive. It also called a BigInt value, or sometimes just a BigInt. It represent whole numbers larger than `2^53 - 1 (Number.MAX_SAFE_INTEGER)`, which is the largest number JavaScript can represent with a number primitive (or Number value). BigInt values can be used for arbitrarily large integers.
+
+    Possible Values : 1n | 3200n  likewise
+    typeof(boolean) : "bigint" string
+    Constructor     : new BigInt(value)
+
+Syntax: 
+
+    BigInt( number ) 
+    or
+    Appending n to end of an integer literal
+
+Integer Range:
+
+    let limit = Number.MAX_SAFE_INTEGER;console.log(limit);             //9007199254740991
+    limit+2;                                                            //9007199254740992 (exceeded MAX_SAFE_INTEGER +1)
+
+Example: Comparing BigInt with a Number.
+
+    typeof 100n === 100        // Returns false
+    typeof 100n ==  100        // Returns true due to coercion
+    typeof 100n === 'bigint'   // Returns true
+    100n < 101                 // Returns true due to coercion
+
+Examples : 👉 
+
+## typeof
+Difference between numeric types:
+
+        typeof 10;      //number
+        typeof 100n;    //bigint
+
+Equality operators can be used between the two types
+
+        10n == BigInt(10);      //true
+        10n == 10;              //true
+
+Math operators only work within their own type
+
+        10n / 10n;
+        10n / 10;
+
+Leading - works, but + doesn’t
+        
+        -10n    //-10n
+        +10n    //TypeError
+
+## string
+
+    Possible Values : "text" | 'text' | `text` | `javascript is "brain" of html`
+    typeof(boolean) : "string" string
+    Constructor     : new String(value)
+
+JavaScript is Case-Sensitive
+
+    const a = 'a';
+    const b = 'A'
+    console.log(a === b); // false
+
+## Template Strings (Es6)
+Template literals are literals delimited with backticks (`string`), allowing embedded expressions called substitutions.
+
+syntax for multi-line strings in template string:
+JSON Literal :
+
+    let json = `{"a" : 1}`; console.log(json);
+    let json1 = '{"a" : 1}'; console.log(json1);
+
+
+    console.log(`string text line 1
+    string text line 2`);
+
+    let a = 5;
+    let b = 10;
+    console.log(`Total is ${a + b}`);
+
+## Symbol
+Symbols are new primitive type introduced in ES6. `Symbols are completely unique identifiers`. Just like their primitive counterparts (Number, String, Boolean), they can be created using the factory function Symbol() which returns a Symbol.
+
+    Syntax          : const symbol = Symbol('description');console.log(symbol);
+    typeof(boolean) : "symbol" 
+    Constructor     : none
+
+
+Refer : 👉 https://developer.mozilla.org/en-US/docs/Glossary/Primitive
+
+## Type Coercion Madness
+
+`Type conversion :`
+Type conversion (or typecasting) means transfer of data from one data type to another. Implicit conversion happens when the compiler automatically assigns data types, but the source code can also explicitly require a conversion to take place. 
+For example, given the instruction 5+2.0, the floating point 2.0 is implicitly typecasted into an integer, but given the instruction `Number("0x11")`, the string "0x11" is explicitly typecasted as the number 17.
+
+`Type Coercion :`
+
+It's a dynamic process of type conversion.
+
+Type coercion is the automatic or implicit conversion of values from one data type to another (such as strings to numbers). Type conversion is similar to type coercion because they both convert values from one data type to another with one key difference — type coercion is implicit whereas type conversion can be either implicit or explicit.
+
+The javascript engine takes the right datatype literals based on operator (+,-,* etc.) and done operations.
+
+`Number And String Arithmetics :`
+If both values are integers, arithmetic operation is performed. If one of them is a string then coercion happens and string addition is invoked.
+
+Examples of Type Coercion 👇 <br>
+
+<div align="center">
+    <img src="images/type-coercion.png" width="650" alt="type-coercion-Img">
+</div>
+
+Source Code : 👉
+
+## Adding Multiple Values
+Operator Precedence
+Example : `1 + 1 + 1 + 2 * " "`
+<div align="center">
+    <img src="images/operator-precedence.png" width="650" alt="operator-precedence-Img">
+</div>
+
+## String To Number Comparison
+When it comes to equality operator == numeric strings are evaluated to numbers in the same way the Number(string) function evaluates to numbers (or NaN).
+
+Eamples :
+
+    1 ==  "1";          //true
+
+    1 == "a";           //false
+Note : If the string does not contain a numeric value, it will evaluate to NaN and therefore
+further evaluating to false:
+
+##  L-value and R-value
+In many computer languages values on the left and right side of the operator are referred to as L-value and R-value.
+
+`Assignment Operator :`
+    The assignment operator takes the R-value and transfers it over to L-value, which is usually a variable identifier name.
+`Arithmetic Addition Operator :`
+    But the arithmetic addition operator takes the L-value and adds R-value to it:
+
+## null vs undefined
+
+<strong>Null:</strong> It is the intentional absence of the value. It is one of the primitive values of JavaScript.
+The value null represents the intentional absence of any object value. It is one of JavaScript's primitive values and
+is treated as falsy for boolean operations.
+<strong>Undefined:</strong> It means the value does not exist in the compiler. It is the global object.
+
+    isNaN(1 + null)      // false
+    isNaN(1 + undefined) // true
+
+- [null](#null)
+- [undefined](#undefined)
+
+Source Code : 👉
+
+## Scope
+
+Scope is simply the area enclosed by {} brackets. But be careful not to confuse it with the identical empty object-literal syntax.
+
+There are 3 unique scope types:
+
+- The global scope
+- block scope 
+- function scope 
+
+Each expects different things and has unique rules when it comes to variable definitions. Event callback functions follow the same rules as function scope, they are just used in a slightly different context. Loops can also have their own block-scope.
+
+## Variable Definitions
+
+Variables are case-sensitive. This means a and A are two different variables:
+
+    let a = 1;
+    let A = "Hi"
+    console.log(a);     // 1
+    console.log(A);     // Hi
+
+if you tried to refer to a variable that wasn’t defined anywhere, you would generate a ReferenceError error "variable name is not defined":
+    
+    console.log(x);      // ReferenceError : name is not defined
+    {
+    } 
+
+Example : 
+    
+    var data = 1;
+    {
+        console.log(data);      // 1
+    }
+
+Here data is defined in global scope. But it can also be accessed from an inner block-scope. Anything (even a function definition) defined in global scope becomes available anywhere in your program. The value propagates into all inner scopes.
+
+When a variable is defined in global scope using var keyword, it also automatically becomes available as a property on window object.
+
+`Hoisting :`
+
+- If data was defined using var keyword inside a block-scope, it would be hoisted back to global scope! Hoisting simply means ”raised” or ”placed on top of”.
+
+- Hoisting is limited to variables defined using var keyword and function name defined using function keyword.
+
+- Variables defined using let and const are not hoisted and their use remains limited
+only to the scope in which they were defined.
+
+Example :
+
+    console.log(data);
+    {
+        var data = 1;
+    }
+Variable data is hoisted to global scope. But the value of the hoisted variable is now undefined not 1. Only its name definition was hoisted.
+
+`Function Name Hoisting :`
+
+Hoisting also applies to function names. But variable hoisting always takes precedence. You can call a function in your code, as long as it is defined at some point later:
+
+    check();                                                //Hello i'm function definition
+    function check() {
+        console.log("Hello i'm function definition");
+    }
+Note that the function was defined after it was called. This is legal in JavaScript. Just make sure you understand that it happened because of function name hoisting.
+
+    var d = function() {
+        console.log("Hello i'm function definition");
+    }
+It is possible to assign an anonymous function expression to a variable name.
+
+This valid JavaScript code will not produce a function redefinition error. Thefunction will be simply overwritten by second definition
+
+    function check() {
+        console.log(1);
+    }
+    function check() {
+        console.log(2);
+    }
+    check();                    // 2
+
+Note : However, this is still perfectly valid code – no error is generated. Whenever you have two function defined using function keyword and they happen to share the same name, the function that was defined `last will take precedence`.
+
+     var check =  function() {
+        console.log("variable assignment");
+    }
+    function chech() {
+        console.log("normal funciton definition")
+    }
+    check();                                            // variable assignment
+
+Note: The variable name will take precedence over function definitions even if it was defined prior to the second function definition with the same name.
+
+## Variable Types
+
+JavaScript is a dynamically-typed (Loosely typed) language.
+The type of the variable (defined using var or let keyword) can be assigned and changed at any time during the run-time of your application, after it was already compiled by browser’s JavaScript engine
+
+The keywords `var, let` and `const` do not determine the variable’s type. Instead, they determine how the variable can be used.
+It can be `re-assigned` to another value during run-time? For example, `var and let can`, but `const can’t`.
+
+`var :`
+The var keyword is still with us from original specification. You should probably start using let and const instead. For the most part it is still available but only to support legacy code.
+
+`let :`
+let defines a variable but limits its use to the scope in which it was defined.
+The developers prefer let keyword over var keyword, as it's an improvement over the var keyword. It helps us to assign the value or store it to some variable.
+
+`const :`
+const is the same as let but you can’t re-assign it to a new value once defined.
+
+##  Scope Visibility Differences
+
+`No Difference In Global Scope :`
+When variables are defined in global scope there is no differences between var, let and const in terms of scope visibility.
+
+<div align="center">
+    <img src="images/global-scope.png" width="650" alt="global-scope-Img">
+</div>
+
+<div align="center">
+    <img src="images/let-scope.png" width="650" alt="let-scope-Img">
+</div>
+
+`Closures :`
+
+## const and Arrays
+Changing a value in the const array is still allowed:
+
+    const a = [];
+    a[0] = 1;
+    console.log(a);     //1
+    a = [];             //TypeError: Assignment to constant variable.
+You just can’t assign any new objects to the original variable name again.
+
+## const and Object Literals
+Similar to arrays, when it comes to object literals, const only makes the definition constant.
+
+    const a = {
+        parameter1 : 1,
+        parameter2 : 2
+    }
+    a.parameter1 = "change";
+    console.log(a);                 // {parameter1: "change", parameter2: 2}
+
+## Dos and Dont’s
+
+Do not use var unless for some reason you want to hoist the variable name.(These cases are rare and usually don’t comply with good software design.)
+
+Do use let and const instead of var, wherever possible. Variable hoisting (variables defined using var) can be the cause of unpredictable bugs, because only the variable name is hoisted, the value becomes undefined.
+
+Do use const to define constants such as PI, speed of light, tax rate, etc. values that you know shouldn’t change during the lifetime of your application.
+
+## Arithmetic
+
+<div align="center">
+    <img src="images/arithmetic.png" width="650" alt="arithmetic-Img">
+</div>
+
+## Assignment
+
+<div align="center">
+    <img src="images/assignment.png" width="650" alt="assignment-Img">
+</div>
+
+## String
