@@ -53,8 +53,8 @@
     - [Adding Multiple Values](#Adding-Multiple-Values)
     - [L-value and R-value](#L-value-and-R-value)
     - [null vs undefined](#null-vs-undefined)
--[Chapter 7] Scope
-    -[(#Scope)](#(#Scope))
+- [Chapter 7] Scope
+    -[Scope](#Scope)
         -[Variable Definitions](#Variable-Definitions)
             -[Variable Types](#Variable-Types)
             -[ Scope Visibility Differences](#Scope-Visibility-Differences)
