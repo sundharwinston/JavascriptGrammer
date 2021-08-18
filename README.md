@@ -54,16 +54,16 @@
     - [L-value and R-value](#L-value-and-R-value)
     - [null vs undefined](#null-vs-undefined)
 - [Chapter 7] Scope
-    -[Scope](#Scope)
-        -[Variable Definitions](#Variable-Definitions)
-            -[Variable Types](#Variable-Types)
-            -[ Scope Visibility Differences](#Scope-Visibility-Differences)
-            -[const and Arrays](#const-and-Arrays)
-            -[const and Object Literals](#const-and-Object-Literals)
-            -[Dos and Dont’s](#Dos-and-Dont’s)
+    - [Scope](#Scope)
+        - [Variable Definitions](#Variable-Definitions)
+            - [Variable Types](#Variable-Types)
+            - [ Scope Visibility Differences](#Scope-Visibility-Differences)
+            - [const and Arrays](#const-and-Arrays)
+            - [const and Object Literals](#const-and-Object-Literals)
+            - [Dos and Dont’s](#Dos-and-Dont’s)
 - [Chapter 8] Operators
-    -[Arithmetic](#Arithmetic)
-    -[Assignment](#Assignment)
+    - [Arithmetic](#Arithmetic)
+    - [Assignment](#Assignment)
 
 
 <!-- <details>
