@@ -53,13 +53,14 @@
     - [Adding Multiple Values](#Adding-Multiple-Values)
     - [L-value and R-value](#L-value-and-R-value)
     - [null vs undefined](#null-vs-undefined)
--[Chapter 7](#Scope)
-    -[Variable Definitions](#Variable-Definitions)
-        -[Variable Types](#Variable-Types)
-        -[ Scope Visibility Differences](#Scope-Visibility-Differences)
-        -[const and Arrays](#const-and-Arrays)
-        -[const and Object Literals](#const-and-Object-Literals)
-        -[Dos and Dont’s](#Dos-and-Dont’s)
+-[Chapter 7] Scope
+    -[(#Scope)](#(#Scope))
+        -[Variable Definitions](#Variable-Definitions)
+            -[Variable Types](#Variable-Types)
+            -[ Scope Visibility Differences](#Scope-Visibility-Differences)
+            -[const and Arrays](#const-and-Arrays)
+            -[const and Object Literals](#const-and-Object-Literals)
+            -[Dos and Dont’s](#Dos-and-Dont’s)
 -[Chapter 8] Operators
     -[Arithmetic](#Arithmetic)
     -[Assignment](#Assignment)
@@ -537,7 +538,7 @@ NaN is a property of the global object. In other words, it is a variable in glob
 As you can see according to isNaN implementation treats string value as number and returns the result based on this. Check `isNaN(‘blabla’)`
 
 <div align="center">
-    <img src="images/confusing.gif" width="650" alt="Lol-Img">
+    <img src="images/confusing.gif" width="300" alt="Lol-Img">
 </div>
 
         isNaN('hello world');        // true
