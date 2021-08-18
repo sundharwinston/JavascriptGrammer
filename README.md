@@ -61,7 +61,7 @@
             -[const and Arrays](#const-and-Arrays)
             -[const and Object Literals](#const-and-Object-Literals)
             -[Dos and Dont’s](#Dos-and-Dont’s)
--[Chapter 8] Operators
+- [Chapter 8] Operators
     -[Arithmetic](#Arithmetic)
     -[Assignment](#Assignment)
 
