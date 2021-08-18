@@ -101,12 +101,13 @@ Much of content of this book is tailored to modern JavaScript development, which
 leans toward >= EcmaScript6 specification, functional programming: the use of
 higher-order Array functions, arrow functions and understanding execution context.
 
+<h1>Chapter 1 : Presentation Format </h1>
 
 ## Presentation Format
 
 Namely: imports, classes, constructors, key principles behind functional programming, including many features ranging from ES5 - ES10 These are all covered in this Documentaion
 
-
+<h1>Chapter 2 : Chrome Console</h1>
 ## Chrome Console
 Many of them know only Chrome’s `console.log` but the console API contains few other methods that console methods are explained below
 
@@ -204,6 +205,7 @@ In JavaScript all objects have .toString() method. When providing an object sto 
 Check it out more : 👉
 https://developer.mozilla.org/en-US/docs/Web/API/Console
 
+<h1>Chapter 3 : Welcome To JavaScript</h1>
 
 ## Entry Point
 
@@ -409,6 +411,8 @@ Example Code : 👉 https://github.com/sundharwinston/JavascriptGrammer/blob/mai
   the native window.onload method for waiting on media (see next,) depending on
   whether you need to wait for just the DOM or the rest of media.
 - Do not write your code just in script tags, without entry point function.
+
+<h1>Chapter 4 : Statements</h1>
 
 ## Evaluating Statements
 
