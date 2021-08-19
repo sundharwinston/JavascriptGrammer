@@ -881,7 +881,7 @@ Strings can be assigned to variable names or each other using the + operator whi
 ## Comparison
 
 <div align="center">
-    <img src="images/Comparison.png" width="650" alt="Comparison-Img">
+    <img src="images/comparison.png" width="650" alt="Comparison-Img">
 </div>
 
 ## Logical
