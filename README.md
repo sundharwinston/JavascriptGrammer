@@ -64,6 +64,14 @@
 - [Chapter 8] Operators
     - [Arithmetic](#Arithmetic)
     - [Assignment](#Assignment)
+    - [String](#String)
+    - [Comparison](#Comparison)
+    - [Logical](#Logical)
+    - [Bitwise](#Bitwise)
+    - [typeof](#typeof)
+    - [Ternary](#Ternary)
+    - [delete](#delete)
+    - [in](#in)
 
 
 <!-- <details>
@@ -538,7 +546,7 @@ NaN is a property of the global object. In other words, it is a variable in glob
 As you can see according to isNaN implementation treats string value as number and returns the result based on this. Check `isNaN(‘blabla’)`
 
 <div align="center">
-    <img src="images/confusing.gif" width="300" alt="Lol-Img">
+    <img src="images/confusing.gif" width="250" alt="Lol-Img">
 </div>
 
         isNaN('hello world');        // true
@@ -863,3 +871,71 @@ Do use const to define constants such as PI, speed of light, tax rate, etc. valu
 </div>
 
 ## String
+
+Strings can be assigned to variable names or each other using the + operator which we earlier saw used as arithmetic addition. But when one or both of the values on either side of + operator are strings, it is treated as a string addition operator.
+
+<div align="center">
+    <img src="images/string.png" width="650" alt="string-Img">
+</div>
+
+## Comparison
+
+<div align="center">
+    <img src="images/Comparison.png" width="650" alt="Comparison-Img">
+</div>
+
+## Logical
+
+<div align="center">
+    <img src="images/logical.png" width="650" alt="logical-Img">
+</div>
+
+## Bitwise
+
+<div align="center">
+    <img src="images/bitwise.png" width="650" alt="bitwise-Img">
+</div>
+
+Bitwise have unique properties: for example: the << operator is the same as multiplying a whole number by 2 and >> operator is the same as dividing a whole number by 2. They are sometimes used as performance optimizations because they are `faster than * and / operators` in terms of processor cycles.
+
+## typeof
+
+<div align="center">
+    <img src="images/typeof.png" width="650" alt="typeof-Img">
+</div>
+
+NaN lives natively on Number.NaN – it is considered to be a primitive value.
+
+NaN is the symbol usually produced in the context of a numeric operation. One such example is trying to instantiate a number object by passing a string value to its constructor: new Number(”str”) in which case NaN would be returned.
+
+## Ternary
+
+The ternary operator has the form of: statement?statement:statement; Statements can be expressions or a single value:
+
+    let data = statement ? value : value ;
+The ternary operator is like an inline if-statement. It does not support {} brackets or multiple statements.
+
+Source Code : 👉
+
+## delete   
+
+The delete keyword can be used to delete an object property:
+You cannot use delete to remove stand-alone variables. Even though, if you try to do that, no error will be generated (unless you are in strict mode.)
+
+The delete statement is still allowed in strict mode, but some particular uses of it are erroneous. It's only allowed for object properties, not simple names, and only for object properties that can be deleted.
+
+Source Code : 👉
+
+## in
+
+The in operator can be used to check if a property name exists in an object:
+
+    "data" in {"name":"javascript", "data": "hello"}        // true
+    "hello" in {"name":"javascript", "data": "hello"}        // false
+
+The in operator, when used together with arrays, will check if an index exists.
+
+    "data" in ["name",1,"data"];                // false
+    0 in ["name",1,"date"];                     // true
+
+Source Code : 👉

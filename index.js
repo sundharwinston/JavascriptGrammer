@@ -64,12 +64,32 @@ app.get('/template-string', (req, res)=>{
 });
 
 
-//Chapter6
+//Chapter 6
 app.get('/type-coercion', (req, res)=>{
 	res.render('chapter6/type-coercion');
 });
 app.get('/null-undefined', (req, res)=>{
 	res.render('chapter6/null-undefined');
+});
+
+//Chapter 7
+app.get('/const', (req, res)=>{
+	res.render('chapter6/const');
+});
+app.get('/variable-type', (req, res)=>{
+	res.render('chapter6/variable-type');
+});
+
+
+//Chapter 8
+app.get('/delete', (req, res)=>{
+	res.render('chapter6/delete');
+});
+app.get('/in', (req, res)=>{
+	res.render('chapter6/in');
+});
+app.get('/ternary', (req, res)=>{
+	res.render('chapter6/ternary');
 });
 
 

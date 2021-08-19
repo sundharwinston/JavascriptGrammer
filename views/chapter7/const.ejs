@@ -1,0 +1,21 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Type Coercion</title>
+        <script type="text/javascript">
+            const language = "javascript";
+
+			try {
+			  language = "scope javascript";
+			} catch (err) {
+			  console.log(err);			// expected output: TypeError: invalid assignment to const `language'
+			}
+			console.log(language); 		// 42
+        </script>
+    </head>
+    <body>
+        <h1>Type Coercion</h1>
+    </body>
+     
+</html>	

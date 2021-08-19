@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>in property</title>
+        <script type="text/javascript">
+            const language = { name: 'html', model: 'markup', year: 1998 };
+
+            console.log('name' in language);         //true
+
+            delete language.name;
+            // 'name' in language ? console.log(1) : language.name = 'Suzuki';
+            if ('name' in language === false) {
+              language.name = 'Suzuki';
+            }
+
+            console.log(language.name);
+
+        </script>
+    </head>
+    <body>
+        <h1>in property</h1>
+    </body>
+     
+</html>	
