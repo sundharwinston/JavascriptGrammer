@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Spread Property</title>
+        <script type="text/javascript">
+            function sum(x, y, z) {
+              return x + y + z;
+            }
+
+            const numbers = [1, 2, 3];
+
+            console.log(sum(...numbers));               // output: 6
+
+            console.log(sum.apply(null, numbers));      // output: 6
+        </script>
+    </head>
+    <body>
+        <h1>Spread Property</h1>
+    </body>
+     
+</html>	

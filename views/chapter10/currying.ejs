@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Curring</title>
+        <script type="text/javascript">
+        
+			function volume(length) {
+			      return function(width) {
+			         return function(height) {
+			            return height * width * length;
+			         }
+			      }
+			   }
+			document.write(volume(11)(2)(3))
+
+        </script>
+    </head>
+    <body>
+        <h1>Curring</h1>
+    </body>
+     
+</html>	
+
+
+

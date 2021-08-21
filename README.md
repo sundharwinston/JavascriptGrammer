@@ -72,8 +72,20 @@
     - [Ternary](#Ternary)
     - [delete](#delete)
     - [in](#in)
-
-
+- [chapter 9] ...rest and ...spread
+    - [Rest Properties](#Rest-Properties)
+    - [Spread Properties](#Spread-Properties)
+    - [Destructuring Assignment](#Destructuring-Assignment)
+- [chapter 10] Closure
+    - [Closure Introduction](#Closure-Introduction)
+    - [Arity](#Arity)
+    - [Currying](#Currying)
+- [Chapter 11] Loops
+    - [for loops](#for-loops)
+    - [for...of Loop](#for...of-Loop)
+    - [for...in Loops](#for...in-Loops)
+- [chapter 12] Arrays
+    - [](#)
 <!-- <details>
 <summary>Dropdown:</summary>
 
@@ -930,8 +942,8 @@ Source Code : 👉
 
 The in operator can be used to check if a property name exists in an object:
 
-    "data" in {"name":"javascript", "data": "hello"}        // true
-    "hello" in {"name":"javascript", "data": "hello"}        // false
+    "data" in {"name":"javascript", "data": "hello"}            // true
+    "hello" in {"name":"javascript", "data": "hello"}           // false
 
 The in operator, when used together with arrays, will check if an index exists.
 
@@ -939,3 +951,292 @@ The in operator, when used together with arrays, will check if an index exists.
     0 in ["name",1,"date"];                     // true
 
 Source Code : 👉
+
+## Rest Properties
+
+The rest parameter syntax allows a function to accept an indefinite number of arguments as an array, providing a way to represent variadic functions in JavaScript.
+
+<strong>Note:</strong> The rest parameter have to be the last argument, as its job is to collect all the remaining arguments into an array. So having a function definition like the code below doesn’t make any sense and will throw an error.
+
+    // non-sense code
+    function fun(a,...b,c){
+        //code
+        return;
+    }
+
+
+Source Code : 👉
+
+## Spread Properties
+
+Spread syntax (...) allows an iterable such as an array expression or string to be expanded in places where zero or more arguments or elements.
+
+    let arr = [3, 5, 1];
+    alert( Math.max(...arr) );      // 5
+
+We also can pass multiple iterables this way.
+
+You can’t use ...spread syntax to assign values to variables.
+
+    let a = [...arg];   
+    let data = ...[1,2,3];     // Uncaught SyntaxError: Unexpected token '...'
+
+`Merging arrays with ...spread :`
+
+    let a = [1,2,3];
+    let b = [4,5,6];
+    console.log(...a,..b);          // 1 2 3 4 5 6
+
+Source Code : 👉
+
+`Spread & Rest Properties :`
+
+The spread operator allows us to spread the value of an array (or any iterable) across zero or more arguments in a function or elements in an array (or any iterable). The rest parameter allows us to pass an indefinite number of parameters to a function and access them in an array.
+
+When we see "..." in the code, it is either rest parameters or the spread syntax.
+
+There’s an easy way to distinguish between them:
+
+- When ... is at the end of function parameters, it’s “rest parameters” and gathers the rest of the list of arguments into an array.
+- When ... occurs in a function call or alike, it’s called a “spread syntax” and expands an array into a list.
+
+Use patterns:
+
+- Rest parameters are used to create functions that accept any number of arguments.
+- The spread syntax is used to pass an array to functions that normally require a list of many arguments.
+Together they help to travel between a list and an array of parameters with ease.
+
+
+## Destructuring Assignment
+
+Destructuring assignment can be used to extract multiple items from arrays and objects and assign them to variables:
+
+        [a,b] = [10,20];
+        console.log(a);         // 10
+        console.log(b);         // 20
+
+` destructure into ...rest array :`
+
+        [a,b,...rest] = [1,2,3,4,5,6,7];
+        console.log(a,b);                           // 1 2
+        console.log(rest);                          // [3,4,5,6,7]
+
+`Destructuring` is often used to extract `object properties` to a `matching name`:
+
+        let { data } = { data:1 };
+        console.log(data);                  // 1
+
+The order doesn’t matter
+    
+    let data = {
+        first : 1,
+        second : 2,
+        third : 3,
+    }
+    let {second} = data;
+    console.log(second);                    // 2
+    let {third} = data;
+    console.log(second + third)             //5
+
+Source Code : 👉
+
+`Merging objects with ...spread :`
+
+        let a = { p:1 ,q:2, m : () => {} };
+        let b = { r:1 ,s:2, n : () => {} };
+        let c = {...a ,...b };
+        console.log(c);
+
+## Closure Introduction
+
+A closure is the combination of a function bundled together (enclosed) with references to its surrounding state (the lexical environment). In other words, a closure gives you access to an outer function’s scope from an inner function. In JavaScript, closures are created every time a function is created, at function creation time.
+
+
+    function start(x) {
+      return function(y) {
+        return x + y;
+      };
+    }
+    var sum = start(5);
+    console.log(sum);                             // function of y i.e f(y){}
+    console.log(sum(2));  // 7                    // It's a closure
+
+Source Code : 👉
+
+## Arity
+
+Arity is the number of arguments a function takes.
+You can access function’s arity via Function.length property:
+
+    function function_name(a,b,c) {
+    }
+    let arity = function_name.length;
+    console.log(arity);                         //3
+
+## Currying
+
+Currying is a technique of evaluating function with multiple arguments, into sequence of functions with single argument.In other words, when a function, instead of taking all arguments at one time, takes the first one and return a new function that takes the second one and returns a new function which takes the third one, and so forth, until all arguments have been fulfilled.
+
+Source Code : 👉
+
+## Loops
+
+The primary purpose of a loop is to iterate over one or a set of multiple statements. . Iterating is commonplace in software development – it means to repeat an action a multiple number of times.`Array is an iterable. Object is not (objects are enumerable).`
+
+## Types of loops in JavaScript
+
+Common iterators are `for, for...of, for...in, while and Array.forEach`.
+Some Array methods are assumed to be iterators: `.values,.keys, .map, .every, .some, .filter, .reduce` and a few others.They are called higher-order functions, because they take another function as an argument
+
+`Incrementing And Reducing :`
+
+Loops can be used for filtering out objects and reducing the list to something more meaningful.
+
+    let data = [1,2,3,4];
+    let sum = 0;
+    for(let i = 0 ; i < 3 ; i++){
+        sum += data[i];
+    }
+    console.log(sum);
+
+You can implement a reducer to the same effect:
+
+    let data = [1,2,3,4];
+    const function_variable = (accumulator,value) => accumulator + value ;
+    const result = data.reduce(function_variable);
+    console.log(result);
+
+## for loops
+`syntax :`
+
+    for(initialize; condition; increment/decrement){
+        //multiple statements
+    }
+
+`The Infinite for Loop :`
+
+    for(;;)
+        console.log("Hey javascript !");    
+
+`Multiple Statements :`
+
+`Note :` the combination of the two statements: i++, inc().
+
+        let counter = 0;
+        function increment(){ counter++; }
+        for(let i = 0; i<5; i++,increment()){
+            console.log(counter);
+        }
+
+`for loops and let scope :`
+
+    for(let i = 0; i<5; i++) let x=i;          //Error: Lexical declaration cannot appear in single-statement context
+
+`Breaking To Label :`
+
+        let c = 0;
+        mark : for( let i=0; i<5; i++){
+            c++;
+            inner : for(let j=0; j < 5 ; j++){
+                if( i == 1 )
+                break mark;
+            }
+        }
+        console.log(c);                                     // 2
+
+`Breaking from a labeled block scope :`
+
+        block : {
+            console.log("before");
+            break block;
+            console.log("after");
+        }                                                   // before
+
+## for...of Loop
+
+syntax :
+
+    for (variable of iterable) {
+      statement
+    }
+
+Example :
+    
+    const iterable = [10, 20, 30];
+    for (const value of iterable) {
+      console.log(value);
+    }    
+
+`for...of and Generators :`
+    
+    function* name([param[, param[, ... param]]]) {
+        Statements
+    }
+
+    name.next().value();                //generator calling method
+
+`for...of and Strings :`
+You can walk each character of a string using a for...of loop:
+
+    let text = "javascript";
+    for (const value of text) {
+      console.log(value);
+    }    
+
+`for...of and Arrays :`
+We can `iterate through it without having to create index variables`. Once the end of the array is reached the loop will end automatically.
+
+    let array = [1,2,3,4];
+    for (const value of array) {
+      console.log(value);
+    }  
+
+` for...of and Objects :`
+for...of loops work only with iterable values. An object is not an iterable.
+
+    let obj = { a : 1, b : 2, c : 3, d :4 };
+    for (const value of obj) {
+      console.log(value);
+    }                                       // Error : obj is not iterable
+
+`for...of loops and objects converted to iterables :`
+
+    let data = { prop : 1 , method : () => {} };
+    for( let key of Object.keys(data))
+        console.log(key);
+        //
+    for( let value of Object.values(data))
+        console.log(value);
+
+## for...in Loops
+
+The for...of loops won’t be help for object iteration
+
+The for/in statement loops through the properties of an object.
+The block of code inside the loop will be executed once for each property.
+
+    let object = {
+        a : 1, b: 2, c:3,
+    };
+    for(let value in object){
+        console.log(value, object[value]);
+    }
+
+## While Loops
+
+syntax : 
+    
+     while(syntax){
+        //statements
+     }
+
+<hr>
+
+<h1>Chapter 12 : Arrays</h1>
+
+## Array
+Many of the Array.* methods are iterators.
+Array methods are attached to Array.prototype property. This means you can execute them directly from array object like array.forEach() or directly from array’s literal value like: [1,2,3].forEach();
+
+## Array.prototype.sort()
+

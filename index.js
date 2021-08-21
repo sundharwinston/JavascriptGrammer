@@ -93,6 +93,40 @@ app.get('/ternary', (req, res)=>{
 });
 
 
+//Chapter 9
+app.get('/rest', (req, res)=>{
+	res.render('chapter9/rest');
+});
+app.get('/spread', (req, res)=>{
+	res.render('chapter9/spread');
+});
+app.get('/destructing-assignment', (req, res)=>{
+	res.render('chapter9/destructing-assignment');
+});
+
+
+//Chapter 10
+app.get('/closure', (req, res)=>{
+	res.render('chapter10/closure');
+});
+app.get('/currying', (req, res)=>{
+	res.render('chapter10/currying');
+});
+
+
+
+//Chapter 11
+app.get('/for', (req, res)=>{
+	res.render('chapter10/for');
+});
+app.get('/for-of', (req, res)=>{
+	res.render('chapter10/for-of');
+});
+app.get('/for-in', (req, res)=>{
+	res.render('chapter10/for-in');
+});
+
+
 //start Server port
 var server = app.listen(4000, function(){
     console.log('listening to port 4000')

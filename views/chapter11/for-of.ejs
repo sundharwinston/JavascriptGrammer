@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>for of loop</title>
+        <script type="text/javascript">
+         // for of with generator 
+                function* generatorFunc() {
+                  
+                    yield 10;
+                    yield 20;
+                    yield 30;
+                }
+                const obj = generatorFunc();
+
+                for (let value of obj) {
+                    console.log(value);
+                }
+        </script>
+    </head>
+    <body>
+        <h1>for of loop</h1>
+    </body>
+     
+</html>	
