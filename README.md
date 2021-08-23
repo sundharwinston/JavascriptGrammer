@@ -106,7 +106,7 @@
 <hr />
 <p>
     <strong>I Love Javascript ❤</strong><br>
-    “Everyone in this country should learn how to program because it teaches you how to think” – Steve Jobs.
+    “Everyone in this country should learn how to program a computer because it teaches you how to think” – Steve Jobs.
 </p>
 
 <div align="center">	
@@ -685,7 +685,7 @@ Examples of Type Coercion 👇 <br>
     <img src="images/type-coercion.png" width="650" alt="type-coercion-Img">
 </div>
 
-Source Code : 👉
+Source Code : 👉 https://github.com/sundharwinston/JavascriptGrammer/blob/main/views/chapter6/type-coercion.ejs
 
 ## Adding Multiple Values
 Operator Precedence
@@ -726,7 +726,7 @@ is treated as falsy for boolean operations.
 - [null](#null)
 - [undefined](#undefined)
 
-Source Code : 👉
+Source Code : 👉 https://github.com/sundharwinston/JavascriptGrammer/blob/main/views/chapter6/null-undefined.ejs
 
 ## Scope
 
@@ -937,7 +937,7 @@ The ternary operator has the form of: statement?statement:statement; Statements 
     let data = statement ? value : value ;
 The ternary operator is like an inline if-statement. It does not support {} brackets or multiple statements.
 
-Source Code : 👉
+Source Code : 👉 https://github.com/sundharwinston/JavascriptGrammer/blob/main/views/chapter8/ternary.ejs
 
 ## delete   
 
@@ -946,7 +946,7 @@ You cannot use delete to remove stand-alone variables. Even though, if you try t
 
 The delete statement is still allowed in strict mode, but some particular uses of it are erroneous. It's only allowed for object properties, not simple names, and only for object properties that can be deleted.
 
-Source Code : 👉
+Source Code : 👉 https://github.com/sundharwinston/JavascriptGrammer/blob/main/views/chapter8/delete.ejs
 
 ## in
 
@@ -960,7 +960,7 @@ The in operator, when used together with arrays, will check if an index exists.
     "data" in ["name",1,"data"];                // false
     0 in ["name",1,"date"];                     // true
 
-Source Code : 👉
+Source Code : 👉 https://github.com/sundharwinston/JavascriptGrammer/blob/main/views/chapter8/in.ejs
 
 ## Rest Properties
 
@@ -975,7 +975,7 @@ The rest parameter syntax allows a function to accept an indefinite number of ar
     }
 
 
-Source Code : 👉
+Source Code : 👉 https://github.com/sundharwinston/JavascriptGrammer/blob/main/views/chapter9/rest.ejs
 
 ## Spread Properties
 
@@ -999,7 +999,7 @@ You can’t use ...spread syntax to assign values to variables.
     let b = [4,5,6];
     console.log(...a,..b);          // 1 2 3 4 5 6
 
-Source Code : 👉
+Source Code : 👉 https://github.com/sundharwinston/JavascriptGrammer/blob/main/views/chapter9/spread.ejs
 
 `Spread & Rest Properties :`
 
@@ -1050,7 +1050,7 @@ The order doesn’t matter
     let {third} = data;
     console.log(second + third)             //5
 
-Source Code : 👉
+Source Code : 👉 https://github.com/sundharwinston/JavascriptGrammer/blob/main/views/chapter9/destructing-assignment.ejs
 
 `Merging objects with ...spread :`
 
@@ -1073,7 +1073,7 @@ A closure is the combination of a function bundled together (enclosed) with refe
     console.log(sum);                             // function of y i.e f(y){}
     console.log(sum(2));  // 7                    // It's a closure
 
-Source Code : 👉
+Source Code : 👉 https://github.com/sundharwinston/JavascriptGrammer/blob/main/views/chapter10/closure.ejs
 
 ## Arity
 
@@ -1089,7 +1089,7 @@ You can access function’s arity via Function.length property:
 
 Currying is a technique of evaluating function with multiple arguments, into sequence of functions with single argument.In other words, when a function, instead of taking all arguments at one time, takes the first one and return a new function that takes the second one and returns a new function which takes the third one, and so forth, until all arguments have been fulfilled.
 
-Source Code : 👉
+Source Code : 👉 https://github.com/sundharwinston/JavascriptGrammer/blob/main/views/chapter10/currying.ejs
 
 ## Loops
 
@@ -1164,6 +1164,8 @@ You can implement a reducer to the same effect:
             console.log("after");
         }                                                   // before
 
+Source Code : 👉 https://github.com/sundharwinston/JavascriptGrammer/blob/main/views/chapter11/for.ejs
+
 ## for...of Loop
 
 syntax :
@@ -1220,6 +1222,8 @@ for...of loops work only with iterable values. An object is not an iterable.
     for( let value of Object.values(data))
         console.log(value);
 
+for-of Source Code : 👉 https://github.com/sundharwinston/JavascriptGrammer/blob/main/views/chapter11/for-of.ejs
+
 ## for...in Loops
 
 The for...of loops won’t be help for object iteration
@@ -1233,6 +1237,8 @@ The block of code inside the loop will be executed once for each property.
     for(let value in object){
         console.log(value, object[value]);
     }
+    
+Source Code : 👉 https://github.com/sundharwinston/JavascriptGrammer/blob/main/views/chapter11/for-in.ejs
 
 ## While Loops
 
@@ -1263,14 +1269,14 @@ The time and space complexity of the sort cannot be guaranteed as it depends on 
 
 <strong>Note :</strong>The sorted array. Note that the array is sorted in place, and `no copy is made.`
 
-Source Code : 👉
+Source Code : 👉 https://github.com/sundharwinston/JavascriptGrammer/blob/main/views/chapter12/sort.ejs
 
 ## Array.forEach
 
 The forEach method will execute a function for every item in the array.
 Each iteration step receives 3 arguments `value, index, object.`
 
-Source Code : 👉
+Source Code : 👉 https://github.com/sundharwinston/JavascriptGrammer/blob/main/views/chapter12/foreach.ejs
 
 ## Array.every
 
@@ -1278,14 +1284,14 @@ Source Code : 👉
 
 The every() method tests whether all elements in the array pass the test implemented by the provided function.
 
-Source Code : 👉
+Source Code : 👉 https://github.com/sundharwinston/JavascriptGrammer/blob/main/views/chapter12/every.ejs
 
 ## Array.some
     Return value: boolean
 
 The some() method tests whether `at least one element in the array passes the test` implemented by the provided function. 
 
-Source Code : 👉
+Source Code : 👉 https://github.com/sundharwinston/JavascriptGrammer/blob/main/views/chapter12/some.ejs
 
 ##  Array.filter
 
@@ -1294,7 +1300,7 @@ Source Code : 👉
 - The filter() method creates a new array with all elements that pass the test implemented by the provided function.
 - filter() does not change the original array.
 
-Source Code : 👉
+Source Code : 👉 https://github.com/sundharwinston/JavascriptGrammer/blob/main/views/chapter12/filter.ejs
 
 ## Array.map
 
@@ -1303,7 +1309,7 @@ Source Code : 👉
 - The map() method calls the provided function once for each element in an array, in order.
 - map() does not change the original array.
 
-Source Code : 👉
+Source Code : 👉 https://github.com/sundharwinston/JavascriptGrammer/blob/main/views/chapter12/map.ejs
 
 ## Array.reduce
 
@@ -1329,7 +1335,7 @@ The flat() method creates a new array with all sub-array elements concatenated i
     const arr2 = [0, 1, 2, [[[3, 4]]]];
     console.log(arr2.flat(2));                  //sub array count
 
-Source Code : 👉
+Source Code : 👉 https://github.com/sundharwinston/JavascriptGrammer/blob/main/views/chapter12/flat.ejs
 
 
 Examples of `map()` and `flatMap()`
@@ -1367,11 +1373,11 @@ When the compared objects have a lot of properties or the structure of the objec
 
 Finally, if the compared objects have nested objects, the deep equality check is the way to go.
 
-Source Code : 👉
+Source Code : 👉 https://github.com/sundharwinston/JavascriptGrammer/blob/main/views/chapter12/compare-object.ejs
 
 
 ## Writing arrcmp
 
 JavaScript provides a function JSON.stringify() in order to convert an object or array into JSON string. By converting into JSON string we can directly check if the strings are equal or not.
 
-Source Code : 👉
+Source Code : 👉 https://github.com/sundharwinston/JavascriptGrammer/blob/main/views/chapter12/compare-array.ejs
