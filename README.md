@@ -751,7 +751,7 @@ Variables are case-sensitive. This means a and A are two different variables:
 
 if you tried to refer to a variable that wasn’t defined anywhere, you would generate a ReferenceError error "variable name is not defined":
     
-    console.log(x);      // ReferenceError : name is not defined
+    console.log(x);      // ReferenceError : x is not defined
     {
     } 
 
