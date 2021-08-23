@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>flat method</title>
+        <script type="text/javascript">
+            let array = [1,2,[3,4]];
+            function check(data,...rest) {
+                console.log(data.flat());
+                console.log("With flat Method",rest.flat());
+                console.log("Without flat Method",rest);
+
+            }
+            check(array,[10,20,30,40]);
+        </script>
+    </head>
+    <body>
+        <h1>flat method</h1>
+    </body>
+     
+</html>	

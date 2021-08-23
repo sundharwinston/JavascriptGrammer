@@ -117,13 +117,44 @@ app.get('/currying', (req, res)=>{
 
 //Chapter 11
 app.get('/for', (req, res)=>{
-	res.render('chapter10/for');
+	res.render('chapter11/for');
 });
 app.get('/for-of', (req, res)=>{
-	res.render('chapter10/for-of');
+	res.render('chapter11/for-of');
 });
 app.get('/for-in', (req, res)=>{
-	res.render('chapter10/for-in');
+	res.render('chapter11/for-in');
+});
+
+
+
+//Chapter 12
+app.get('/sort', (req, res)=>{
+	res.render('chapter12/sort');
+});
+app.get('/foreach', (req, res)=>{
+	res.render('chapter12/foreach');
+});
+app.get('/every', (req, res)=>{
+	res.render('chapter12/every');
+});
+app.get('/some', (req, res)=>{
+	res.render('chapter12/some');
+});
+app.get('/filter', (req, res)=>{
+	res.render('chapter12/filter');
+});
+app.get('/map', (req, res)=>{
+	res.render('chapter12/map');
+});
+app.get('/flat', (req, res)=>{
+	res.render('chapter12/flat');
+});
+app.get('/compare-object', (req, res)=>{
+	res.render('chapter12/compare-object');
+});
+app.get('/compare-array', (req, res)=>{
+	res.render('chapter12/compare-array');
 });
 
 

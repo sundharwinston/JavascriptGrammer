@@ -85,7 +85,17 @@
     - [for...of Loop](#for...of-Loop)
     - [for...in Loops](#for...in-Loops)
 - [chapter 12] Arrays
-    - [](#)
+    - [Array.prototype.sort()](#Array.prototype.sort())
+    - [Array.forEach](#Array.forEach)
+    - [Array.every](#Array.every)
+    - [Array.some](#Array.some)
+    - [Array.filter](#Array.filter)
+    - [Array.reduce](#Array.reduce)
+    - [Dos and Dont’s](#Dos-and-Dont’s)
+    - [Array.flat()](#Array.flat())
+    - [String.prototype.matchAll()](#String.prototype.matchAll())
+    - [Comparing Two Objects](#Comparing-Two-Objects)
+
 <!-- <details>
 <summary>Dropdown:</summary>
 
@@ -803,7 +813,7 @@ Note : However, this is still perfectly valid code – no error is generated. Wh
      var check =  function() {
         console.log("variable assignment");
     }
-    function chech() {
+    function check() {
         console.log("normal funciton definition")
     }
     check();                                            // variable assignment
@@ -970,6 +980,8 @@ Source Code : 👉
 ## Spread Properties
 
 Spread syntax (...) allows an iterable such as an array expression or string to be expanded in places where zero or more arguments or elements.
+
+The values can be assigned to based on their index position.
 
     let arr = [3, 5, 1];
     alert( Math.max(...arr) );      // 5
@@ -1240,3 +1252,126 @@ Array methods are attached to Array.prototype property. This means you can execu
 
 ## Array.prototype.sort()
 
+The sort() method sorts the elements of an array in place and returns the sorted array. The default sort order is ascending, built upon converting the elements into strings, then comparing their sequences of values.
+
+The time and space complexity of the sort cannot be guaranteed as it depends on the implementation.
+
+    const array1 = [4,6,5,1,2,3];
+    array1.sort();
+    console.log(array1);
+
+
+<strong>Note :</strong>The sorted array. Note that the array is sorted in place, and `no copy is made.`
+
+Source Code : 👉
+
+## Array.forEach
+
+The forEach method will execute a function for every item in the array.
+Each iteration step receives 3 arguments `value, index, object.`
+
+Source Code : 👉
+
+## Array.every
+
+    Return value: boolean
+
+The every() method tests whether all elements in the array pass the test implemented by the provided function.
+
+Source Code : 👉
+
+## Array.some
+    Return value: boolean
+
+The some() method tests whether `at least one element in the array passes the test` implemented by the provided function. 
+
+Source Code : 👉
+
+##  Array.filter
+
+    Return value : new array consisting only of items that passed a condition.
+
+- The filter() method creates a new array with all elements that pass the test implemented by the provided function.
+- filter() does not change the original array.
+
+Source Code : 👉
+
+## Array.map
+
+    Return value: a copy of the original array with modified values (if any.)
+
+- The map() method calls the provided function once for each element in an array, in order.
+- map() does not change the original array.
+
+Source Code : 👉
+
+## Array.reduce
+
+    Return value: accumulator
+
+##  Dos and Dont’s
+
+- Do use it for summing up some numbers.
+- Do use it for multiplying some numbers.
+- Do use it for updating state in React.
+- Do not use it for building new lists or objects from scratch.
+- Do not use it for just about anything else (use a loop).
+- Do not use it to mutate (change original values of) its arguments.
+- Do not use it perform side effects, like API calls and routing transitions.
+
+## Array.flat()
+
+The flat() method creates a new array with all sub-array elements concatenated into it recursively up to the specified depth.
+
+    const arr1 = [0, 1, 2, [3, 4]];
+    console.log(arr1.flat());
+
+    const arr2 = [0, 1, 2, [[[3, 4]]]];
+    console.log(arr2.flat(2));                  //sub array count
+
+Source Code : 👉
+
+
+Examples of `map()` and `flatMap()`
+
+    let arr1 = [1, 2, 3, 4];
+    arr1.map(x => [x * 2]);                         // [[2], [4], [6], [8]]
+    arr1.flatMap(x => [x * 2]);                     // [2, 4, 6, 8]
+    arr1.flatMap(x => [[x * 2]]);                   // [[2], [4], [6], [8]]
+
+## String.prototype.matchAll()
+String.match with string argument only returns the first match. for example :
+
+    let string = "Hello";
+    let match = string.match('l');
+    console.log(match[0]);
+
+`Adding /g to the mix :`
+
+    let string = "Hello";
+    let match = string.match(/l/g);
+    console.log(match);                              // (2) ["l", "l"]
+
+## Dos and Dont’s
+- Do use string.matchAll instead of regex.exec & string.match with /g flag.
+
+## Comparing Two Objects
+
+e == and === operators won’t help because they compare by reference and not by value
+
+    [] === [];                      //false
+    let x = []; 
+    x === x;                        //true
+
+When the compared objects have a lot of properties or the structure of the objects is determined during runtime, a better approach is to use shallow check.
+
+Finally, if the compared objects have nested objects, the deep equality check is the way to go.
+
+Source Code : 👉
+
+
+## Writing arrcmp
+
+JavaScript provides a function JSON.stringify() in order to convert an object or array into JSON string. By converting into JSON string we can directly check if the strings are equal or not.
+
+Source Code : 👉
