@@ -158,6 +158,13 @@ app.get('/compare-array', (req, res)=>{
 });
 
 
+//Evaluation 1
+app.get('/primenumber', (req, res)=>{
+	res.render('Evaluation1/prime-number');
+});
+
+
+
 //start Server port
 var server = app.listen(4000, function(){
     console.log('listening to port 4000')
