@@ -6,9 +6,9 @@ step 1: Start the program.
 
 step 2: Initialize the variable number and flag = true
 
-step 3: Check the condition if given number is equal to 1 . then the number equal to 1 print it is `"prime number"` and go to step 9. If it is not equal to 1 go to next step.
+step 3: 
 
-step 4: Check else if condition the number greater than 1. If it is true then go to next step
+step 4: Check if condition the number greater than 1. If it is true then go to next step
 
 step 5: Declare for loop initialize variable i with 2. Repeat the steps until i < number
 
@@ -25,8 +25,8 @@ Pseudocode :
 
 	BEGIN
 	INPUT number,flag=true;
-	IF number === 1
-	   PRINT "Prime Number"
+	IF type of number === 'string'
+		RETURN 'not valid'
 	ELSE IF  number > 1
 		FOR (let i=2;i<number;i++)
 		   IF (number % i == 0) 
