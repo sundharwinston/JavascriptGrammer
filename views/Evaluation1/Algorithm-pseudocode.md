@@ -196,10 +196,10 @@ Source Code : 👉
 
 The Math.random() function return random number by the random number generation algorithm. Based on browser engine it varies.
 	
-	function RandomNumber(max) {
-	  return Math.floor(Math.random() * max);
+	function RandomNumber(min,max) {
+	  return Math.floor(Math.random() * (max - min) + min);
 	}
-	RandomNumber(3);
+	RandomNumber(1,5);
 	
 ## 8. Remove duplicate from the following array?([1,2,9,4,5,8,3,5,1,4,5])
 
@@ -234,6 +234,8 @@ step 8: stop the program.
 	FindDubicate([1,2,1,3,4,4,3]) FUNCTION CALL
 
 
+Source Code : 👉
+
 ## 9. Write a program to calculate the sum of the first 10 natural numbers.
 
 ## Algorithm :
@@ -258,6 +260,8 @@ step 5: stop the program.
 		sum += i;
 	RETURN sum
 	END
+
+Source Code : 👉
 
 ## 10. Write a program to print the sum of the even and odd numbers for a given number?
 (100)
@@ -288,6 +292,8 @@ step 5: stop the program.
 	RETURN odd,even 
 	END
 
+Source Code : 👉
+
 ## 11. Write a program to merge two arrays? ([1,2,9,3,5,1,4,5], [11,54,70,40])
 
 We have two merge action 
@@ -303,9 +309,13 @@ We have two merge action
 a. [{id: 1, name: ‘Stephen covey’ }, {id: 2, name: ‘Robin Sharma’ }, {id: 3, name:
 ‘Tolstoy’}, {id: 3, name: ‘Tolstoy’}, {id: 5, name: ‘James clear’}]
 
+
 ## 13. Compare two objects, If all properties are equal return true or return false?
 a. ({id: 1, name: “edison”}, {id: 1, name: “edison”})
 b. ({id: 1, name: “edison”}, {id: 2, name: “edison”})
+
+
+Source Code : 👉
 
 ## Algorithm :
 
@@ -337,6 +347,7 @@ step 6: stop the program.
 	return true;
 	END
 
+Source Code : 👉
 
 
 ## 14. Take a multidimensional array and flat the array?[1,4,2,3,[10,20,20], [100,500,700,600],
