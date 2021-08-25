@@ -1,0 +1,23 @@
+ <%- include('../layouts/header.ejs') %>					<!--  header page included for future use -->
+
+        <script type="text/javascript">
+			let DataFormation = "", data=0;
+		  	for(let i = 1;i<5;i++) {
+				for (let j=5;j>i;j--) {
+			     DataFormation += " ";
+				}
+			  	for(let k = 0; k < 2*i-i ; k++) {
+					data++;
+					DataFormation += data;
+					DataFormation += " ";
+				}
+			  DataFormation += "\n";
+			}
+		  	console.log(DataFormation);
+        </script>
+    </head>
+    <body>
+        <h1>Pyramid</h1>
+    </body>
+     
+</html>	

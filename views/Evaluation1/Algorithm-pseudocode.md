@@ -76,7 +76,7 @@ step 4.5: concatenating character in reverse order using addition assignment ope
 	Declare a function with the name of ReverseString (string) 
 	   if(!string AND string.length < 2 AND typeof string !== 'string') 
     		return "Not valid" 
-	    let ReversedString = ""
+	    DECLARE VARIABLE ReversedString = ""
 	    FOR (let i = string.length - 1; i >= 0; i--) 
 	        ReversedString += string[i]
 	    PRINT ReversedString
@@ -108,12 +108,11 @@ step 8: stop the program.
 Pseudocode :
 
 	BEGIN
-	Declare a function with the name of ReverseWord (string) 
+	DECLARE a function with the name of ReverseWord (string) 
 		if(!string AND string.length < 2 AND typeof string !== 'string') 
     		return "Not valid" 
-		let ReversedWord;
-		ReversedWord = console.log(string.split(" ").reverse().join(""));
-		return ReversedWord
+		DECLARE VARIABLE ReversedWord = console.log(string.split(" ").reverse().join(" "));
+		PRINT ReversedWord
 	CALL the function with input parameter(sentence)
 	END
 
@@ -130,21 +129,19 @@ step 2: Declare a function with the name of Palindrome with parameter.
 
 step 3:	check three condition in if statement first check the input is present or not second check the string length must be greater than 2 and third check the input string is a type of string or not.
 
-step 4:	check three condition in if statement first check the input is present or not and second check the input string is a type of string or not.
+step 4: Inside function Convert lowercase and remove the special characters using replace() method.
 
-step 5: Inside function Convert lowercase and remove the special characters using replace() method.
+step 5: Get the length of the string and stored it in a length variable.
 
-step 6: Get the length of the string and stored it in a length variable.
+step 6: Declare For loop with initialize value i is 0, condition i < length/2 and i is increment by 1.
 
-step 7: Declare For loop with initialize value i is 0, condition i < length/2 and i is increment by 1.
+step 6.1: Create If statement and check the first character is equal to last character and looply. if the character does not matches then return `Not a Palindrome`
 
-step 7.1: Create If statement and check the first character is equal to last character and looply. if the character does not matches then return `Not a Palindrome`
+step 7: After the for loop print "Palindrome". because the for loop if statement for only check the unmatched character is found or not. if none of the character is mismatched then print "palindrome".
 
-step 9: After the for loop print "Palindrome". because the for loop if statement for only check the unmatched character is found or not. if none of the character is mismatched then print "palindrome".
+step 8: call the function with input parameter.
 
-step 10: call the function with input parameter.
-
-step 11: stop the program.
+step 9: stop the program.
 
 
 
@@ -152,13 +149,13 @@ step 11: stop the program.
 
 	BEGIN
 	Declare a function with the name of Palindrome (string) 
-		 if(!string AND string.length < 2 AND typeof string !== 'string') 
+		 IF(!string AND string.length < 2 AND typeof string !== 'string') 
     		return "Not valid" 
-		if(!string AND typeof string !== 'string') 
+		IF(!string AND typeof string !== 'string') 
     		RETURN "Not valid" 
 		PerfectString = string.toLowerCase().replace(/[^A-Za-z0-9]/g, '');
-		var length = PerfectString.length;
-		FOR (let i = 0; i < length/2; i++) 
+		DECLARE INSTANT VARIABLE length = PerfectString.length;
+		FOR (let i = 0; i < round of value downward ( length/2 ); i++) 
 			IF (string[i] !== string[length - 1 - i]) 
 			   RETURN 'not palindrome';
 		RETURN 'palindrome';

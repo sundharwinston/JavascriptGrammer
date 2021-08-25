@@ -1,0 +1,26 @@
+ <%- include('../layouts/header.ejs') %>		<!-- header page included for future use -->
+
+        <script type="text/javascript">
+
+        	//using spread operator
+        	let array1 = [1,2,9,3,5,1,4,5], array2 = [11,54,70,40];
+        	const mergedArray = [...array1, ...array2];
+        	console.log(mergedArray);							// [1, 2, 9, 3, 5, 1, 4, 5, 11, 54, 70, 40]
+
+        	//using concat method
+        	const concatenateArray = array1.concat(array2);
+        	console.log(concatenateArray);						// [1, 2, 9, 3, 5, 1, 4, 5, 11, 54, 70, 40]
+
+
+        	// mutable merge using push method
+			 array1.push(...array2);
+			console.log(array1);
+			console.log(array1.length);				// legth: 12 the length of the array 1 get changed because of mutable merge
+
+        </script>
+    </head>
+    <body>
+        <h1>Merge Two array</h1>
+    </body>
+     
+</html>	

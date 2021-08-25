@@ -1,0 +1,37 @@
+ <%- include('../layouts/header.ejs') %>								<!--  header page included for future use -->
+
+        <script type="text/javascript">
+
+        //Using for loop method	
+    	function reverse (string) {
+			if(!string || string.length < 2 || typeof string !== 'string' || typeof number === 'boolean') 
+				console.log( "Not a valid input"); 
+			else{
+				let ReversedString = ""
+				for(let i = string.length - 1; i >= 0; i--) 
+					ReversedString += string[i]
+				console.log("Using for loop method :" + ReversedString)
+			}
+		}
+		reverse("hello");
+
+
+		//Another method : Using javascript inbuild methods
+    	function inbuiltReverse (string) {
+    		if(!string || string.length < 2 || typeof string !== 'string' || typeof number === 'boolean') 
+				console.log( "Not valid"); 
+			else{
+	    		let changedString = string.split('').reverse().join('');
+	    		console.log("Using Inbuild Reverse method :" + changedString)
+	    	}
+		}
+		inbuiltReverse("hello");
+
+
+        </script>
+    </head>
+    <body>
+        <h1>Reverse a String</h1>
+    </body>
+     
+</html>	

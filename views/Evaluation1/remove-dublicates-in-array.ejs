@@ -1,0 +1,27 @@
+ <%- include('../layouts/header.ejs') %>						<!--  header page included for future use -->
+
+        <script type="text/javascript">
+
+        	//using map method
+        	let arrayData = [1,2,1,3,4,4,3];
+			function findDublicate(data) {
+				let array = [];
+				data.forEach(x => {								// similiar in map method too.only the keyword will change (map)
+					if(!array.includes(x))  array.push(x)
+				});
+				console.log("Using forEach method :")
+				console.log(array);
+			}
+			findDublicate(arrayData); 
+
+
+			// using set method
+			console.log("Using Set method :")
+			console.log([...new Set(arrayData)]);
+        </script>
+    </head>
+    <body>
+        <h1>Remove dublicate values in an array</h1>
+    </body>
+     
+</html>	

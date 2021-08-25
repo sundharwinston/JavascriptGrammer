@@ -1,0 +1,20 @@
+ <%- include('../layouts/header.ejs') %>					<!--  header page included for future use -->
+
+        <script type="text/javascript">
+			let odd,even,number = 20;
+			if(typeof number === 'string' || number.toString().indexOf('.') != -1 || typeof number === 'boolean') {
+				console.log("Not a valid input");
+			}
+			else {
+				for(let i=0; i<= number; i++) {
+					i % 2 ==0 ? even += i : odd += i;
+				}
+				console.log("sum of odd :" + odd, "sum of even :" + even);
+			}
+        </script>
+    </head>
+    <body>
+        <h1>Prime Number</h1>
+    </body>
+     
+</html>	

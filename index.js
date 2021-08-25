@@ -162,6 +162,46 @@ app.get('/compare-array', (req, res)=>{
 app.get('/primenumber', (req, res)=>{
 	res.render('Evaluation1/prime-number');
 });
+app.get('/doublequal-tribleequal', (req, res)=>{
+	res.render('Evaluation1/doublequal-tribleequal');
+});
+app.get('/reverse-string', (req, res)=>{
+	res.render('Evaluation1/reverse-string');
+});
+app.get('/reverse-word', (req, res)=>{
+	res.render('Evaluation1/reverse-word');
+});
+app.get('/palindrome', (req, res)=>{
+	res.render('Evaluation1/palindrome');
+});
+app.get('/foreach-map', (req, res)=>{
+	res.render('Evaluation1/foreach-map');
+});
+app.get('/remove-dublicates-in-array', (req, res)=>{
+	res.render('Evaluation1/remove-dublicates-in-array');
+});
+app.get('/sumof-natural-numbers', (req, res)=>{
+	res.render('Evaluation1/sumof-natural-numbers');
+});
+app.get('/arrayflat', (req, res)=>{
+	res.render('Evaluation1/arrayflat');
+});
+app.get('/generator', (req, res)=>{
+	res.render('Evaluation1/generator');
+});
+app.get('/rightangle-triangle', (req, res)=>{
+	res.render('Evaluation1/rightangle-triangle');
+});
+app.get('/pyramid', (req, res)=>{
+	res.render('Evaluation1/pyramid');
+});
+
+// app.get('/sumof-even-numbers', (req, res)=>{
+// 	res.render('Evaluation1/sumof-evennumbers');
+// });
+// app.get('/compare-oject', (req, res)=>{
+// 	res.render('Evaluation1/oject-compare');
+// });
 
 
 

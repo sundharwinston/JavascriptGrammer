@@ -1,0 +1,30 @@
+ <%- include('../layouts/header.ejs') %>
+
+        <script type="text/javascript">
+
+            //time complexity of forEach and map method
+            let array = [1, 2, 3, 4, 5]
+            console.time("foreach time");
+                array.forEach(value => (value + value) * 10);
+            console.timeEnd("foreach time");
+
+            console.time("map time");
+                array.map(value => ( value + value ) * 10);
+            console.timeEnd("map time");
+	
+
+
+            // Differentiate in return type : foreach returns undefined but map returns a array or value etc. for further operation
+            //once you comment the forEach statement and run the program you will get map data
+            let arrayData = array.forEach(value => value * value).reduce((total, value) => total + value)
+            //Uncaught TypeError: Cannot read property 'reduce' of undefined
+            console.log(arrayData);                                                        
+            let mapData = array.map(value => value * value).reduce((total, value) => total + value)
+            console.log(mapData);
+        </script>
+    </head>
+    <body>
+        <h1>Difference between forEach and map</h1>
+    </body>
+     
+</html>	

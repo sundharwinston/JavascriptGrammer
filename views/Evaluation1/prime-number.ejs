@@ -1,7 +1,19 @@
- <%- include('../layouts/header.ejs') %>
+ <%- include('../layouts/header.ejs') %>		<!-- header page included for future use -->
 
         <script type="text/javascript">
-  
+			let number=11, flag=true; 
+			if(typeof number === 'string' || number.toString().indexOf('.') != -1 || typeof number === 'boolean') {
+				console.log("Not a valid input");
+			}
+			else if(number === 1)
+				console.log("1 is not a prime number");
+			else if(number > 1) {
+				for (let i = 2; i < number; i++)
+					if(number % i == 0)  flag = false ;
+				flag ? console.log("It's a prime number") : console.log("It's not a prime number");
+			}
+			else
+				console.log("Give greater than 1");
         </script>
     </head>
     <body>

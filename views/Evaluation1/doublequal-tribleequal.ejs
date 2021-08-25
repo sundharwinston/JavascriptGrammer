@@ -1,0 +1,21 @@
+ <%- include('../layouts/header.ejs') %>
+
+        <script type="text/javascript">
+			const data1 = 1,data2 = "1";
+			const string = "";
+
+			//double equal check only the data but in trible equal checking it's data type too.
+			console.log(data1 == data2);		//true
+			console.log(data1 === data2);		//false
+
+			//The value of empty string and false is euqal but in strict equal the data type is differ so it return false 
+			console.log(string == false);		//true			
+			console.log(string === false);		//false
+
+        </script>
+    </head>
+    <body>
+        <h1>Difference between Double Equals and Trible equals</h1>
+    </body>
+     
+</html>	
