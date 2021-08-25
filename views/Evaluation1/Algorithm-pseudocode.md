@@ -6,9 +6,9 @@ step 1: Start the program.
 
 step 2: Initialize the variable number and flag = true
 
-step 3: 
+step 3: Check if the given number is string or not. If it string then return not valid
 
-step 4: Check if condition the number greater than 1. If it is true then go to next step
+step 4: Check else if condition the number greater than 1. If it is true then go to next step
 
 step 5: Declare for loop initialize variable i with 2. Repeat the steps until i < number
 
@@ -159,7 +159,7 @@ step 11: stop the program.
 		PerfectString = string.toLowerCase().replace(/[^A-Za-z0-9]/g, '');
 		var length = PerfectString.length;
 		FOR (let i = 0; i < length/2; i++) 
-			IF (str[i] !== str[length - 1 - i]) 
+			IF (string[i] !== string[length - 1 - i]) 
 			   RETURN 'not palindrome';
 		RETURN 'palindrome';
 		}
