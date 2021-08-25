@@ -47,6 +47,10 @@ Source Code : 👉
 - ==  is used for comparing two variables, but it ignores the datatype of variable.
 - === is used for comparing two variables, but this operator also checks datatype and compares two values.
 
+		console.log(2 == '2');				// true
+		console.log(2 === '2');				// false
+		console.log(0 === false);			// false
+
 Source Code : 👉
 
 ## 3. How would you reverse a string in JavaScript?
@@ -68,6 +72,7 @@ step 4.5: concatenating character in reverse order using addition assignment ope
 
 ## Pseudocode :
 
+	BEGIN
 	Declare a function with the name of ReverseString (string) 
 	   if(!string AND string.length < 2 AND typeof string !== 'string') 
     		return "Not valid" 
@@ -88,23 +93,29 @@ step 1: start the program.
 
 step 2: Declare a function with the name of ReverseWord with parameter.
 
-step 3:	Inside function create a variable ReversedWord.
+step 3:	check three condition in if statement first check the input is present or not second check the string length must be greater than 2 and third check the input string is a type of string or not.
 
-step 4: reverse a word using three methods i.e split(), reverse(), join(). Here, split method first seperate the string by space and form a array, In reverse() method reverse the string array and join() method concatenating all of the strings in an array.
+step 4:	Inside function create a variable ReversedWord.
 
-step 5: print the reversed word in a sentence.
+step 5: reverse a word using three methods i.e split(), reverse(), join(). Here, split method first seperate the string by space and form a array, In reverse() method reverse the string array and join() method concatenating all of the strings in an array.
 
-step 6: call the function with input parameter of sentence.
+step 6: print the reversed word in a sentence.
 
-step 7: stop the program.
+step 7: call the function with input parameter of sentence.
+
+step 8: stop the program.
 
 Pseudocode :
 
+	BEGIN
 	Declare a function with the name of ReverseWord (string) 
+		if(!string AND string.length < 2 AND typeof string !== 'string') 
+    		return "Not valid" 
 		let ReversedWord;
 		ReversedWord = console.log(string.split(" ").reverse().join(""));
 		return ReversedWord
 	CALL the function with input parameter(sentence)
+	END
 
 
 Source Code : 👉
@@ -116,6 +127,8 @@ Source Code : 👉
 step 1: start the program.
 
 step 2: Declare a function with the name of Palindrome with parameter.
+
+step 3:	check three condition in if statement first check the input is present or not second check the string length must be greater than 2 and third check the input string is a type of string or not.
 
 step 4:	check three condition in if statement first check the input is present or not and second check the input string is a type of string or not.
 
@@ -137,7 +150,10 @@ step 11: stop the program.
 
 ## Pseudocode :
 
+	BEGIN
 	Declare a function with the name of Palindrome (string) 
+		 if(!string AND string.length < 2 AND typeof string !== 'string') 
+    		return "Not valid" 
 		if(!string AND typeof string !== 'string') 
     		RETURN "Not valid" 
 		PerfectString = string.toLowerCase().replace(/[^A-Za-z0-9]/g, '');
@@ -148,25 +164,75 @@ step 11: stop the program.
 		RETURN 'palindrome';
 		}
 	CALL the function with input parameter(string)
+	END
 
 
 Source Code : 👉
 
 ## 6. Write your own program to explain the difference between forEach and map?
 
-`forEach :`
+`forEach :` 
+
+- The forEach method will execute a function for every item in the array.
+- Each iteration step receives 3 arguments `value, index, object.`
+- If not need new array for another operation go with foreach.
+		
+		Syntax :
+		forEach((element, index, array) => { ... } )
 
 `map :`
+	
+- The map() method calls the provided function once for each element in an array, in order.
+- map() does not change the original array.
+- if we want an alternate new array and do some another operation like reduce and etc. use map method.
+
+		Syntax :
+		map((element, index, array) => { ... } )
+
 
 Source Code : 👉
 
 ## 7. Generate a random number between 1 to 5?
 
 The Math.random() function return random number by the random number generation algorithm. Based on browser engine it varies.
-
+	
+	function RandomNumber(max) {
+	  return Math.floor(Math.random() * max);
+	}
+	RandomNumber(3);
+	
 ## 8. Remove duplicate from the following array?([1,2,9,4,5,8,3,5,1,4,5])
 
- 
+## Algorithm :
+
+step 1: start the program.
+
+step 2: Declare function with name FindDubicate.
+
+step 3: Inside function create an empty array.
+
+step 4: Use map method and inside map method check if the empty array having the looped value or not if it is not then push the value into empty array using if statement and Array push property.
+
+step 5: Repeat the process until the input array index goes to last.
+
+step 6: return removed dublicate array.
+
+step 7: Invoke a function.
+
+step 8: stop the program.
+
+
+## Pseudocode :
+
+	FUNCTION FindDubicate(array) {
+		DECLARE array = []
+		array.map(x => {
+			IF(!array.includes(x))  array.push(x)
+		});
+		RETURN array
+	}
+	FindDubicate([1,2,1,3,4,4,3]) FUNCTION CALL
+
 
 ## 9. Write a program to calculate the sum of the first 10 natural numbers.
 
@@ -185,11 +251,13 @@ step 4: print sum.
 step 5: stop the program.
 
 ## Pseudocode :
-	
-	let sum = 0
+
+	BEGIN
+	INPUT sum = 0
 	FOR (let i=1; i<=10; i++)
 		sum += i;
 	RETURN sum
+	END
 
 ## 10. Write a program to print the sum of the even and odd numbers for a given number?
 (100)
@@ -210,13 +278,15 @@ step 5: stop the program.
 
 ## Pseudocode :
 
-	let odd,even,Number = 20;
+	BEGIN
+	INPUT odd,even,Number = 20;
 	FOR (let i=0;i<= Number; i++)
 		IF (i % 2 ==0)
 			even += i
 		ELSE
 			odd += i
 	RETURN odd,even 
+	END
 
 ## 11. Write a program to merge two arrays? ([1,2,9,3,5,1,4,5], [11,54,70,40])
 
@@ -255,6 +325,7 @@ step 6: stop the program.
 
 ## Pseudocode :
 
+	BEGIN
 	Declare a function with the name of compare (object1,object2) 
 		const object1_key = Object.keys(object1)
 		const object2_key = Object.keys(object2)
@@ -264,6 +335,7 @@ step 6: stop the program.
 			if (object1[key] !== object2[key]) 
 			  	return false;
 	return true;
+	END
 
 
 
@@ -277,22 +349,25 @@ Source Code : 👉
 ## 15. Group by the id of the following array of objects using the Array.reduce method?
 [{id: 1, name: ‘edison’ }, {id: 2, name: ‘Annand’ }, {id: 3, name: ‘Vasnath’}]
 
-## 16. Write a program in Javascript to display the pattern like right angle triangle using an asterisk.The pattern like :
-*
-**
-***
-****
-*****
 
-	The function* declaration ( function keyword followed by an asterisk) defines a generator function, which returns a Generator object
+## 16. Write a program in Javascript to display the pattern like right angle triangle using an asterisk.The pattern like :
+	*
+	**
+	***
+	****
+	*****
+
+	The function* declaration ( function keyword followed by an asterisk) defines a generator function, 
+	which returns a Generator object
 
 Source Code : 👉
 
 ## 17. Write a program in Javascript to make such a pattern like right angle triangle with number increased by 
-1
-2 3
-4 5 6
-7 8 9 10
+
+	1
+	2 3
+	4 5 6
+	7 8 9 10
 
 ## Algorithm :
 
@@ -316,7 +391,8 @@ step 4: return DataFormation variable. Because the triangle formation is stored 
 
 ## Pseudocode :
 
-	let data = 0, DataFormation = ""
+	BEGIN
+	INPUT data = 0, DataFormation = ""
 		FOR (let i = 1; i<5; i++) 
 			FOR (let j = 0;j < i;j++) 
 			   data++
@@ -324,12 +400,12 @@ step 4: return DataFormation variable. Because the triangle formation is stored 
 			   DataFormation +=" "
 			DataFormation +="\n"
 	RETURN DataFormation
+	END
 
 
 Source Code : 👉
 
-## 18. Write a program in Javascript to make such a pattern like a pyramid with numbers
-increased by 1
+## 18. Write a program in Javascript to make such a pattern like a pyramid with numbers increased by 1
 
 		1
 	   2 3
@@ -358,7 +434,8 @@ step 6: stop the program.
 
 ## Pyramid Pseudocode :
 
-	 let DataFormation = "",data=0;
+	BEGIN
+	 INPUT DataFormation = "",data=0;
 	  FOR (let i = 1;i<5;i++) 
 			FOR (let j=5;j>i;j--) 
 		     DataFormation += " ";
@@ -368,6 +445,7 @@ step 6: stop the program.
 		     DataFormation += " ";
 	  DataFormation += "\n";
 	  console.log(DataFormation);
+	  END
 
 
 Source Code : 👉
@@ -394,7 +472,7 @@ step 2: Create two for loop one is for pyramid and another for loop for reciproc
 
 step 3: top initialization of variable DataFormation set to empty string.
 
-step 4: In first for loop is similiar to [Pyramid Pseudocode](#Pyramid-Pseudocode).
+step 4: In first for loop is similiar to Pyramid Pseudocode.
 
 step 5: Declare Second for loop with the similiar logic of looping based on length of row.
 
@@ -412,7 +490,8 @@ step 7: stop the program.
 
 ## Pseudocode :
 
-	let DataFormation = "";
+	BEGIN
+	INPUT DataFormation = "";
 	FOR (let i = 1;i<=5;i++) 
 		FOR (let j=5;j>i;j--) 
 		   DataFormation += " ";
@@ -426,12 +505,15 @@ step 7: stop the program.
 		   DataFormation += "*";
 		DataFormation += "\n";
 	console.log(DataFormation);
+	END
 
 
 Source Code : 👉
 
 ## 20. Explain following terms
-a. console.log :
+
+## console.log :
+
 This Api used to give the output message in browser console. It's a string or object whaterver it is.
 
 	let obj = {name:"javascript",age:12};
@@ -439,7 +521,7 @@ This Api used to give the output message in browser console. It's a string or ob
 	let string = "Hi";
 	console.log(obj,arr,string);				// {name: "javascript", age: 12} (4) [1, 2, 3, 4] "Hi"
 
-b. console.dir :
+## console.dir :
 If you want to look at all the object’s properties and methods,you can use console.dir method. then you can see the contents of child objects too.
 
 	let object = { property1 : 1, property1 : 2, method : function(){} };
@@ -450,7 +532,7 @@ If you want to look at all the object’s properties and methods,you can use con
          property1: 2
         >[[Prototype]]: Object
 
-c. console.count :
+##  console.count :
 - This Api is gives the number of times it get called.
 - If we did not called with parameter of label then it was called with the "default" label.
 
@@ -468,7 +550,8 @@ c. console.count :
 			VM60:3 default: 2
 			VM60:4 javascript
 			VM60:8 default: 3
-d. console.table :
+
+## console.table :
 - This Api method display the data in table format. In this method, one argument is mandatory. the argument is array of object. 
 - The table label format may differ based on formation of array and object.
 
@@ -476,7 +559,7 @@ d. console.table :
 		let lang = [["c", "c++"], ["c#", "Dot net"], ["js", "node js"]];
 		console.table(lang);
 
-e. console.time/timeLog/timeEnd :
+## console.time/timeLog/timeEnd :
 
 The `console.time()` method starts a timer you can use to track how long an operation takes. You give each timer a unique name, and may have up to `10,000 timers running` on a given page. When you call `console.timeEnd()` with the same name, the browser will output the time, in `milliseconds`, that elapsed since the timer was started.
 
@@ -493,7 +576,7 @@ You can track the amount of time between function calls. This can be helpful
 	console.timeEnd(); 								// default: 0.508056640625 ms
 
 
-f. console.trace :
+## console.trace :
 The console.trace() method outputs a stack trace to the Web console.
 
 	function check() {
@@ -510,7 +593,7 @@ The console.trace() method outputs a stack trace to the Web console.
 		check @ VM49:5
 		(anonymous) @ VM49:7
 
-g. console.group/groupEnd
+## console.group/groupEnd
 
 This method creates a new inline group in the Web console log
 
@@ -536,7 +619,7 @@ This method creates a new inline group in the Web console log
 		VM39:8 Back to level 2
 	VM39:10 Back to the outer level
 
-h. console.assert
+## console.assert
 
 This method writes an error message to the console if the assertion is false. If the assertion is true, nothing happens.
 
