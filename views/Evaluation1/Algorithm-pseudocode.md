@@ -40,7 +40,7 @@ Pseudocode :
 		PRINT "Give greater than 0"		
 	END
 
-Source Code : 👉
+Source Code : 👉 https://github.com/sundharwinston/JavascriptGrammer/blob/main/views/Evaluation1/prime-number.ejs
 
 ## 2. What is difference between == and === with an example?
 
@@ -51,7 +51,7 @@ Source Code : 👉
 		console.log(2 === '2');				// false
 		console.log(0 === false);			// false
 
-Source Code : 👉
+Source Code : 👉 https://github.com/sundharwinston/JavascriptGrammer/blob/main/views/Evaluation1/doublequal-tribleequal.ejs
 
 ## 3. How would you reverse a string in JavaScript?
 
@@ -83,7 +83,7 @@ step 4.5: concatenating character in reverse order using addition assignment ope
 	CALL the function with input parameter
 
 
-Source Code : 👉
+Source Code : 👉 https://github.com/sundharwinston/JavascriptGrammer/blob/main/views/Evaluation1/reverse-string.ejs
 
 ## 4. How would you reverse words in a sentence?
 
@@ -117,7 +117,7 @@ Pseudocode :
 	END
 
 
-Source Code : 👉
+Source Code : 👉 https://github.com/sundharwinston/JavascriptGrammer/blob/main/views/Evaluation1/reverse-word.ejs
 
 ## 5. How will you verify a word as a palindrome?
 
@@ -164,7 +164,7 @@ step 9: stop the program.
 	END
 
 
-Source Code : 👉
+Source Code : 👉 https://github.com/sundharwinston/JavascriptGrammer/blob/main/views/Evaluation1/palindrome.ejs
 
 ## 6. Write your own program to explain the difference between forEach and map?
 
@@ -187,7 +187,7 @@ Source Code : 👉
 		map((element, index, array) => { ... } )
 
 
-Source Code : 👉
+Source Code : 👉 https://github.com/sundharwinston/JavascriptGrammer/blob/main/views/Evaluation1/foreach-map.ejs
 
 ## 7. Generate a random number between 1 to 5?
 
@@ -231,7 +231,7 @@ step 8: stop the program.
 	FindDubicate([1,2,1,3,4,4,3]) FUNCTION CALL
 
 
-Source Code : 👉
+Source Code : 👉 https://github.com/sundharwinston/JavascriptGrammer/blob/main/views/Evaluation1/remove-dublicates-in-array.ejs
 
 ## 9. Write a program to calculate the sum of the first 10 natural numbers.
 
@@ -258,7 +258,7 @@ step 5: stop the program.
 	RETURN sum
 	END
 
-Source Code : 👉
+Source Code : 👉 https://github.com/sundharwinston/JavascriptGrammer/blob/main/views/Evaluation1/sumof-natural-numbers.ejs
 
 ## 10. Write a program to print the sum of the even and odd numbers for a given number?
 (100)
@@ -289,7 +289,7 @@ step 5: stop the program.
 	RETURN odd,even 
 	END
 
-Source Code : 👉
+Source Code : 👉 https://github.com/sundharwinston/JavascriptGrammer/blob/main/views/Evaluation1/sumof-evennumbers.ejs
 
 ## 11. Write a program to merge two arrays? ([1,2,9,3,5,1,4,5], [11,54,70,40])
 
@@ -301,6 +301,7 @@ We have two merge action
 - `Mutable merge :`this method merge into an array without creating a new array.
 	- push() method
 
+Source Code : 👉 https://github.com/sundharwinston/JavascriptGrammer/blob/main/views/Evaluation1/merge-array.ejs
 
 ## 12. Remove duplicate from an array of an object by id and name?
 a. [{id: 1, name: ‘Stephen covey’ }, {id: 2, name: ‘Robin Sharma’ }, {id: 3, name:
@@ -310,9 +311,6 @@ a. [{id: 1, name: ‘Stephen covey’ }, {id: 2, name: ‘Robin Sharma’ }, {id
 ## 13. Compare two objects, If all properties are equal return true or return false?
 a. ({id: 1, name: “edison”}, {id: 1, name: “edison”})
 b. ({id: 1, name: “edison”}, {id: 2, name: “edison”})
-
-
-Source Code : 👉
 
 ## Algorithm :
 
@@ -344,7 +342,7 @@ step 6: stop the program.
 	return true;
 	END
 
-Source Code : 👉
+Source Code : 👉 https://github.com/sundharwinston/JavascriptGrammer/blob/main/views/Evaluation1/compare-object.ejs
 
 
 ## 14. Take a multidimensional array and flat the array?[1,4,2,3,[10,20,20], [100,500,700,600],
@@ -352,7 +350,7 @@ Source Code : 👉
 
 	The flat() method creates a new array with all sub-array elements concatenated into it recursively up to the specified depth.
 
-Source Code : 👉
+Source Code : 👉 https://github.com/sundharwinston/JavascriptGrammer/blob/main/views/Evaluation1/arrayflat.ejs
 
 ## 15. Group by the id of the following array of objects using the Array.reduce method?
 [{id: 1, name: ‘edison’ }, {id: 2, name: ‘Annand’ }, {id: 3, name: ‘Vasnath’}]
@@ -368,7 +366,7 @@ Source Code : 👉
 	The function* declaration ( function keyword followed by an asterisk) defines a generator function, 
 	which returns a Generator object
 
-Source Code : 👉
+Source Code : 👉 https://github.com/sundharwinston/JavascriptGrammer/blob/main/views/Evaluation1/generator.ejs
 
 ## 17. Write a program in Javascript to make such a pattern like right angle triangle with number increased by 
 
@@ -411,7 +409,7 @@ step 4: return DataFormation variable. Because the triangle formation is stored 
 	END
 
 
-Source Code : 👉
+Source Code : 👉 https://github.com/sundharwinston/JavascriptGrammer/blob/main/views/Evaluation1/rightangle-triangle.ejs
 
 ## 18. Write a program in Javascript to make such a pattern like a pyramid with numbers increased by 1
 
@@ -456,7 +454,7 @@ step 6: stop the program.
 	  END
 
 
-Source Code : 👉
+Source Code : 👉 https://github.com/sundharwinston/JavascriptGrammer/blob/main/views/Evaluation1/pyramid.ejs
 
 ## 19. Write a program in Javascript to display the pattern like a diamond
 
