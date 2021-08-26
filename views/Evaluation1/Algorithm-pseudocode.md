@@ -101,7 +101,7 @@ step 4:	Inside function create a variable ReversedWord.
 
 step 5: reverse a word using three methods i.e split(), reverse(), join(). Here, split method first seperate the string by space and form a array, In reverse() method reverse the string array and join() method concatenating all of the strings in an array.
 
-step 6: print the reversed word in a sentence.
+step 6: print the reversed word.
 
 step 7: call the function with input parameter of sentence.
 
@@ -194,7 +194,7 @@ Source Code : 👉 https://github.com/sundharwinston/JavascriptGrammer/blob/main
 The Math.random() function return random number by the random number generation algorithm. Based on browser engine it varies.
 	
 	function RandomNumber(min,max) {
-	  return Math.floor(Math.random() * (max - min) + min);
+	  RETURN Math.floor(Math.random() * (max - min) + min);
 	}
 	RandomNumber(1,5);
 	
@@ -547,17 +547,17 @@ step 7: stop the program.
 	INPUT DataFormation = "";
 	FOR (let i = 1;i<=5;i++) 
 		FOR (let j=5;j>i;j--) 
-		   DataFormation += " ";
+		   DataFormation += " "
 		FOR (let k=0;k<i*2-1;k++) 
-		   DataFormation += "*";
-		DataFormation += "\n";
+		   DataFormation += "*"
+		DataFormation += "\n"
 	FOR (let i=1;i<=5-1;i++) 
 		FOR (let j=0;j<i;j++) 
-		   DataFormation += " ";
+		   DataFormation += " "
 		FOR (let k=(5-i)*2-1;k>0;k--) 
-		   DataFormation += "*";
+		   DataFormation += "*"
 		DataFormation += "\n";
-	console.log(DataFormation);
+	console.log(DataFormation)
 	END
 
 

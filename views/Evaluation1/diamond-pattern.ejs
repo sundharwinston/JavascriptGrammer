@@ -1,0 +1,32 @@
+ <%- include('../layouts/header.ejs') %>		<!-- header page included for future use -->
+
+        <script type="text/javascript">
+
+			let DataFormation = "";
+			for (let i = 1;i<=5;i++) {
+				for (let j=5;j>i;j--) {
+				   DataFormation += " ";
+				}
+				for (let k=0;k<i*2-1;k++) {
+				   DataFormation += "*";
+				}
+				DataFormation += "\n";
+			}
+			for (let i=1;i<=5-1;i++) {
+				for (let j=0;j<i;j++) { 
+				   DataFormation += " ";
+				 }
+				for (let k=(5-i)*2-1;k>0;k--) {
+				   DataFormation += "*";
+				}
+				DataFormation += "\n";
+			}
+			console.log(DataFormation);
+
+        </script>
+    </head>
+    <body>
+        <h1>Diamond pattern</h1>
+    </body>
+     
+</html>	

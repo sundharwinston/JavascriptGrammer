@@ -177,6 +177,9 @@ app.get('/palindrome', (req, res)=>{
 app.get('/foreach-map', (req, res)=>{
 	res.render('Evaluation1/foreach-map');
 });
+app.get('/random-number', (req, res)=>{
+	res.render('Evaluation1/random-number');
+});
 app.get('/remove-dublicates-in-array', (req, res)=>{
 	res.render('Evaluation1/remove-dublicates-in-array');
 });
@@ -194,6 +197,9 @@ app.get('/rightangle-triangle', (req, res)=>{
 });
 app.get('/pyramid', (req, res)=>{
 	res.render('Evaluation1/pyramid');
+});
+app.get('/diamond-pattern', (req, res)=>{
+	res.render('Evaluation1/diamond-pattern');
 });
 app.get('/removeduplicate-arrayofobject', (req, res)=>{
 	res.render('Evaluation1/removeduplicate-arrayofobject');
