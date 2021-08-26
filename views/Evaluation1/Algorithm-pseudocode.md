@@ -4,7 +4,7 @@ Algorithm :
 
 step 1: Start the program.
 
-step 2: Initialize the variable number and flag = true
+step 2: Initialize the variable number and assign flag = true
 
 step 3: Check if the given number is string or not. If it string then return not valid
 
@@ -25,8 +25,10 @@ Pseudocode :
 
 	BEGIN
 	INPUT number,flag=true;
-	IF type of number === 'string'
+	IF !string OR string.length < 2 OR typeof string !== 'string' OR typeof number === 'boolean'
 		RETURN 'not valid'
+	ELSE IF number === 1
+		RETURN "1 is not a prime number"
 	ELSE IF  number > 1
 		FOR (let i=2;i<number;i++)
 		   IF (number % i == 0) 
@@ -109,7 +111,7 @@ Pseudocode :
 
 	BEGIN
 	DECLARE a function with the name of ReverseWord (string) 
-		if(!string AND string.length < 2 AND typeof string !== 'string') 
+		if(!string OR string.length < 2 OR typeof string !== 'string' OR typeof number === 'boolean') 
     		return "Not valid" 
 		DECLARE VARIABLE ReversedWord = console.log(string.split(" ").reverse().join(" "));
 		PRINT ReversedWord
@@ -149,10 +151,8 @@ step 9: stop the program.
 
 	BEGIN
 	Declare a function with the name of Palindrome (string) 
-		 IF(!string AND string.length < 2 AND typeof string !== 'string') 
+		 IF(!string OR string.length < 2 OR typeof string !== 'string' OR typeof number === 'boolean') 
     		return "Not valid" 
-		IF(!string AND typeof string !== 'string') 
-    		RETURN "Not valid" 
 		PerfectString = string.toLowerCase().replace(/[^A-Za-z0-9]/g, '');
 		DECLARE INSTANT VARIABLE length = PerfectString.length;
 		FOR (let i = 0; i < round of value downward ( length/2 ); i++) 
@@ -230,6 +230,9 @@ step 8: stop the program.
 	}
 	FindDubicate([1,2,1,3,4,4,3]) FUNCTION CALL
 
+Another Method:
+
+	[...new Set(array)]					// check it out in source code
 
 Source Code : 👉 https://github.com/sundharwinston/JavascriptGrammer/blob/main/views/Evaluation1/remove-dublicates-in-array.ejs
 
@@ -307,6 +310,25 @@ Source Code : 👉 https://github.com/sundharwinston/JavascriptGrammer/blob/main
 a. [{id: 1, name: ‘Stephen covey’ }, {id: 2, name: ‘Robin Sharma’ }, {id: 3, name:
 ‘Tolstoy’}, {id: 3, name: ‘Tolstoy’}, {id: 5, name: ‘James clear’}]
 
+## Algorithm :
+
+step 1: start the program
+
+step 2: Initialize the variable array and uniqueArray
+
+step 3: Use reduce and map method. using reduce method looping the array of object and inside reduce method use map for identify the duplicate id using set method and get the value finally stored it in a variable uniqueArray.
+
+step 4: print the uniqueArray variable.
+
+step 5: stop the program.
+
+## Pseudocode :
+
+		INPUT array ,uniqueArray
+		Array.from(array.reduce( (map,obj) => map.set(obj.id,obj), new Map()).values());
+		PRINT uniqueArray
+
+Source Code : 👉
 
 ## 13. Compare two objects, If all properties are equal return true or return false?
 a. ({id: 1, name: “edison”}, {id: 1, name: “edison”})
@@ -334,10 +356,10 @@ step 6: stop the program.
 	Declare a function with the name of compare (object1,object2) 
 		const object1_key = Object.keys(object1)
 		const object2_key = Object.keys(object2)
-		if (object1_key.length !== object2_key.length) 
+		IF (object1_key.length !== object2_key.length) 
 			return "false";
-		for (let key of keys1) 
-			if (object1[key] !== object2[key]) 
+		FOR (let key of keys1) 
+			IF (object1[key] !== object2[key]) 
 			  	return false;
 	return true;
 	END
@@ -357,6 +379,7 @@ Source Code : 👉 https://github.com/sundharwinston/JavascriptGrammer/blob/main
 
 
 ## 16. Write a program in Javascript to display the pattern like right angle triangle using an asterisk.The pattern like :
+
 	*
 	**
 	***
@@ -365,6 +388,30 @@ Source Code : 👉 https://github.com/sundharwinston/JavascriptGrammer/blob/main
 
 	The function* declaration ( function keyword followed by an asterisk) defines a generator function, 
 	which returns a Generator object
+
+
+## Algorithm :
+
+step 1: start the program.
+
+step 2: Declare a function with * and function name.
+
+step 3: inside a function define yield keywords for printing * `The yield keyword is used to pause and resume a generator function`.
+
+step 4: Declare for of with function call repeately and inside for of print the data from generator function
+
+step 5 stop the program.
+
+## Pseudocode :
+
+	DECLARE function function* generator() {
+	    yield ('*');
+	    yield ('**');
+	    yield ('***');
+	    yield ('****');
+	    yield ('*****');
+	FOR (let data of generator())
+		PRINT data 
 
 Source Code : 👉 https://github.com/sundharwinston/JavascriptGrammer/blob/main/views/Evaluation1/generator.ejs
 
@@ -630,7 +677,7 @@ This method creates a new inline group in the Web console log
 This method writes an error message to the console if the assertion is false. If the assertion is true, nothing happens.
 
 	console.assert(false, 'the word is %s', 'foo');		//show error message
-	console.assert(false, 'the word is %s', 'foo');		// nothing happen
+	console.assert(true, 'the word is %s', 'foo');		// nothing happen
 	let data = 10;
 	console.assert(data % 10 === 0, {number: data, errorMsg: "Not divisible by 10"});
 	

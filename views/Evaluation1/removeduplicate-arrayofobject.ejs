@@ -1,31 +1,19 @@
  <%- include('../layouts/header.ejs') %>		<!-- header page included for future use -->
 
         <script type="text/javascript">
-			let number=11, flag=true; 
-			if(typeof number === 'string' || number.toString().indexOf('.') != -1 || typeof number === 'boolean') {
-				console.log("Not a valid input");
-			}
-			else if(number === 1)
-				console.log("1 is not a prime number");
-			else if(number > 1) {
-				for (let i = 2; i < number; i++)
-					if(number % i == 0)  flag = false ;
-				flag ? console.log("It's a prime number") : console.log("It's not a prime number");
-			}
-			else
-				console.log("Give greater than 1");
 
-
+        	//using reduce and map set method
 			const array = [ {id: 1, name: 'Stephen covey' }, {id: 2, name: 'Robin Sharma' }, {id: 3, name:'Tolstoy'}, {id: 3, name: 'Tolstoy'}, {id: 5, name: 'James clear'} ];
 			// array.map(value =>{
 			// 	console.log(value.id,value.name);
 			// });
 			const uniqueArray = Array.from(array.reduce( (map,obj) => map.set(obj.id,obj), new Map()).values());
 			console.log(uniqueArray);
+
         </script>
     </head>
     <body>
-        <h1>Prime Number</h1>
+        <h1>Remove duplicates in Array of object</h1>
     </body>
      
 </html>	

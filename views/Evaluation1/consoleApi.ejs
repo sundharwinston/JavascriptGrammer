@@ -1,0 +1,84 @@
+ <%- include('../layouts/header.ejs') %>		<!-- header page included for future use -->
+
+        <script type="text/javascript">
+
+        	//constant values in top initialization
+			const object = { name : "javascript", age : 2, native : "india" };	
+			const array  = [1,2,3,4];
+			const string = "string";
+
+			//console.log
+			console.log("log output :")
+			console.log(object);
+			console.log(array,string);
+
+			//console.dir
+			console.log("Dir output :")
+			console.dir(object);
+
+			//console.count	
+			console.log("count output :")
+			function check() {
+				console.count();
+				console.log("javascript");
+			}
+			check();
+			check();
+			console.count();
+
+
+			//console.table
+			console.log("table output :")
+			console.table(object);
+			const lang = [["c", "c++"], ["c#", "Dot net"], ["js", "node js"]];
+			console.table(lang);
+
+
+			//console.time and timeEnd
+			console.time("executionTime");
+			function obj() {
+				for(let i=0; i<array.length; i++) {
+				    array[i] = i;
+				    console.timeLog("executionTime");
+				}
+			}
+			console.time("totaltime");
+				obj();
+			console.timeEnd("totaltime"); 
+
+
+			//console.trace
+			function check() {
+		  		function nested() {
+		    		console.trace();
+		  		}
+		  		nested();
+			}
+			check();
+
+
+			//console.group/groupEnd
+			console.log("This is the outer level");
+			console.group();
+				console.log("Level 2");
+				console.group();
+					console.log("Level 3");
+					console.warn("More of level 3");
+				console.groupEnd();
+				console.log("Back to level 2");
+			console.groupEnd();
+			console.log("Back to the outer level");
+
+
+			//console.assert
+			console.assert(false, 'Nodejs is a %s', 'framework');		//show error message
+			console.assert(true, 'Nodejs is not a %s', 'javascript');		// nothing happen
+			let data = 18;
+			console.assert(data % 10 === 0, {number: data, errorMsg: "Not divisible by 10"});
+        </script>
+    </head>
+    <body>
+        <h1>Prime Number</h1>
+    </body>
+     
+</html>	

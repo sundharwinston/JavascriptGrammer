@@ -195,6 +195,12 @@ app.get('/rightangle-triangle', (req, res)=>{
 app.get('/pyramid', (req, res)=>{
 	res.render('Evaluation1/pyramid');
 });
+app.get('/removeduplicate-arrayofobject', (req, res)=>{
+	res.render('Evaluation1/removeduplicate-arrayofobject');
+});
+app.get('/consoleApi', (req, res)=>{
+	res.render('Evaluation1/consoleApi');
+});
 
 // app.get('/sumof-even-numbers', (req, res)=>{
 // 	res.render('Evaluation1/sumof-evennumbers');
