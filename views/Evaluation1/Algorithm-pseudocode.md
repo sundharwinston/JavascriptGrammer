@@ -141,7 +141,7 @@ step 6.1: Create If statement and check the first character is equal to last cha
 
 step 7: After the for loop print "Palindrome". because the for loop if statement for only check the unmatched character is found or not. if none of the character is mismatched then print "palindrome".
 
-step 8: call the function with input parameter.
+step 8: call the function with input parameter (invoke a function).
 
 step 9: stop the program.
 
@@ -221,13 +221,12 @@ step 8: stop the program.
 
 ## Pseudocode :
 
-	FUNCTION FindDubicate(array) {
+	FUNCTION FindDubicate(array) 
 		DECLARE array = []
 		array.map(x => {
 			IF(!array.includes(x))  array.push(x)
 		});
 		RETURN array
-	}
 	FindDubicate([1,2,1,3,4,4,3]) FUNCTION CALL
 
 Another Method:
@@ -260,6 +259,8 @@ step 5: stop the program.
 		sum += i;
 	RETURN sum
 	END
+
+	math.sum([1,2,3,4,5,6,7,8,9,10])			
 
 Source Code : 👉 https://github.com/sundharwinston/JavascriptGrammer/blob/main/views/Evaluation1/sumof-natural-numbers.ejs
 
@@ -372,6 +373,16 @@ Source Code : 👉 https://github.com/sundharwinston/JavascriptGrammer/blob/main
 
 	The flat() method creates a new array with all sub-array elements concatenated into it recursively up to the specified depth.
 
+## Algorithm :
+
+step 1: start the program.
+
+step 3: pass the array to flat method and stored it in a new variable.
+
+step 4: print the variable.
+
+step 5: stop the program.
+
 Source Code : 👉 https://github.com/sundharwinston/JavascriptGrammer/blob/main/views/Evaluation1/arrayflat.ejs
 
 ## 15. Group by the id of the following array of objects using the Array.reduce method?
@@ -404,7 +415,7 @@ step 5 stop the program.
 
 ## Pseudocode :
 
-	DECLARE function function* generator() {
+	DECLARE function function* generator() 
 	    yield ('*');
 	    yield ('**');
 	    yield ('***');
@@ -492,12 +503,12 @@ step 6: stop the program.
 	  FOR (let i = 1;i<5;i++) 
 			FOR (let j=5;j>i;j--) 
 		     DataFormation += " ";
-		  FOR (let k = 0; k < 2*i-i ; k++) 
-		     data++;
-		     DataFormation += data;
-		     DataFormation += " ";
+		  FOR (let k = 0; k < i ; k++) 
+		     data++
+		     DataFormation += data
+		     DataFormation += " "
 	  DataFormation += "\n";
-	  console.log(DataFormation);
+	  console.log(DataFormation)
 	  END
 
 
@@ -505,16 +516,15 @@ Source Code : 👉 https://github.com/sundharwinston/JavascriptGrammer/blob/main
 
 ## 19. Write a program in Javascript to display the pattern like a diamond
 
-	*
-	***
-	*****
-	*******
-	*********
-	*******
-	*****
-	***
-	*
-
+	     *
+        ***
+       *****
+      *******
+     *********
+      *******
+       *****
+        ***
+         *  			
 
 
 ## Algorithm
@@ -556,7 +566,7 @@ step 7: stop the program.
 		   DataFormation += " "
 		FOR (let k=(5-i)*2-1;k>0;k--) 
 		   DataFormation += "*"
-		DataFormation += "\n";
+		DataFormation += "\n"
 	console.log(DataFormation)
 	END
 

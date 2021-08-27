@@ -1,0 +1,22 @@
+ <%- include('../layouts/header.ejs') %>		<!-- header page included for future use -->
+
+        <script type="text/javascript">
+
+			const data = [{id: 1, name: 'edison' },{id: 1, name: 'js' }, {id: 2, name: 'Annand' }, {id: 3, name: 'Vasnath'}]
+
+			let group = data.reduce((object, value) => {
+			 // console.log("value", value);
+			 // console.log('object', object);
+				 object[value.id] = [...object[value.id] || [], value];
+				 // object[value.name] = [...object[value.name] || [], value];
+				 return object;
+			}, {});
+			console.log("group", group);
+
+        </script>
+    </head>
+    <body>
+        <h1>Prime Number</h1>
+    </body>
+     
+</html>	

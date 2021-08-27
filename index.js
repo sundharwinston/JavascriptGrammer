@@ -201,6 +201,9 @@ app.get('/pyramid', (req, res)=>{
 app.get('/diamond-pattern', (req, res)=>{
 	res.render('Evaluation1/diamond-pattern');
 });
+app.get('/groupby', (req, res)=>{
+	res.render('Evaluation1/groupby');
+});
 app.get('/removeduplicate-arrayofobject', (req, res)=>{
 	res.render('Evaluation1/removeduplicate-arrayofobject');
 });
