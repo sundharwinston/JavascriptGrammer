@@ -340,7 +340,7 @@ step 5: stop the program.
 		Array.from(array.reduce( (map,obj) => map.set(obj.id,obj), new Map()).values());
 		PRINT uniqueArray
 
-Source Code : 👉
+Source Code : 👉 https://github.com/sundharwinston/JavascriptGrammer/blob/main/views/Evaluation1/remove-dublicates-in-array.ejs
 
 ## 13. Compare two objects, If all properties are equal return true or return false?
 a. ({id: 1, name: “edison”}, {id: 1, name: “edison”})
@@ -583,7 +583,7 @@ step 7: stop the program.
 	END
 
 
-Source Code : 👉
+Source Code : 👉 https://github.com/sundharwinston/JavascriptGrammer/blob/main/views/Evaluation1/diamond-pattern.ejs
 
 ## 20. Explain following terms
 
