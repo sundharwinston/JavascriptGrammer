@@ -65,11 +65,15 @@ step 2: Declare a function with the name of ReverseString with parameter.
 
 step 3:	check three condition in if statement first check the input is present or not second check the string length must be greater than 2 and third check the input string is a type of string or not.
 
-step 3: Inside function declare a empty string variable ReversedString. 
+step 4: Inside function declare a empty string variable ReversedString. 
 
-step 4: Declare For loop with initialize i value of string length -1, condition of for loop is until the string index goes zero and finaly with decrement one by i.
+step 5: Declare For loop with initialize i value of string length -1, condition of for loop is until the string index goes zero and finaly with decrement one by i.
 
-step 4.5: concatenating character in reverse order using addition assignment operator.
+step 5.1: concatenating character in reverse order using addition assignment operator.
+
+step 6: print the result.
+
+step 7: stop the program.
 
 
 ## Pseudocode :
@@ -99,11 +103,11 @@ step 3:	check three condition in if statement first check the input is present o
 
 step 4:	Inside function create a variable ReversedWord.
 
-step 5: reverse a word using three methods i.e split(), reverse(), join(). Here, split method first seperate the string by space and form a array, In reverse() method reverse the string array and join() method concatenating all of the strings in an array.
+step 5: reverse a word using three methods i.e split(), reverse(), join(). Here, split method first seperate the string by space and form a array, In reverse() method reverse the string array and join() method concatenating all of the strings in an array and finaly store the string in variable.
 
-step 6: print the reversed word.
+step 6: print the result.
 
-step 7: call the function with input parameter of sentence.
+step 7: call the function with input parameter of sentence (invoke a function).
 
 step 8: stop the program.
 
@@ -129,7 +133,9 @@ step 1: start the program.
 
 step 2: Declare a function with the name of Palindrome with parameter.
 
-step 3:	check three condition in if statement first check the input is present or not second check the string length must be greater than 2 and third check the input string is a type of string or not.
+step 3: Get the string length and stored it in a varible length.
+
+step 3:	check three condition in if statement first check the input is present or not second check the string length must be greater than 2 and third check the input string is a type of string or not. if the condition is true then return not valid and go to step 9. else go to step 4.
 
 step 4: Inside function Convert lowercase and remove the special characters using replace() method.
 
@@ -151,15 +157,20 @@ step 9: stop the program.
 
 	BEGIN
 	Declare a function with the name of Palindrome (string) 
+		DECLARE VARIABLE length = string.length;                       
+	    DECLARE VARIABLE flag = true;
 		 IF(!string OR string.length < 2 OR typeof string !== 'string' OR typeof number === 'boolean') 
     		return "Not valid" 
-		PerfectString = string.toLowerCase().replace(/[^A-Za-z0-9]/g, '');
-		DECLARE INSTANT VARIABLE length = PerfectString.length;
-		FOR (let i = 0; i < round of value downward ( length/2 ); i++) 
-			IF (string[i] !== string[length - 1 - i]) 
-			   RETURN 'not palindrome';
-		RETURN 'palindrome';
-		}
+    	ELSE
+			PerfectString = string.toLowerCase().replace(/[^A-Za-z0-9]/g, '');
+			DECLARE INSTANT VARIABLE P_length = PerfectString.length;
+			FOR (let i = 0; i < round of value downward ( length/2 ); i++) 
+				IF (string[i] !== string[P_length - 1 - i]) 
+				   flag = false
+		IF flag
+			RETURN "palindrome"
+		ELSE RETURN "not a palindrome"
+			
 	CALL the function with input parameter(string)
 	END
 

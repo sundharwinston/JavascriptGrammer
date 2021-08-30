@@ -1381,3 +1381,25 @@ Source Code : 👉 https://github.com/sundharwinston/JavascriptGrammer/blob/main
 JavaScript provides a function JSON.stringify() in order to convert an object or array into JSON string. By converting into JSON string we can directly check if the strings are equal or not.
 
 Source Code : 👉 https://github.com/sundharwinston/JavascriptGrammer/blob/main/views/chapter12/compare-array.ejs
+
+## Functions
+
+two types of functions: 
+- the standard function that can be defined using function keyword 
+    - The name of the function.
+    - A list of parameters to the function, enclosed in parentheses and separated by commas.
+    - The JavaScript statements that define the function, enclosed in curly brackets, {...}
+Syntax : 
+                
+        function functionName(parameter) {
+            //........statements
+        }
+
+- Arrow function 
+Syntax :
+    
+        (parameter)=>{
+            //........statements
+        } 
+
+## Anonymous Functions

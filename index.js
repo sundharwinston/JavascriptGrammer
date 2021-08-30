@@ -214,9 +214,9 @@ app.get('/consoleApi', (req, res)=>{
 // app.get('/sumof-even-numbers', (req, res)=>{
 // 	res.render('Evaluation1/sumof-evennumbers');
 // });
-// app.get('/compare-oject', (req, res)=>{
-// 	res.render('Evaluation1/oject-compare');
-// });
+app.get('/oject-compare', (req, res)=>{
+	res.render('Evaluation1/compare-object');
+});
 
 
 

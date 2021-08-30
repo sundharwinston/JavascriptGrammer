@@ -1,18 +1,26 @@
  <%- include('../layouts/header.ejs') %>		<!-- header page included for future use -->
 
         <script type="text/javascript">
+        	'use strict';
+        	let object1={id: 1, name: "edison"};
+			let object2={id: 1, name: "edisodn"};
+
+			let object3={id: 1, name: "edison"};
+			let object14={id: 2, name: "edison"};
 			function compare(object1,object2)  { 
+				let flag = true;
 				const object1_key = Object.keys(object1)
 				const object2_key = Object.keys(object2)
 				if (object1_key.length !== object2_key.length) 
 					console.log("false");
 				else{
-					for (let key of keys1) 
+					for (let key of object1_key) 
 						if (object1[key] !== object2[key]) 
-						  	console.log("false");
+						  	flag = false;
+					flag ? console.log("true") : console.log("false");
 				}
 			}	
-			compare();
+			compare(object1,object2);
         </script>
     </head>
     <body>
