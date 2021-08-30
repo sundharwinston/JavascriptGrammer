@@ -399,6 +399,7 @@ Source Code : 👉 https://github.com/sundharwinston/JavascriptGrammer/blob/main
 ## 15. Group by the id of the following array of objects using the Array.reduce method?
 [{id: 1, name: ‘edison’ }, {id: 2, name: ‘Annand’ }, {id: 3, name: ‘Vasnath’}]
 
+Source Code : 👉 https://github.com/sundharwinston/JavascriptGrammer/blob/main/views/Evaluation1/groupby.ejs
 
 ## 16. Write a program in Javascript to display the pattern like right angle triangle using an asterisk.The pattern like :
 
