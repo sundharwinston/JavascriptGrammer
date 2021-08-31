@@ -3,23 +3,26 @@
         <script type="text/javascript">
 
         	function diamondPattern(size) {
-        		if(typeof size === 'string' || size.toString().indexOf('.') != -1 || typeof size === 'boolean') {
+        		
+        	function diamondPattern(size) {
+        		if(typeof size === 'string' || size.toString().indexOf('.') != -1 || typeof size === 'boolean') 
 					console.log("Not a valid input");
+				else {
+					let DataFormation = "";
+					for (let i = 1;i<=size;i++) {
+						for (let j=size;j>i;j--) DataFormation += " ";
+						for (let k=0;k<i*2-1;k++) DataFormation += "*";
+					DataFormation += "\n";
+					}
+					for (let i=1;i<=size-1;i++) {
+						for (let j=0;j<i;j++)  DataFormation += " ";
+						for (let k=(size-i)*2-1;k>0;k--) DataFormation += "*";
+					DataFormation += "\n";
+					}
+					console.log(DataFormation);
 				}
-				let DataFormation = "";
-				// for (let i = 1;i<=size;i++) {
-				// 	for (let j=size;j>i;j--) DataFormation += " ";
-				// 	for (let k=0;k<i*2-1;k++) DataFormation += "*";
-				// DataFormation += "\n";
-				// }
-				for (let i=1;i<=size-1;i++) {
-					for (let j=0;j<i;j++)  DataFormation += " ";
-					for (let k=(size-i)*2-1;k>0;k--) DataFormation += "*";
-				DataFormation += "\n";
-				}
-				console.log(DataFormation);
 			}
-			diamondPattern(5)
+			diamondPattern(5);
         </script>
     </head>
     <body>

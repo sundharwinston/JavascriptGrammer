@@ -207,6 +207,9 @@ app.get('/groupby', (req, res)=>{
 app.get('/removeduplicate-arrayofobject', (req, res)=>{
 	res.render('Evaluation1/removeduplicate-arrayofobject');
 });
+app.get('/merge-array', (req, res)=>{
+	res.render('Evaluation1/merge-array');
+});
 app.get('/consoleApi', (req, res)=>{
 	res.render('Evaluation1/consoleApi');
 });

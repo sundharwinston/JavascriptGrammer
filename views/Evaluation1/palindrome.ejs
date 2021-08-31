@@ -8,7 +8,7 @@
                 if(!string || length < 2 || typeof string !== 'string' || typeof number === 'boolean') 
                     console.log( "Not a valid input"); 
                 else{
-                    perfectString = string.toLowerCase().replace(/[^A-Za-z0-9]/g, '');
+                    perfectString = string.toLowerCase();
                     perfectString_length = perfectString.length;
                     for (let i = 0; i < Math.floor(perfectString_length / 2) ; i++) {
                         if (perfectString[i] !== perfectString[perfectString_length - 1 - i]) {       // check first and last string are equal or not
@@ -19,7 +19,7 @@
                 }
             }
 
-             checkPalindrome("ra1ceC1ar");                            // function invocation
+             checkPalindrome("m1o1m");                            // function invocation
 
 
              //using reverse() method

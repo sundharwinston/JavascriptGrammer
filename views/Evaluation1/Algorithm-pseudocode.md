@@ -6,7 +6,7 @@ step 1: Start the program.
 
 step 2: Initialize the variable number and assign flag = true
 
-step 3: Check if the given number is string or not. If it string then return not valid
+step 3: Check if the given number is string or not. If it string then return not valid and go to step 9.
 
 step 4: Check else if condition the number greater than 1. If it is true then go to next step
 
@@ -63,7 +63,7 @@ step 1: start the program.
 
 step 2: Declare a function with the name of ReverseString with parameter.
 
-step 3:	check three condition in if statement first check the input is present or not second check the string length must be greater than 2 and third check the input string is a type of string or not.
+step 3:	check three condition in if statement first check the input is present or not second check the string length must be greater than 2 and third check the input string is a type of string or not. If the condition is true then return not valid and go to step 7.
 
 step 4: Inside function declare a empty string variable ReversedString. 
 
@@ -80,7 +80,7 @@ step 7: stop the program.
 
 	BEGIN
 	Declare a function with the name of ReverseString (string) 
-	   if(!string AND string.length < 2 AND typeof string !== 'string') 
+	   if(!string OR string.length < 2 OR typeof string !== 'string') 
     		return "Not valid" 
 	    DECLARE VARIABLE ReversedString = ""
 	    FOR (let i = string.length - 1; i >= 0; i--) 
@@ -99,26 +99,25 @@ step 1: start the program.
 
 step 2: Declare a function with the name of ReverseWord with parameter.
 
-step 3:	check three condition in if statement first check the input is present or not second check the string length must be greater than 2 and third check the input string is a type of string or not.
+step 3:	check three condition in if statement first check the input is present or not second check the string length must be greater than 2 and third check the input string is a type of string or not. If the condition is true then return not valid and go to step 7. If the condition is false then go to next step.
 
-step 4:	Inside function create a variable ReversedWord.
+step 4:	create a variable ReversedWord. reverse a word using three methods i.e split(), reverse(), join(). Here, split method first seperate the string by space and form a array, In reverse() method reverse the string array and join() method concatenating all of the strings in an array and finaly store the string in variable.
 
-step 5: reverse a word using three methods i.e split(), reverse(), join(). Here, split method first seperate the string by space and form a array, In reverse() method reverse the string array and join() method concatenating all of the strings in an array and finaly store the string in variable.
+step 5: print the result.
 
-step 6: print the result.
+step 6: call the function with input parameter of sentence (invoke a function).
 
-step 7: call the function with input parameter of sentence (invoke a function).
-
-step 8: stop the program.
+step 7: stop the program.
 
 Pseudocode :
 
 	BEGIN
 	DECLARE a function with the name of ReverseWord (string) 
-		if(!string OR string.length < 2 OR typeof string !== 'string' OR typeof number === 'boolean') 
+		IF(!string OR string.length < 2 OR typeof string !== 'string' OR typeof number === 'boolean') 
     		return "Not valid" 
-		DECLARE VARIABLE ReversedWord = console.log(string.split(" ").reverse().join(" "));
-		PRINT ReversedWord
+    	ELSE
+			DECLARE VARIABLE ReversedWord = console.log(string.split(" ").reverse().join(" "));
+			PRINT ReversedWord
 	CALL the function with input parameter(sentence)
 	END
 
@@ -137,7 +136,7 @@ step 3: Get the string length and stored it in a varible length.
 
 step 3:	check three condition in if statement first check the input is present or not second check the string length must be greater than 2 and third check the input string is a type of string or not. if the condition is true then return not valid and go to step 9. else go to step 4.
 
-step 4: Inside function Convert lowercase and remove the special characters using replace() method.
+step 4: Convert lowercase and remove the special characters using replace() method and store the word in variable.
 
 step 5: Get the length of the string and stored it in a length variable.
 

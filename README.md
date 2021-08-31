@@ -84,7 +84,7 @@
     - [for loops](#for-loops)
     - [for...of Loop](#for...of-Loop)
     - [for...in Loops](#for...in-Loops)
-- [chapter 12] Arrays
+- [Chapter 12] Arrays
     - [Array.prototype.sort()](#Array.prototype.sort())
     - [Array.forEach](#Array.forEach)
     - [Array.every](#Array.every)
@@ -95,6 +95,18 @@
     - [Array.flat()](#Array.flat())
     - [String.prototype.matchAll()](#String.prototype.matchAll())
     - [Comparing Two Objects](#Comparing-Two-Objects)
+- [Chapter 13] Functions
+    - [Anonymous Functions](#Anonymous-Functions)
+    - [Assigning Functions To Variables](#Assigning-Functions-To-Variables)
+    - [Origin of this keyword](#Origin-of-this-keyword)
+- [Chapter 14] Higher-order Functions
+    - [Intro](#Intro)
+    - [Iterators](#Iterators)
+    - [Dos and Dont’s](#Dos-and-Dont’s)
+- [Chapter 15] Arrow Functions
+    - [Arrow Functions](#Arrow-Functions)
+- [Chapter 16] Creating HTML Elements Dynamically 
+    -[Dynamic HTML](#Dynamic-HTML)
 
 <!-- <details>
 <summary>Dropdown:</summary>
@@ -1349,8 +1361,8 @@ Examples of `map()` and `flatMap()`
 String.match with string argument only returns the first match. for example :
 
     let string = "Hello";
-    let match = string.match('l');
-    console.log(match[0]);
+    let match = string.match('l');              // ["l", index: 2, input: "Hello", groups: undefined]
+    console.log(match[0]);                      // l
 
 `Adding /g to the mix :`
 
@@ -1402,4 +1414,75 @@ Syntax :
             //........statements
         } 
 
+Source Code : 👉
+
 ## Anonymous Functions
+If The function name is omitted then the function is called as Anonymous function. for example.
+
+    setTimeout(function(){
+        console.log("hello Javascript");
+    },1000)
+
+## Assigning Functions To Variables
+Anonymous functions can be assigned to a variable. If you assigned a anonymous function to a variable then it is also called as named function and you can call the function using their variable for example.
+
+    let functionVariable = function(){
+        console.log("Hey i am anonymous function");
+    }
+    functionVariable();                                 // functin call
+
+You can also pass them to the event functions just by their name.
+    
+    setTimeout(functionVariable,1000);
+
+Source Code : 👉
+
+## Origin of this keyword
+this keyword was meant to point to an instance of an object in class definitions.
+
+Source Code : 👉
+
+## higher-order function
+
+## Intro
+A higher-order function is a function that accepts functions as parameters and/or `returns a function.`The first-order function actions also applies on higher order function.
+
+
+## Iterators
+
+The Array.map method is one of the most common higher-order functions. It takes a function to run on every item in the array. Then it returns a modified copy of the original array.
+
+
+Instead of writing and re-writing a lot of repetitive code. But map,filter,reduce(Higher Order function) makes your code look cleaner.
+
+writing our own map method we now actually understand how it works internally.check it out bellow source code for better understanding.
+Higher order map function source code : 👉
+
+## Dos and Dont’s
+
+- Do use a high-order method for solving the problems it was intended to solve.
+- Understanding the differences between map, filter, reduce matters. This isn’t about just the syntax differences, but `writing efficient` code and `avoiding antipatterns.`
+- `Do not use filter` if you can get away with using `reduce` to accomplish the same action with more efficiency.
+
+## Arrow Functions
+
+Arrow functions were introduced in ES6.
+Instead of defining the function using the function keyword, we can use arrow functions. 
+
+Syntax :
+
+    () => {}                                    // Arrow function syntax
+    let data = () => {}.                        // Assigning arrow function to variable
+    data();                                     // call arrow function
+    let data = () => { return 1; }              // return a value
+    let data = () => 1                          // this is also a return type of value
+
+## Dynamic HTML
+
+The element is not typed directly into your HTML document using HTML tag syntax. Instead, it is created dynamically by your application.
+The method createElement natively exists on the document object. It can be used to create a new element.
+
+    let div = document.createElement("div");                           // create div
+    let span = document.createElement("span");                          
+    let img = document.createElement("img");                           
+    let p = document.createElement("p");                                
