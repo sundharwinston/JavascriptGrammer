@@ -7,3 +7,4 @@ let result = array.map(check);		// using map method call the function recursivel
 
 console.log(result);				// result : [2,3,4,5]
 console.log(array);					// original array	[1,2,3,4] does not affect
+

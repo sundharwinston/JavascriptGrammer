@@ -74,7 +74,7 @@ app.get('/null-undefined', (req, res)=>{
 
 //Chapter 7
 app.get('/const', (req, res)=>{
-	res.render('chapter6/const');
+	res.render('chapter7/const');
 });
 app.get('/variable-type', (req, res)=>{
 	res.render('chapter6/variable-type');
