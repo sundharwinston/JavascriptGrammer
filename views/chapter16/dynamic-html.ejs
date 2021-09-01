@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Dynamic HTML</title>
+        <script type="text/javascript">
+            var paragrah = document.createElement("p"); 
+            var text = document.createTextNode(" This is a new text node"); 
+            paragrah.appendChild(text);
+            console.log(text);
+            document.getElementById("data").appendChild(paragrah); 
+        </script>
+    </head>
+    <body id= "data">
+        <h1>Dynamic HTML</h1>
+    </body>
+     
+</html>	

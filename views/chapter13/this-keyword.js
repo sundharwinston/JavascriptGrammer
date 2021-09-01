@@ -12,6 +12,7 @@ lang.checkfunction();
 
 function check() {
     this.datas = "This value";
+    console.log(datas);
 }
 check();
 // console.log(window.datas);

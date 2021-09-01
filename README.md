@@ -107,6 +107,8 @@
     - [Arrow Functions](#Arrow-Functions)
 - [Chapter 16] Creating HTML Elements Dynamically 
     -[Dynamic HTML](#Dynamic-HTML)
+    -[Setting CSS Style](#Setting-CSS-Style)
+    -[Adding Elements To DOM with .appendChild method](#Adding-Elements-To-DOM-with-.appendChild-method)
 
 <!-- <details>
 <summary>Dropdown:</summary>
@@ -1486,3 +1488,70 @@ The method createElement natively exists on the document object. It can be used 
     let span = document.createElement("span");                          
     let img = document.createElement("img");                           
     let p = document.createElement("p");                                
+
+When adding a new HTML element dynamically, it is usually inserted into another element that already exists in the DOM.
+
+##  Setting CSS Style
+
+We can assign a css syle properties to the dynamic html elements.
+
+    let div = document.createElement("div");                    // create element
+    div.setAttribute("id","element");                           // set id to the element
+    div.setAttribute("class","border");                         // set class name to the element
+    div.style.top = 100px;                                      // assigning css via style property
+    div.style.bottom = 100px;
+    div.style.color = "black";
+
+<span style="border-color: yellow;">Important Note:</span> 
+
+In CSS dash (-) is a legal property name character. But in JavaScript it is always interpreted as the minus sign. Using it as part of a JavaScript identifier name will cause an error. For this reason, single-word CSS property names remain the same – style.position and style.display for example. `Multi-word property names are changed to camel-case format`, where the second word is capitalized. `For example z-index becomes .zIndex, and border-style becomes .borderStyle.`
+
+## Adding Elements To DOM with .appendChild method
+
+Method element. appendChild(object ) inserts an element object into DOM.
+
+`document.body :`
+
+    document.body.appendChild( div );                 // Add element to the dom by inserting it  into <body> tags
+
+`getElementById :`
+
+Insert element into another element by id:
+
+    document.getElementById("id").appendChild( div );
+
+`querySelector :`
+
+The Document method querySelector() returns the first Element within the document that matches the specified selector, or group of selectors. If no matches are found, null is returned.
+
+    var element = document.querySelector("p");              // return first paragraph tag
+
+## Writing A Function To Create Elements
+
+Writing your own functions is fun. And sometimes necessary. In this section we will write our own function that makes it easy to create HTML elements dynamically.
+
+`Function Parameters :`
+
+    let element = (id,right,left,bottom,color) => {             // function parameter
+        // body of the function
+    }
+    element('id-1',10,1,100,'black');                           // functionn invocation
+
+Bellow are UI elements pixel-perfect precision.
+
+<div align="center">
+    <img src="images/ui-style.png" width="650" alt="ui-style-Img">
+</div>
+
+## Creating objects using function constructors
+
+    function lang(name) {                            // function definition
+        this.name = name;
+        this.prg = function() {
+            return this.name;
+        }
+    }
+    let js = new lang('javascript');                // initiate object
+    let java = new lang('java');
+
+In JavaScript programs Objects and Arrays are created all the time. Imagine if you instantiated 10000 or even 100000 objects of a particular type, each storing a copy of the same exact method. This is rather wasteful. Instead of using this we can use Native functions like Array.toString().

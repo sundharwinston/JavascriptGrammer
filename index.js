@@ -158,6 +158,13 @@ app.get('/compare-array', (req, res)=>{
 });
 
 
+// Chapter 16
+
+app.get('/dynamic-html', (req, res)=>{
+	res.render('chapter16/dynamic-html');
+});
+
+
 //Evaluation 1
 app.get('/primenumber', (req, res)=>{
 	res.render('Evaluation1/prime-number');
@@ -220,6 +227,9 @@ app.get('/consoleApi', (req, res)=>{
 app.get('/oject-compare', (req, res)=>{
 	res.render('Evaluation1/oject-compare');
 });
+
+
+
 
 
 
