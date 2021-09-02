@@ -29,7 +29,7 @@ step 4: stop the program.
 			flag === 2 ? PRINT i : ""
 	END FOR
 
-Source Code : 👉
+Source Code : 👉 https://github.com/sundharwinston/JavascriptGrammer/blob/main/views/Evaluation2/primenumber.js
 
 
 ## 2. From two sorted arrays, how would you find the common numbers?
@@ -71,7 +71,7 @@ step 5: stop the program.
          END FOR
      END FOR
 
-Source Code : 👉
+Source Code : 👉 https://github.com/sundharwinston/JavascriptGrammer/blob/main/views/Evaluation2/common-number.js
 
 ## 3.Explain about function Anatomy, Anonymous function and Assigning function to a variable with an example?
 
@@ -79,7 +79,7 @@ Source Code : 👉
 
 - The function having function keyword and followed by function name with or without parameter. The function block is enclosed with brackets {}.
 
-Source Code : 👉
+Source Code : 👉 https://github.com/sundharwinston/JavascriptGrammer/blob/main/views/Evaluation2/function-anatomy.js
 
 `Anonymous function :`
 
