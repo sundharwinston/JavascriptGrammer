@@ -94,7 +94,7 @@ Source Code : 👉
 			// function body
 		}
 
-Source Code : 👉
+Source Code : 👉 https://github.com/sundharwinston/JavascriptGrammer/blob/main/views/Evaluation2/anonymous-function.js
 
 `Assigning function to a variable :`
 
@@ -109,7 +109,7 @@ Anonymous functions can be assigned to a variable. If you assigned a anonymous f
 	}
 	variable();
 
-Source Code : 👉
+Source Code : 👉 https://github.com/sundharwinston/JavascriptGrammer/blob/main/views/Evaluation2/assign-functionto-variable.js
 
 ## 4. Show an example of Safeguarding function parameters?
 
@@ -141,8 +141,8 @@ step 5: stop the program
 	    PRINT {message} AND {user}
 	lang('Javascript', check);
 
-Source Code : 👉
-
+Source Code : 👉 https://github.com/sundharwinston/JavascriptGrammer/blob/main/views/Evaluation2/safeguarde-function.js
+ 
 ## 5. Explain `this` keyword with an example?
 
 - The JavaScript `this` keyword refers to the object it belongs to i.e The `this` keyword references the object, which is executing the current function.
@@ -176,7 +176,7 @@ step 7: stop the program.
 	PRINT lang
 
 
-Source Code : 👉
+Source Code : 👉 https://github.com/sundharwinston/JavascriptGrammer/blob/main/views/Evaluation2/this-keyword.js
 
 ## 6. How `this` inside the function and class?
 
@@ -214,7 +214,8 @@ step 5: stop the program.
 	END CLASS
 	DECLARE programming = OBJECT lang("Javascript",1995)
 	programming.check()
-
+	
+Source Code : 👉 https://github.com/sundharwinston/JavascriptGrammer/blob/main/views/Evaluation2/this-In-class.js
 
 `In Function :`
 
@@ -246,7 +247,7 @@ step 6: stop the program.
 		go();          
 		go.call(obj);  
 
-Source Code : 👉
+Source Code : 👉 https://github.com/sundharwinston/JavascriptGrammer/blob/main/views/Evaluation2/this-in-function.js
 
 ## 7. Difference between map, reduce and filter methods? With an example
 
@@ -273,6 +274,7 @@ step 4: print the result
     DECLARE result = array.map(x => x + 1);
     PRINT result
 
+Source Code : 👉 https://github.com/sundharwinston/JavascriptGrammer/blob/main/views/Evaluation2/map.js
 
 `reduce :`
 
@@ -309,6 +311,7 @@ step 5: stop the program.
 	})
 	PRINT result
 
+Source Code : 👉 https://github.com/sundharwinston/JavascriptGrammer/blob/main/views/Evaluation2/reduce.js
 
 `filter :`
 
@@ -339,7 +342,7 @@ step 5: stop the program.
     DECLARE result = words.filter(word => word.length > 6);
     PRINT result
 
-Source Code : 👉
+Source Code : 👉 https://github.com/sundharwinston/JavascriptGrammer/blob/main/views/Evaluation2/filter.js
 
 ## 8. Count Total number of zeros from 1 up to 50
 
@@ -381,7 +384,7 @@ step 4: stop the program.
 	END FOR
 	PRINT count;
 
-Source Code : 👉
+Source Code : 👉 https://github.com/sundharwinston/JavascriptGrammer/blob/main/views/Evaluation2/zeros-count.js
 
 ## 9. The following array of numbers show the missing number? ([1,2,3,5,6])
 
@@ -416,7 +419,7 @@ step 7: stop the program.
 	})
 	PRINT result
 
-Source Code : 👉
+Source Code : 👉 https://github.com/sundharwinston/JavascriptGrammer/blob/main/views/Evaluation2/missingNumbers-inArray.js
 
 ## 10. Write a program for calculating age using Date of birth? (1990)
 
@@ -444,7 +447,7 @@ step 7: stop the program.
 	age = year- birthYear;
 	PRINT AGE
 
-Source Code : 👉
+Source Code : 👉 https://github.com/sundharwinston/JavascriptGrammer/blob/main/views/Evaluation2/calculate-age.js
 
 
 ## 11. In the Javascript function, what are the differences between call by value and reference?
@@ -481,7 +484,7 @@ step 6: stop the program.
 	callByValue(first_var,second_var); 
 	PRINT (first_var,second_var);
 
-Source Code : 👉
+Source Code : 👉 https://github.com/sundharwinston/JavascriptGrammer/blob/main/views/Evaluation2/callby-value-reference.js
 
 `In pass by reference :`
 
@@ -513,7 +516,7 @@ step 6: stop the program.
 	callByReference(varObj) 
 	PRINT (varObj);
 
-Source Code : 👉
+Source Code : 👉 https://github.com/sundharwinston/JavascriptGrammer/blob/main/views/Evaluation2/callby-value-reference.js
 
 ## 12. What is Arity in Javascript? Explain with a real time example.
 
@@ -544,7 +547,7 @@ step 6: stop the program.
 	DECLARE arity = lang.length
 	PRINT arity
 
-Source Code : 👉
+Source Code : 👉 https://github.com/sundharwinston/JavascriptGrammer/blob/main/views/Evaluation2/arity.js
 
 ## 13. What is Currying in Javascript? Explain with a real time example.
 
@@ -572,7 +575,7 @@ step 6: stop the program.
             RETURN height * width * length;
 	PRINT volume(11)(2)(3));
 
-Source Code : 👉
+Source Code : 👉 https://github.com/sundharwinston/JavascriptGrammer/blob/main/views/Evaluation2/currying.js
 
 ## 14. What is ES6?
 
@@ -614,3 +617,4 @@ examples
 			console.log("Hi");				// Error : check is not a function
 		}
 
+Source Code : 👉 https://github.com/sundharwinston/JavascriptGrammer/blob/main/views/Evaluation2/difference-function-variableAssignFunction.js
