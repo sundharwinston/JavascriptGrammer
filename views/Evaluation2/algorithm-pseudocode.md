@@ -40,7 +40,7 @@ step 1: start the program.
 
 step 2: declare a two variable s_length and h_length for storing length of the array.
 
-step 3: check first array.length > second array.length if the condition is true then store greater length and smaller length.
+step 3: check first array.length > second array.length if the condition is true then store greater length and smaller length to variable. if the condition faild then go to else statement and store greater length and smaller length.
 
 step 4: declare for loop with initialize variable i = 0 , condition i<= greater length and i incremented by one.
 
@@ -53,19 +53,23 @@ step 5: stop the program.
 
 ## Pseudocode :
 
-		DECLARE firstArray = [1,2,3,4,5,6], secondArray = [4,5,6,7];
-        DECLARE smallLength,greaterLength,i,j;
-        IF (firstArray.length > secondArray.length) 
-            greaterLength =  firstArray.length;  
-            smallLength =  secondArray.length; 
-        END IF 
-        FOR ( i = 0; i < greaterLength; i++)
-            FOR ( j=0; j < smallLength; j++) 
-                IF (firstArray[i] == secondArray[j])
-                    PRINT secondArray[j];
-                END IF
-             END FOR
+	DECLARE firstArray = [1,2,3,4,5,6], secondArray = [4,5,6,7];
+    DECLARE smallLength,greaterLength,i,j;
+    IF (firstArray.length > secondArray.length) 
+        greaterLength =  firstArray.length;  
+        smallLength =  secondArray.length; 
+    END IF 
+    ELSE
+		greaterLength = secondArray.length; 
+	    smallLength = firstArray.length;  
+    END ELSE
+    FOR ( i = 0; i < greaterLength; i++)
+        FOR ( j=0; j < smallLength; j++) 
+            IF (firstArray[i] == secondArray[j])
+                PRINT secondArray[j];
+            END IF
          END FOR
+     END FOR
 
 Source Code : 👉
 
@@ -165,7 +169,7 @@ step 7: stop the program.
 ## Pseudocode :
 
 	DECLARE data = 3
-	ASSIGN this.lang = "MDN"
+	ASSIGN this.lang = "Javascript"
 	PRINT ( this === window )
 	PRINT window.data
 	PRINT window.lang
