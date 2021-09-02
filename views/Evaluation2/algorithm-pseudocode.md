@@ -255,10 +255,77 @@ Source Code : 👉
 		Syntax :
 		map((element, index, array) => { ... } )
 
+## Algorithm :
+
+step 1: start the program.
+
+step 2: declare an array with values.
+
+step 3: increment one in each value of array using map method and store the value in variable map. It is in the form of array
+
+step 4: print the result
+
+
+## Pseudocode :
+
+    DECLARE array = [1, 4, 9, 16];
+    DECLARE result = array.map(x => x + 1);
+    PRINT result
+
+
+
 `reduce :`
+
 - The reduce() method applies a reducer function to each array element and returns a single value.
+- The reduce function having callback params.
+	- accumulator
+	- currentValue like.
+	- initialValue 
+
+## Algorithm :
+
+step 1: start the program.
+
+step 2: declare on array with values.
+
+step 3: get the sum of array using reduce method. Use callback parameter as accumulator and current value. 
+
+step 3.1: inside the reduce method write sum logics and return the value. it's goint to stored in accumulator.
+
+step 4: print the result.
+
+step 5: stop the program.
+
+## Pseudocode :
+		DECLARE array = [1,2,3,4];
+		DECLARE result = array.reduce((acc,value) => {
+			return acc+value;
+		})
+		PRINT result
+
 
 `filter :`
+
+- The filter() method creates a new array with all elements that pass the test implemented by the provided function.
+- It does not affect original array.
+
+## Algorithm :
+
+step 1: start the program.
+
+step 2: declare an array with string values or numbers type.
+
+step 3: using filter method check the condition if the word length is more than 6 then the word is stored in a variable in the form of array.
+
+step 4: print the result.
+
+step 5: stop the program.
+
+## Pseudocode :
+
+		DECLARE words = ['do', 'limit', 'come', 'beautiful', 'destruction', 'present'];
+	    DECLARE result = words.filter(word => word.length > 6);
+	    PRINT result
 
 Source Code : 👉
 
@@ -512,6 +579,7 @@ examples
 `named function :`
 
 - The function having function keyword and followed by function name with or without parameter. The function block is enclosed with brackets {}.
+- function hoisting is possible.
 		
 		check();
 		function check() {
@@ -522,6 +590,7 @@ examples
 `Assigning functions to variable :`
 
 - Anonymous functions can be assigned to a variable. If you assigned a anonymous function to a variable then it is also called as named function and you can call the function using that variable with parentheses.
+- function cannot be hoisted.
 
 		check();
 		var check = function() {
