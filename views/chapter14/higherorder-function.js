@@ -1,4 +1,4 @@
-function map(array) {
+function map(array) {										// working logics of map function
 	let copy =[];
 	for(let index = 0; index < array.length; index++){
 		let original = array[index];
