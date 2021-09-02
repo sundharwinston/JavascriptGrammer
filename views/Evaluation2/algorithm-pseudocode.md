@@ -389,28 +389,33 @@ Source Code : 👉
 
 step 1: start the program.
 
-step 2: declare a array, i and declare `first` variable and assign a first value of array.
+step 2: declare a variable j=0, empty and assign empty array, array with initial value of [1,2,3,5,6].
 
-step 3: declare for loop with initialize variable i = 0 , condition i<= length of array and i incremented by one.
+step 3: declare for loop with initialize variable i = array[0] , condition i<= array length -1 and i incremented by one.
 
-step 3.1: check if condition, if the zeroth index value of array is not equal to variable first if it is true then print first variable and go to step 3.2
+step 3.1: inside the loop assign value to empty array from starting value to end value of an given array.
 
-step 3.2: increment the first variable by one.
+step 4: after creating the empty array form an single array that containing both given array and total value containing empty array.
 
-step 4: continue the step 3 until the for loop condtion faild.
+step 5: get the mismatched element in an array using filter method. compare two array, if the element does not containing in any one of the array then the element return to an new array.
 
-step 5 stop the program.
+step 6: print the array.
+
+step 7: stop the program.
 
 ## Pseudocode :
 
-	DECLARE array = [1,2,3,5,5],i.
-	DECLARE first = array[0]
-	FOR (i=0 ; i < LENGTH of array; i++)
-		IF (array[i] !== first)
-			PRINT first
-		END IF
-		first++;
+	DECLARE array = [1,2,3,5,6],empty=[],j=0;
+	FOR ( i=array[0]; i<= array[array.length-1] ;i++) {
+		empty[j] = i;
+		j++;
 	END FOR
+	spread = [...array,...empty];
+	result =  spread.filter(number => {
+		RETURN !(array.includes(number) && empty.includes(number));
+	})
+	PRINT result
+
 Source Code : 👉
 
 ## 10. Write a program for calculating age using Date of birth? (1990)
