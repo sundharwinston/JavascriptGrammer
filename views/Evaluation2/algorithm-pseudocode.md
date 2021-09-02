@@ -4,7 +4,7 @@
 
 step 1: start the program.
 
-step 2: declare a variable i,j and range given by user.
+step 2: declare a variable i,j and range. range variable is store the input value given by user.
 
 step 3: declare for loop with initialize variable i = 0 , condition i<=200 and i incremented by one.
 
@@ -216,8 +216,6 @@ step 5: stop the program.
 	programming.check()
 
 
-
-
 `In Function :`
 
 - The value of this is dependent on how the function is called.
@@ -269,13 +267,11 @@ step 3: increment one in each value of array using map method and store the valu
 
 step 4: print the result
 
-
 ## Pseudocode :
 
     DECLARE array = [1, 4, 9, 16];
     DECLARE result = array.map(x => x + 1);
     PRINT result
-
 
 
 `reduce :`
@@ -285,6 +281,11 @@ step 4: print the result
 	- accumulator
 	- currentValue like.
 	- initialValue 
+
+		Syntax :
+		reduce((accumulator, currentValue, currentIndex, array) => {
+			// statements 
+		}, initialValue)
 
 ## Algorithm :
 
@@ -301,17 +302,24 @@ step 4: print the result.
 step 5: stop the program.
 
 ## Pseudocode :
-		DECLARE array = [1,2,3,4];
-		DECLARE result = array.reduce((acc,value) => {
-			return acc+value;
-		})
-		PRINT result
+
+	DECLARE array = [1,2,3,4];
+	DECLARE result = array.reduce((acc,value) => {
+		return acc+value;
+	})
+	PRINT result
 
 
 `filter :`
 
 - The filter() method creates a new array with all elements that pass the test implemented by the provided function.
 - It does not affect original array.
+
+		Syntax :
+		filter((element, index, array) => { 
+			// statements
+		})
+
 
 ## Algorithm :
 
@@ -327,9 +335,9 @@ step 5: stop the program.
 
 ## Pseudocode :
 
-		DECLARE words = ['do', 'limit', 'come', 'beautiful', 'destruction', 'present'];
-	    DECLARE result = words.filter(word => word.length > 6);
-	    PRINT result
+	DECLARE words = ['do', 'limit', 'come', 'beautiful', 'destruction', 'present'];
+    DECLARE result = words.filter(word => word.length > 6);
+    PRINT result
 
 Source Code : 👉
 
@@ -339,7 +347,7 @@ Source Code : 👉
 
 step 1: start the program.
 
-step 2: declare a variable count,i,j and k.
+step 2: declare a variable count,i,j and k and range. range variable is the input from user
 
 step 3: declare for loop with initialize variable i = 1 , condition i <= 50 and i incremented by one.
 
@@ -360,8 +368,8 @@ step 4: stop the program.
 
 ## Pseudocode :
 
-	DECLARE count = 0,i,j,k
-	FOR (i=1; i<=50; i++)
+	DECLARE count = 0,i,j,k,range = 50
+	FOR (i=1; i<=range; i++)
 		j = i;
 		WHILE ( j )
 			k = j % 10;
@@ -525,11 +533,11 @@ step 6: stop the program.
 
 ## Pseudocode: 
 
-		FUNCTION lang(l1,l2,l3,l4) 
-			PRINT arguments
-			PRINT l1,l2,l3,l4
-		DECLARE arity = lang.length
-		PRINT arity
+	FUNCTION lang(l1,l2,l3,l4) 
+		PRINT arguments
+		PRINT l1,l2,l3,l4
+	DECLARE arity = lang.length
+	PRINT arity
 
 Source Code : 👉
 
