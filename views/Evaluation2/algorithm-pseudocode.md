@@ -65,7 +65,7 @@ step 5: stop the program.
     END ELSE
     FOR ( i = 0; i < greaterLength; i++)
         FOR ( j=0; j < smallLength; j++) 
-            IF (firstArray[i] == secondArray[j])
+            IF (firstArray[i] === secondArray[j])
                 PRINT secondArray[j];
             END IF
          END FOR
@@ -123,13 +123,15 @@ step 2: declare a function with name check.inside a function return one message.
 
 step 3: declare another one function name of lang with two parameter.
 
-step 3.1: call the function check using function parameter and store the data in variable.
+step 3.1: inside a function check if type of parameter is function or not. if it is a function then go to step 4.2. else go to step 5.
 
-step 3.2: print the data that is stored in variable.
+step 3.2: call the function check using function parameter and store the data in variable.
+
+step 3.3: print the data that is stored in variable.
 
 step 4: invoke a function with two parameter one is value and another one parameter is function name.
 
-step 5: stop the program
+step 5: stop the program.
 
 
 ## Pseudocode :
@@ -137,8 +139,10 @@ step 5: stop the program
 	FUNCTION check() 
 	    RETURN 'Hi'
 	FUNCTION lang(user, function)
-	    const message = function()
-	    PRINT {message} AND {user}
+	    IF (typeof function == 'function')
+	    	const message = function()
+	    	PRINT {message} AND {user}
+	    END IF
 	lang('Javascript', check);
 
 Source Code : 👉 https://github.com/sundharwinston/JavascriptGrammer/blob/main/views/Evaluation2/safeguarde-function.js
