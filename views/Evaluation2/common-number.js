@@ -10,7 +10,7 @@ if (firstArray.length > secondArray.length) {
 }
 for ( i = 0; i < greaterLength; i++) {
     for ( j=0; j < smallLength; j++) {
-        if (firstArray[i] == secondArray[j])
+        if (firstArray[i] === secondArray[j])
             console.log(secondArray[j]);
      }
  }
