@@ -14,3 +14,10 @@ for ( i = 0; i < greaterLength; i++) {
             console.log(secondArray[j]);
      }
  }
+
+
+// Using Higher order function
+var filteredArray = firstArray.filter(function(n) {
+    return secondArray.indexOf(n) !== -1;
+});
+console.log(filteredArray);
