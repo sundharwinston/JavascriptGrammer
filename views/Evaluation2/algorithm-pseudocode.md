@@ -423,6 +423,12 @@ step 7: stop the program.
 	})
 	PRINT result
 
+Note :
+
+	The `Array.prototype.includes()` method was introduced in ECMAScript 6. This method is used to find out whether the element is included in the array or not. It returns a 	  `boolean value — true or false`
+
+	The `Array.prototype.indexOf()` to find out whether the element is present in the array or not. `But it doesn’t return a boolean`. It returns the first index of the        element found in the array, or it will `return -1`
+
 Source Code : 👉 https://github.com/sundharwinston/JavascriptGrammer/blob/main/views/Evaluation2/missingNumbers-inArray.js
 
 ## 10. Write a program for calculating age using Date of birth? (1990)
