@@ -96,6 +96,8 @@
     - [String.prototype.matchAll()](#String.prototype.matchAll())
     - [Comparing Two Objects](#Comparing-Two-Objects)
 - [Chapter 13] Functions
+    - [Functions](#Functions)
+    - [Parameter Vs Arguments](#Parameter-Vs-Arguments)
     - [Anonymous Functions](#Anonymous-Functions)
     - [Assigning Functions To Variables](#Assigning-Functions-To-Variables)
     - [Origin of this keyword](#Origin-of-this-keyword)
@@ -106,9 +108,14 @@
 - [Chapter 15] Arrow Functions
     - [Arrow Functions](#Arrow-Functions)
 - [Chapter 16] Creating HTML Elements Dynamically 
-    -[Dynamic HTML](#Dynamic-HTML)
-    -[Setting CSS Style](#Setting-CSS-Style)
-    -[Adding Elements To DOM with .appendChild method](#Adding-Elements-To-DOM-with-.appendChild-method)
+    - [Dynamic HTML](#Dynamic-HTML)
+    - [Setting CSS Style](#Setting-CSS-Style)
+    - [Adding Elements To DOM with .appendChild method](#Adding-Elements-To-DOM)
+    - [Writing A Function To Create Elements](#Writing-A-Function-To-Create-Elements)
+    - [Creating objects using function constructors](#Creating-objects-using-function-constructors)
+- [Chapter 17] Prototype
+    - [Prototype](#Prototype)
+
 
 <!-- <details>
 <summary>Dropdown:</summary>
@@ -1416,6 +1423,12 @@ Syntax :
             //........statements
         } 
 
+## Parameter Vs Arguments :
+
+<div align="center">
+    <img src="images/arguments.jpg" width="650" alt="arguments-Img">
+</div>
+
 Source Code : 👉
 
 ## Anonymous Functions
@@ -1506,6 +1519,8 @@ We can assign a css syle properties to the dynamic html elements.
 
 In CSS dash (-) is a legal property name character. But in JavaScript it is always interpreted as the minus sign. Using it as part of a JavaScript identifier name will cause an error. For this reason, single-word CSS property names remain the same – style.position and style.display for example. `Multi-word property names are changed to camel-case format`, where the second word is capitalized. `For example z-index becomes .zIndex, and border-style becomes .borderStyle.`
 
+
+## Adding-Elements-To-DOM
 ## Adding Elements To DOM with .appendChild method
 
 Method element. appendChild(object ) inserts an element object into DOM.
@@ -1555,3 +1570,6 @@ Bellow are UI elements pixel-perfect precision.
     let java = new lang('java');
 
 In JavaScript programs Objects and Arrays are created all the time. Imagine if you instantiated 10000 or even 100000 objects of a particular type, each storing a copy of the same exact method. This is rather wasteful. Instead of using this we can use Native functions like Array.toString().
+
+## Prototype
+A JavaScript prototype is used to add new properties and methods to an existing object constructor.

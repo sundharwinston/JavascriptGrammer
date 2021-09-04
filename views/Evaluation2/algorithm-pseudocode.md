@@ -425,9 +425,9 @@ step 7: stop the program.
 
 Note :
 
-	The `Array.prototype.includes()` method was introduced in ECMAScript 6. This method is used to find out whether the element is included in the array or not. It returns a 	  `boolean value — true or false`
+	The Array.prototype.includes() method was introduced in ECMAScript 6. This method is used to find out whether the element is included in the array or not. It returns a boolean value — true or false.
 
-	The `Array.prototype.indexOf()` to find out whether the element is present in the array or not. `But it doesn’t return a boolean`. It returns the first index of the        element found in the array, or it will `return -1`
+	The Array.prototype.indexOf() to find out whether the element is present in the array or not. But it doesn’t return a boolean`. It returns the first index of the element found in the array, or it will return -1.
 
 Source Code : 👉 https://github.com/sundharwinston/JavascriptGrammer/blob/main/views/Evaluation2/missingNumbers-inArray.js
 
@@ -602,6 +602,9 @@ Source Code : 👉 https://github.com/sundharwinston/JavascriptGrammer/blob/main
 `Anonymous function :`
 
 If The function name is omitted then the function is called as Anonymous function. for example.
+
+- If the program no name is needed and the function is only ever called in one place, then don't need for declaring a function with name.
+- The code looks readable when the developer/tester testing the code. Because the function in inline you didn't go and find the function definition and all.
 
 ## 16. List the differences between named function and assigning functions to variable with
 examples
