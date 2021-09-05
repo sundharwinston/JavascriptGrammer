@@ -1,13 +1,13 @@
 // Call by value
 let first = 1,second = 2;
 function callByValue(first,second) {
-	first_var = 100; 
-	second_var = 200; 
-	console.log(first_var,second_var);						// print the changed value 
+	first = 100; 
+	second = 200; 
+	console.log(first,second);								// print the changed value 
 }
-console.log("Before call :" + first,second);
+console.log(`Before calls : ${first} ${second}`);
 callByValue(first,second); 									// function invocation
-console.log("After call :" + first,second);
+console.log(`After call : ${first} ${second}`);
 
 
 

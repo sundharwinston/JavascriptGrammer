@@ -6,28 +6,34 @@ step 1: start the program.
 
 step 2: declare a variable i,j and range. range variable is store the input value given by user.
 
-step 3: declare for loop with initialize variable i = 0 , condition i<=200 and i incremented by one.
+step 3:  Check some valildation if the given range is string or not. If it is string or boolean then return not valid and go to step 5.
 
-step 3.1: declare variable flag with initial value of zero.
+step 4: declare for loop with initialize variable i = 0 , condition i<=200 and i incremented by one.
 
-step 3.2: declare nested for loop with initialize variable j=1, condition j <=i and j incremented by one.
+step 4.1: declare variable flag with initial value of zero.
 
-step 3.2.1: check if condition i % j === 0. If the condition is true then increment flag value by one. else go to step 3.2
+step 4.2: declare nested for loop with initialize variable j=1, condition j <=i and j incremented by one.
 
-step 3.3: check if condition flag === 2 if the condition is true then print value of i else go to step 3.
+step 4.2.1: check if condition i % j === 0. If the condition is true then increment flag value by one. else go to step 3.2
 
-step 4: stop the program.
+step 4.3: check if condition flag === 2 if the condition is true then print value of i else go to step 3.
+
+step : stop the program.
 
 ## Pseudocode :
 
-	DECLARE VARIABLE i,j,range = 200
-	For ( i = 2; i <= range; i++)
-		let flag = 0;
-			FOR ( j = 1; j<=i; j++)
-				if(i % j ===0) flag++;
-			END FOR
-			flag === 2 ? PRINT i : ""
-	END FOR
+	DECLARE VARIABLE j,start =1, end = 200
+	IF !start OR !end OR start > end OR typeof start, end !== 'string' OR typeof start, end === 'boolean'  
+		RETURN 'not valid'
+	ELSE
+		For ( i = start; i <= end; i++)
+			let flag = 0;
+				FOR ( j = 1; j<=i; j++)
+					if(i % j ===0) flag++;
+				END FOR
+				flag === 2 ? PRINT i : ""
+		END FOR
+	END ELSE
 
 Source Code : 👉 https://github.com/sundharwinston/JavascriptGrammer/blob/main/views/Evaluation2/primenumber.js
 
@@ -356,19 +362,21 @@ step 1: start the program.
 
 step 2: declare a variable count,i,j and k and range. range variable is the input from user
 
-step 3: declare for loop with initialize variable i = 1 , condition i <= 50 and i incremented by one.
+step 3: Check some valildation if the given range is string or not. If it is string or boolean then return not valid and go to step 5.
 
-step 3.1: Assign i value to variable j.
+step 4: declare for loop with initialize variable i = 1 , condition i <= 50 and i incremented by one.
 
-step 3.2: declare while loop with condition of j.
+step 4.1: Assign i value to variable j.
 
-step 3.2.1: calculate remainder of the number and stored in variable k.
+step 4.2: declare while loop with condition of j.
 
-step 3.2.2: check if condition of k === 0. If the condition is true then increase count by one.
+step 4.2.1: calculate remainder of the number and stored in variable k.
 
-step 3.2.3: divide j by 10 and store to variable j and go to step 3.2.
+step 4.2.2: check if condition of k === 0. If the condition is true then increase count by one.
 
-step 3.3: print count.
+step 4.2.3: divide j by 10 and store to variable j and go to step 3.2.
+
+step 4.3: print count.
 
 step 4: stop the program.
 
@@ -376,16 +384,21 @@ step 4: stop the program.
 ## Pseudocode :
 
 	DECLARE count = 0,i,j,k,range = 50
-	FOR (i=1; i<=range; i++)
-		j = i;
-		WHILE ( j )
-			k = j % 10;
-			IF (k === 0)
-				count++;
-			END IF
-			j = j/10;
-		END WHILE
-	END FOR
+	IF !range OR range > 1 OR typeof start, end !== 'string' OR typeof start, end === 'boolean'  
+		RETURN 'not valid'
+	END IF
+	ELSE
+		FOR (i=1; i<=range; i++)
+			j = i;
+			WHILE ( j )
+				k = j % 10;
+				IF (k === 0)
+					count++;
+				END IF
+				j = j/10;
+			END WHILE
+		END FOR
+	END ELSE
 	PRINT count;
 
 Source Code : 👉 https://github.com/sundharwinston/JavascriptGrammer/blob/main/views/Evaluation2/zeros-count.js
