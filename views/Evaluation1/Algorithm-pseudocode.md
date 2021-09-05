@@ -25,7 +25,7 @@ Pseudocode :
 
 	BEGIN
 	INPUT number,flag=true;
-	IF !string OR string.length < 2 OR typeof string !== 'string' OR typeof number === 'boolean'
+	IF !number OR number.length < 2 OR typeof number === 'string' OR typeof number === 'boolean'
 		RETURN 'not valid'
 	ELSE IF number === 1
 		RETURN "1 is not a prime number"
