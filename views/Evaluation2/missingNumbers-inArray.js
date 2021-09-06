@@ -14,4 +14,13 @@ let result =  spread.filter(number => {
   return !(array.includes(number) && empty.includes(number));
 })
 
-console.log(result)
+console.log(result);
+
+var data = [];let k = 0;
+for(let i = 0;i < spread.length;i++){
+	if(!(array.includes(spread[i]) && empty.includes(spread[i]))){
+		data[k] = spread[i];
+    k++;
+	}
+}
+console.log(data);
