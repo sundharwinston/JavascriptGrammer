@@ -9,7 +9,7 @@ else {
 			k = j % 10;
 			if (k === 0)
 				count++;
-			j = j/10;
+			j = Math.floor(j/10);
 		}
 	}
 	console.log(count);
