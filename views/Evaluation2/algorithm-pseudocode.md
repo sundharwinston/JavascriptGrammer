@@ -46,31 +46,21 @@ step 1: start the program.
 
 step 2: declare a two variable s_length and h_length for storing length of the array.
 
-step 3: check first array.length > second array.length if the condition is true then store greater length and smaller length to variable. if the condition faild then go to else statement and store greater length and smaller length.
+step 3: declare for loop with initialize variable i = 0 , condition i<= length of first array and i incremented by one.
+ 
+step 3.1: declare nested for loop with initialize variable j=0, condition j < length of second array  and j incremented by one.
 
-step 4: declare for loop with initialize variable i = 0 , condition i<= greater length and i incremented by one.
+step 3.1.1: check if condition first array[i] == second array[j]. If the condition is true then print the value using index.
 
-step 4.1: declare nested for loop with initialize variable j=0, condition j < smaller length of an array and j incremented by one.
-
-step 4.1.1: check if condition first array[i] == second array[j]. If the condition is true then print second array value.
-
-step 5: stop the program.
+step 4: stop the program.
 
 
 ## Pseudocode :
 
 	DECLARE firstArray = [1,2,3,4,5,6], secondArray = [4,5,6,7];
     DECLARE smallLength,greaterLength,i,j;
-    IF (firstArray.length > secondArray.length) 
-        greaterLength =  firstArray.length;  
-        smallLength =  secondArray.length; 
-    END IF 
-    ELSE
-		greaterLength = secondArray.length; 
-	    smallLength = firstArray.length;  
-    END ELSE
-    FOR ( i = 0; i < greaterLength; i++)
-        FOR ( j=0; j < smallLength; j++) 
+    FOR ( i = 0; i < firstArray.length; i++)
+        FOR ( j=0; j < secondArray.length; j++) 
             IF (firstArray[i] === secondArray[j])
                 PRINT secondArray[j];
             END IF
@@ -575,6 +565,8 @@ Source Code : 👉 https://github.com/sundharwinston/JavascriptGrammer/blob/main
 ## 13. What is Currying in Javascript? Explain with a real time example.
 
 Currying is a technique of evaluating function with multiple arguments, into sequence of functions with single argument.In other words, when a function, instead of taking all arguments at one time, takes the first one and return a new function that takes the second one and returns a new function which takes the third one, and so forth, until all arguments have been fulfilled.
+ 
+It is the concept of closure or bind. let's see the examples in source code for better understanding. 
 
 ## Algorithm :
 

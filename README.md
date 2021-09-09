@@ -115,6 +115,8 @@
     - [Creating objects using function constructors](#Creating-objects-using-function-constructors)
 - [Chapter 17] Prototype
     - [Prototype](#Prototype)
+    - [Prototype on Object Literal](#Prototype-on-Object-Literal)
+    - [Prototype Link](#Prototype-Link)
 
 
 <!-- <details>
@@ -1572,4 +1574,55 @@ Bellow are UI elements pixel-perfect precision.
 In JavaScript programs Objects and Arrays are created all the time. Imagine if you instantiated 10000 or even 100000 objects of a particular type, each storing a copy of the same exact method. This is rather wasteful. Instead of using this we can use Native functions like Array.toString().
 
 ## Prototype
-A JavaScript prototype is used to add new properties and methods to an existing object constructor.
+
+When a function is defined two things happen:
+
+1.The function object is created, because functions are objects. 
+2.A completely separate prototype object is created. The prototype property of the defined function will point to it.
+
+
+Let’s say we defined a new function Human:
+    
+    function Human() {}
+    console.log( typeof Human.prototype )                  // object
+
+`Human.prototype` will point to the prototype object. This object has another property called constructor, which points back to the Human function:
+
+<div align="center">
+    <img src="images/prototype.png" width="650" alt="prototype-Img">
+</div>
+
+`Human is a constructor function, used to create objects of type Human. Its prototype property points to a separate entity in memory: prototype object. There is one separate prototype object per each unique object type (class).
+`
+
+##  Prototype on Object Literal
+
+object literal :
+
+    let literal =  {
+        name : "javascript",
+        age : 1990,
+        method : function() {}
+    }
+    console.log(typeof literal.__proto__);                      // object
+
+Internally it is wired into prototype as an object of type Object, even though it wasn’t created using the new operator.
+
+When literal was created, literal. proto was wired to point to Object.prototype. Object.prototype was already created internally by JavaScript
+
+<div align="center">
+    <img src="images/object-literal.png" width="650" alt="object-literal-Img">
+</div>
+
+##  Prototype Link
+
+
+
+
+
+
+
+
+
+
+<!-- A JavaScript prototype is used to add new properties and methods to an existing object constructor. -->

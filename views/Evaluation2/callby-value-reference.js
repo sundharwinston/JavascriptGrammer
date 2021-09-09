@@ -13,7 +13,7 @@ console.log(`After call : ${first} ${second}`);
 
 
 // Call by reference
-var varObj = {a:1,b:10};
+let varObj = {a:1,b:10};
 function callByReference(varObj) {
 	varObj.a = 100; 
 	console.log(varObj); 									// print the changed object
