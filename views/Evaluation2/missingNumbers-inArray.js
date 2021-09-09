@@ -9,13 +9,14 @@ for(let i=first; i<=last ;i++) {
 	j++;
 }
 
+// Array.from(Array(10).keys())
+
 let spread = [...array,...empty];
 let result =  spread.filter(number => {
   return !(array.includes(number) && empty.includes(number));
 })
 
 console.log(result);
-
 
 
 
