@@ -1,25 +1,22 @@
-let array = [1,2,3,4,5];
-let object = {
+let object1 = {
 	name : "javascript",
 	age : 1990,
 	getage : function() {
-		console.log(`my age is ${this.age}`);
+		console.log(`my age is ${this.name}`);
 	}
 }
-function check() {
-	// body...
+
+let object2 = {
+	name : "object 2",
 }
 
-let arrayProperty = array.__proto__;
-let arraycheck = Array.prototype;
-console.log(arrayProperty);
+object2.__proto__ = object1;				//  the object1 properties are inherited to object 2 
+console.log(object2.age);
+console.log(object2.getage());
 
 
-let objectProperty = object.__proto__;
-let objectCheck = object.prototype;
-console.log(objectCheck);
 
-// ==========================================================================================================
+// =====================================================================================================================
 
 // Constructor function
 function language(name) {

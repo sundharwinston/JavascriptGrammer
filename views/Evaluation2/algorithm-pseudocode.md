@@ -18,7 +18,7 @@ step 4.2.1: check if condition i % j === 0. If the condition is true then increm
 
 step 4.3: check if condition flag === 2 if the condition is true then print value of i else go to step 3.
 
-step : stop the program.
+step 5: stop the program.
 
 ## Pseudocode :
 
