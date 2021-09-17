@@ -1914,6 +1914,45 @@ Source Code : 👉
 
 ## Generator
 
+Generators are similar to async. They came out prior to async keyword, but they share a similar pattern.
+
+A generator is defined by adding the star `(*)` character to the function definition.
+    
+    function* generator() {
+        // code here
+    }
+
+You can also create it via anonymous function definition assignment:
+
+    let generator = function* () {}
+
+## yield
+
+Just like `async works together with await`, `generators work together with yield` producing exactly the same effect.
+    
+    let generator = function* () {
+        yield 1;
+        yield "data";
+    }
+
+we can’t call generator() function directly. Because every time we do, it will be reset to first yield statement. For this reason, proper way to initialize new generator is by variable assignment.
+
+    let gen = new generator();
+
+In a similar way to then method on a Promise object, generators have next method. 
+
+    gen.next();
+    gen.next();
+
+`Note :` the next produces an object like {value: 1, done: false}
+
+
+## Catching Errors
+- To catch an error using a generator you can use throw method:
+- Within the generator function, make sure to branch out with try-catch statement.
+
+- An error should be thrown if at least one yield statement has been already executed. Of course, yield 1, yield 2 and yield 3 would be something more meaningful in a real-case scenario, such as an API call.
+
 
 ## Event Loop
 
