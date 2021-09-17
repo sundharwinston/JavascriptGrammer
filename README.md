@@ -117,12 +117,32 @@
     - [Prototype](#Prototype)
     - [Prototype on Object Literal](#Prototype-on-Object-Literal)
     - [Prototype Link](#Prototype-Link)
+    - [Prototype Chain](#Prototype-Chain)
+    - [Creating objects](#Creating-objects)
+- [Chapter 18] Object Oriented Programming
+    - [Object Oriented Programming](#Object-Oriented-Programming)
+    - [Inheritance](#Inheritance)
 - [Chapter 19] Events
     - [Events](#Events)
     - [Browser Events](#Browser-Events)
     - [Event Capture And Event Bubbling](#Event-Capture-And-Event-Bubbling)
+    - [setTimeout](#setTimeout)
+    - [setInterval](#setInterval)
+    - [Intercepting Browser Events](#Intercepting-Browser-Events)
 - [Chapter 20] Network Requests
     - [Network Requests](#Network-Requests)
+    - [Promises](#Promises)
+    - [Axios](#Axios)
+    - [Fetch API](#Fetch-API)
+    - [async await](#async-await)
+    - [Generator](#Generator)
+- [Chapter 21] Event Loop
+    - [Event Loop](#Event-Loop)
+- [Chapter 22] Call Stack
+    - [Call Stack](#Call-Stack)
+    - [Execution Context](#Execution-Context)
+    - [call method](#call-method)
+    - [Bind](#Bind)
 
     
 
@@ -1642,7 +1662,7 @@ In this case Object constructor function is executed and we get a constructed li
 
 It can be argued that Array is a child of its parent type Object.
 
-## Creating objects using Object.create
+## Creating objects 
 
 In JavaScript we can also create objects using Object.create method, which takes a clean slate object as one of its arguments.
 
@@ -1657,6 +1677,41 @@ In JavaScript we can also create objects using Object.create method, which takes
     console.log(programming.age);
 
 Here the JavaScript will look at .age property in language object. Because programming was created via Object.create(language), programming considers language to be its parent so it looks there. Finally it finds it on language.age and returns 1 in console. Again, property hunger is stored only once in memory.
+
+## Object Oriented Programming
+
+https://blog.sessionstack.com/how-javascript-works-3-types-of-polymorphism-f10ff4992be1
+https://www.simplilearn.com/tutorials/javascript-tutorial/oop-in-javascript#class_implementation_in_javascript
+
+https://www.youtube.com/watch?v=ZYa_NiOUTQo&list=PLhW3qG5bs-L9MspCEDoTa4TuGJ3K9k9F_&index=22
+
+There are three ways to create an object 
+- By onject literal
+- Uisng new keyword
+- Using an object constructor
+
+## Inheritance
+
+`Types of Inheritance in JavaScript :`
+
+Inheritance is an important concept in object oriented programming. In the classical `inheritance, methods from base class get copied into derived class`. In JavaScript, inheritance is supported by using prototype object. Some people call it "Prototypal Inheriatance" and some people call it "Behaviour Delegation".
+
+## Prototypal Inheritance
+
+## Pseudoclassical Inheritance
+## Functional Inheritance
+
+
+## Polymorphism and Encapsulation
+## Types of Polymorphism
+
+## Ad-hoc Polymorphism
+## Parametric Polymorphism
+## Subtype Polymorphism
+## Polymorphism, Why Use it?
+
+
+
 
 ## Events
 
@@ -1683,6 +1738,8 @@ Let’s create a synthetic event :
 ## Event Capture And Event Bubbling
 
 ## setTimeout
+
+The setTimeout() function is actually exposed by the browser's window object as as such they aren't necessarily defined in the ECMAScript specification because `they're not JavaScript features, they are features of the browser itself.`
 
 You can time events using setTimeout function.
 
@@ -1717,3 +1774,193 @@ Many built-in events already have callback functions attached to global window o
 
 
 ## Network Requests
+
+Applications dealing with back-end code often communicate via HTTP requests.
+
+## XMLHttpRequest
+
+XMLHttpRequest is a built-in browser object that allows to make HTTP requests in JavaScript.
+
+Right now, there’s another, more modern method fetch, that somewhat deprecates XMLHttpRequest.
+
+In modern web-development XMLHttpRequest is used for three reasons :
+
+- Historical reasons: we need to support existing scripts with XMLHttpRequest.
+- We need to support old browsers, and don’t want polyfills (e.g. to keep scripts tiny).
+- We need something that fetch can’t do yet, e.g. to track upload progress.
+
+HTTP status code :
+- `OK` for 200, 
+- `Not Found` for 404,
+- `Forbidden` for 403 and so on.
+
+## Promises
+
+Promises are used to handle asynchronous operations in JavaScript. They are easy to manage when dealing with multiple asynchronous operations where callbacks can create callback hell leading to unmanageable code.
+
+`Benefits of Promises :`
+- Improves Code Readability
+- Better handling of asynchronous operations
+- Better flow of control definition in asynchronous logic
+- Better Error Handling
+
+
+<div align="center">
+    <img src="images/promise.png" width="650" alt="eventloop-Img">
+</div>
+
+Syntax :
+
+    var promise = new Promise(function(resolve, reject){
+     // write logics here
+    });
+
+Parameters :
+- Promise constructor takes only one argument,a callback function.
+- Callback function takes two arguments, resolve and reject
+- Perform operations inside the callback function and if everything went well then call resolve.
+- If desired operations do not go well then call reject.
+
+Promise Consumers
+Promises can be consumed by registering functions using .then and .catch methods.
+
+`then()`
+then() is invoked when a promise is either resolved or rejected.
+
+`syntax :`
+    
+    .then(function(result){
+        //handle success
+    }, function(error){
+        //handle error
+    })
+
+`catch()`
+
+catch() is invoked when a promise is either rejected or some error has occured in execution.
+
+Syntax :
+
+    .catch(function(error){
+        //handle error
+    })
+
+`finally()`
+
+The finally method is executed regardless of whether event succeeded with resolve method or failed with reject method. It is a good place for cleaning up the code or update the UI view
+
+Example :
+
+        promise.finally(function(msg) {
+            console.log("finally: hide the loading animation")
+        });
+
+`Promise Applications :`
+
+- Promises are used for asynchronous handling of events.
+- Promises are used to handle asynchronous http requests.
+
+## Axios
+
+- Axios is a promise based HTTP client for the browser and Node.js. Axios makes it easy to send asynchronous HTTP requests
+- Axios is to generage requests in JavaScript using Axios client library. The JavaScript fetch method for an alternative way of creating requests in JavaScript.
+
+## Fetch API
+
+- The built-in fetch API offers another Promise-based interface for talking to a web server.
+- The Fetch API provides a JavaScript interface for accessing and manipulating parts of the HTTP pipeline, such as requests and responses. It also provides a global fetch() method that provides an easy, logical way to fetch resources asynchronously across the network.
+
+The fetch specification :
+
+- The Promise returned from `fetch() won’t reject on HTTP error status even if the response is an HTTP 404 or 500.`Instead, as soon as the server responds with headers, the Promise will resolve normally and it will `only reject on network failure` or if anything prevented the request from completing.
+- fetch() won’t send cross-origin cookies unless you set the credentials init option. 
+
+## async await
+
+Async functions :
+- The `async` keyword. It can be placed before a function, example look bellow.
+            
+        async function f() {
+            return 1;
+        }
+
+- The word `async` before a function means one simple thing: a function always returns a promise. Other values are wrapped in a resolved promise automatically.
+
+Await :
+
+- The keyword await makes JavaScript wait until that promise settles and returns its result.
+    
+        let value = await promise;
+
+we cannot return the data in async function that is, return type of async function is only on `promise` after that we can get a data using `.Then` method.
+
+without using `.then` we can use `await` and get a data inside a async function.
+
+## Generator
+
+
+## Event Loop
+
+JavaScript has a concurrency model based on an event loop, which is responsible for executing the code, collecting and processing events, and executing queued sub-tasks. This model is quite different from models in other languages like C and Java.
+
+<div align="center">
+    <img src="images/eventloop.png" width="650" alt="eventloop-Img">
+</div>
+
+<div align="center">
+    <img src="images/eventloop2.png" width="650" alt="eventloop2-Img">
+</div>
+
+<div align="center">
+    <img src="images/eventloop1.png" width="650" alt="eventloop1-Img">
+</div>
+
+
+
+## Call Stack
+
+- The call stack is a place to keep track of currently executing functions. As your code executes, each call is placed on the call stack in order in which it appears in your program. Once the function returns it is removed from the call stack.
+
+- Placing a function call onto the stack is called pushing and removing it from the call stack is called popping. Same idea behind Array.push and .pop methods
+
+## Execution Context
+
+Everything in javascript happen inside an Execution Context.
+
+In JavaScript, execution context is an abstract concept that holds information about the environment within which the current code is being executed.
+
+Remember: the JavaScript engine creates the global execution context before it starts to execute any code.
+
+<div align="center">
+    <img src="images/execution-context.png" width="650" alt="execution-context-Img">
+</div>
+
+<div align="center">
+    <img src="images/callstack-execution.png" width="650" alt="callstack-execution-Img">
+</div>
+
+<div align="center">
+    <img src="images/callstack-execution2.png" width="650" alt="callstack-execution2-Img">
+</div>
+
+<div align="center">
+    <img src="images/callstack-execution1.png" width="650" alt="callstack-execution1-Img">
+</div>
+
+## call method
+## call, apply and bind
+
+call and apply :
+The call() method calls a function with a given this value and arguments provided individually.
+
+call() and apply() serve the exact same purpose. The only difference between how they work is that call() expects all parameters to be passed in individually, whereas apply() expects an array of all of our parameters. Example:
+
+
+The main differences between bind() and call() is that the call() method:
+- Accepts additional parameters as well
+- Executes the function it was called upon right away.
+- The call() method does not make a copy of the function it is being called on.
+
+## Bind
+
+The bind() method creates a new function that, when called, has its this keyword set to the provided value. 

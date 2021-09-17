@@ -11,3 +11,6 @@ function check2() {
 
 console.log(check1.mybind());
 console.log(check2.mybind());
+
+
+

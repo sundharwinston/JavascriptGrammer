@@ -164,6 +164,13 @@ app.get('/dynamic-html', (req, res)=>{
 	res.render('chapter16/dynamic-html');
 });
 
+//Chater 20
+app.get('/promise', (req, res)=>{
+	res.render('chapter20/promise');
+});
+
+
+
 
 //Evaluation 1
 app.get('/primenumber', (req, res)=>{

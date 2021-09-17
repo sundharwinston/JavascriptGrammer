@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+</body>
+
+
+
+
+<script type="text/javascript">
+// var promise = new Promise(function(resolve, reject) {
+// const x = "1";
+// const y = "1"
+// if(x === y) {
+// 	resolve();
+// } else {
+// 	reject();
+// }
+// });
+
+// promise.then(function () {
+// 		console.log('Success');
+// 	})
+// 	.catch(function () {
+// 		console.log('Some error has occured');
+// 	});
+
+
+// fetch server/api data using core javascript that's why here created XMLHttpRequest
+var promise = new Promise(function(resolve, reject) {
+	const Http = new XMLHttpRequest();	// http client request
+	console.log(1);
+	Http.onreadystatechange = function(){
+	    if(this.readyState == 4 && this.status == 200){
+	        resolve(Http.responseText);
+	    }
+	    else{
+	    	reject("Someting went wrong..!");
+	    }
+		Http.open("GET","https://reqres.in/api/users",true);
+		Http.send();
+	}
+
+});
+promise.then(function (data) {
+		console.log(data);
+	})
+	.catch(function (error) {
+		console.log(error);
+	});
+
+
+
+	// the above problem solved in easy manner using async and await
+	async function promiseCheck() {
+		let fetchData = await fetch("https://61445e5b411c860017d25418.mockapi.io/users");
+		let json = await fetchData.json();
+		console.log(json);
+	}
+	promiseCheck();
+
+</script>
+</html>
+
+
+
