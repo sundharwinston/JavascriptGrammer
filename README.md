@@ -1994,12 +1994,17 @@ Remember: the JavaScript engine creates the global execution context before it s
     <img src="images/callstack-execution.png" width="450" alt="callstack-execution-Img">
 </div>
 
-<div align="center">
-    <img src="images/execution-context2.png" width="450" alt="execution-context2-Img">
-</div>
-
-<div align="center">
-    <img src="images/execution-context1.png" width="450" alt="execution-context1-Img">
+<div class="row"> 
+    <div class="col">
+        <div align="center">
+            <img src="images/execution-context2.png" width="450" alt="execution-context2-Img">
+        </div>
+    </div>
+    <div class="col">
+        <div align="center">
+            <img src="images/execution-context1.png" width="450" alt="execution-context1-Img">
+        </div>
+    </div>
 </div>
 
 ## call method
