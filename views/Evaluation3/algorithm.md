@@ -3,7 +3,23 @@
 solution :
 
 The Arrow function doesn't define it's own execution context. The arrow function refers the value in `lexical` manner.
-	
+"this" keyword doesn't work in nested function in object. Example
+
+`"this" in object :`
+
+	var john = {
+	    name: 'John',
+	    greet: function(people) {
+	      const that = this;
+	        people.forEach(function (person) {
+	            console.log('Hi ' + person + '. My name is ' + that.name);
+	        });
+	    }
+	}
+	john.greet(['javascript', 'react', 'Angular']); 
+
+`"this" in Arrow Function :`
+
 	var name = "Javascript";
 	var object = {
 		arrow : () => {
@@ -25,17 +41,11 @@ step 2:
 Source Code : 👉 
 
 	FUNCTION permutation(string) 
-	  IF (!string || typeof string !== "string")
-	    return "Please enter a string";
-	  ELSE IF (string.length < 2 )
-	    return string;
 	  INITIALIZE permutations = []; 
 	  FOR (var i = 0; i < string.length; i++) 
 	    INITIALIZE char = string[i];
-	    if (string.indexOf(char) != i) 
-	      continue; 
 	    INITIALIZE remainingString = string.slice(0, i) + string.slice(i + 1, string.length); 
-	    FOR (var subPermutation of permutation(remainingString))
+	    FOR (var subPermutation OF permutation(remainingString))
 	      permutations.push(char + subPermutation)
 	  return permutations;
 	END FUNCTION
@@ -84,14 +94,51 @@ Solution :
 ## 5. Explain the Class instance method and static method with an example?
 
 `Class instance :`
-create a instance class and object using `new` keyword.
+
+- create a instance class and object using `new` keyword.
+- call the function using object.
+
+		class instanceClass {
+			name = "sundhar";
+			getDetail = function() {
+				console.log(`classic function`);
+			}
+		}
+		let object = new instanceClass();
+		console.log(object.getDetail());
+
 
 `static Method:`
-The static members/variables are not accepted in instance method.
+
+- The static members/variables are not accepted in instance method.
+- we can a static method in directly not by object.
+
+		class staticClass {
+			name = "sundhar";
+			static getDetail = function() {
+				console.log(`static function`);
+			}
+		}
+		console.log(staticClass.getDetail());
 
 Source Code : 👉 
 
 ## 6. How does "this" works inside the Class method with an example?
+
+- this working in class is similiar to function.
+
+		class Rectangle {
+			constructor(height, width) {
+			    this.height = height;
+			    this.width = width;
+			}
+			calcArea = function(){
+				// this.height = 20;
+				return this.height * this.width;
+			}
+		}
+		const square = new Rectangle(10, 10);
+		console.log(square.calcArea()); // 100
 
 ## 7. What is the execution order of the following block of code?
 
@@ -120,11 +167,17 @@ JavaScript has a concurrency model based on an event loop, which is responsible 
 
 Algorithm : 
 
-step 1: create a event constructor using new keyword.
+step 1: start the program.
 
-step 2: write the listening code using Event Listener and call the function.
+step 2: create a event constructor using new keyword.
 
-step 3: 
+step 3: write the listening code using Event Listener and call the function respective to the eventListener syntax.
+
+step 4: write function definition.
+
+step 5: check condition and dispatch your event.
+
+step 6: stop the program.
 
 	let x = 5;
 	const startEvent = new Event("start");
@@ -146,7 +199,18 @@ step 3:
 
 `Constructor :`
 
-- 
+- In every class the javascript will generate empty constructor. For example
+
+		class name {
+			constructor(fname,lname) {
+			    this.name = "sundhar";
+			    this.last = "winston";
+			    console.log("super constructor "+fname + lname);
+			}
+		    getDetail(){
+		    	console.log("super function");
+			}
+		}
 
 
 
