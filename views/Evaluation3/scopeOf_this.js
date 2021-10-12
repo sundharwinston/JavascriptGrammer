@@ -1,10 +1,14 @@
-const object = {
-  myMethod(data) {
-    console.log(this);
-    const callback = () => {
-      console.log(this); // refers global methods/function
-    };
-    callback();
-  }
+var a = 5;
+
+var obj = {
+    myMethod:() => {
+        console.log(this);
+        console.log(this.a);		// arrow function refers a global elements
+    },
+
+    data() {
+    	console.log(this.a);	// function does not refers a global elements
+    }
 };
-object.myMethod(1);
+obj.myMethod();
+obj.data();

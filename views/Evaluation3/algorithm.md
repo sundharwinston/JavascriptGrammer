@@ -31,7 +31,63 @@ The Arrow function doesn't define it's own execution context. The arrow function
 
 ## 2. How would you create all permutations of a string?
 
+Algorithm : 
+
+step 1: use strict mode in global manner and declare input variable.
+
+step 2: create a function definition for permutation with parameter of string and result.
+
+step 3: check string length is equal to zero if it is true then go to next step.
+
+step 4: increment the count and display result.
+
+step 5: Inside for loop initialize i = 0 execute until i < string.length-1.
+
+step 6: using substrin split the string value and store in remain variable.
+
+step 7: call the permutation function with argument remain and result+string[i].this execute recursively and terminate when for condition fails.
+
+step 8: check type of input is equal to string. if it string then go to next step. else go to 13.
+
+step 9: check input is empty string or not. if it not empty then go to next step. else go to step 12.
+
+step 10: initailze the count value equal to zero and call the permutation function with string as argument.goto step 3.afetr execute functio go to next step.
+
+step 11: print the number of combination.
+
+step 12: print this is empty string.go to step 14.
+
+step 13: print this not string.go to next step.
+
+step 14: stop the program.
+
 Source Code : 👉 
+	
+	 "use strict"
+	  DECLARE string = "abc"
+	  FUNCTION permutation( string, result){
+	      IF (string.length === 0){
+	          count++;
+	          PRINT (result);
+	      }
+	      for(let i = 0; i < string.length ; i++ ){
+	          let remain = string.slice( 0, i) + string.slice( i + 1 );
+	          permutation( remain, result + string[i]);			// RECURSIVE FUNCTION CALL
+	      }
+	  }
+	  IF (typeof string === "string"){
+	      IF (string.length > 0){
+	          var count = 0;
+	          permutation( string, "");
+	          PRINT ("Total number of permutation are :",count);
+	      }ELSE {
+	          PRINT ("This is empty string");
+	      }
+	  }ELSE {
+	      console.log("This is not string")
+	  } 
+
+Another Method :
 
 	FUNCTION permutation(string) 
 	  INITIALIZE permutations = []; 
@@ -157,7 +213,7 @@ step 3: The functon ex1 execute third because of the setTimeout functon. Here th
 
 ## 8.Event Loop 
 
-JavaScript has a concurrency model based on an event loop, which is responsible for executing the code, collecting and processing events, and executing queued sub-tasks. This model is quite different from models in other languages like C and Java.
+JavaScript has a concurrency model based on an event loop, which is `responsible for executing the code, collecting and processing events, and executing queued sub-tasks.` This model is quite different from models in other languages like C and Java.
 
 ## 9. Create a custom event listener and explain?
 

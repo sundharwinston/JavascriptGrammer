@@ -33,11 +33,10 @@
       if(string.length === 0){
           count++;
           console.log(result);
-      }else{
-          for(let i = 0; i < string.length ; i++ ){
-              let remain = string.slice( 0, i) + string.slice( i + 1 );
-              permutation( remain, result + string[i]);
-          }
+      }
+      for(let i = 0; i < string.length ; i++ ){
+          let remain = string.slice( 0, i) + string.slice( i + 1 );
+          permutation( remain, result + string[i]);
       }
   }
   if(typeof string === "string"){

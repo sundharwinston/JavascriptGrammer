@@ -25,5 +25,5 @@ var john = {
 	            console.log('Hi ' + person + '. My name is ' + this.name);
 	        });
 	    }
-	}
-	john.greet(['javascript', 'react', 'Angular']); 
+}
+john.greet(['javascript', 'react', 'Angular']); 
