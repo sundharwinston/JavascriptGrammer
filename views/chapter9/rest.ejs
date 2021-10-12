@@ -3,29 +3,32 @@
     <head>
         <title>Rest Property</title>
         <script type="text/javascript">
-            // let ar = [8,9,4];
-  //i wanna map examples too
-            let x = [1,2,3,4]
-           function sum(a,...theArgs) {
-              // return theArgs.reduce((previous, current) => {
-              //   return previous + current;
-              // });
-              console.log(a,theArgs);
-            }
-            // console.log(ar);
-            console.log(sum(x));
-            
+ "use strict";
+let string="ABC";
+function permutation( string, result){
+    if(string.length === 0){
+        count++;
+        console.log(result);
+    }else{
+        for(let i = 0; i < string.length ; i++ ){
+            let remain = string.substring( 0, i) + string.substring( i + 1 );
+            // console.log(remain);
+            permutation( remain, result + string[i]);
+        }
+    }
+}
+if(typeof string === "string"){
+    if(string.length > 0){
+        var count = 0;
+        permutation( string, "");
+        console.log("Total number of permutation are :",count);
+    }else{
+        console.log("This is empty string");
+    }
 
-
-  // rest with function and other arguments
-            // function fun(a,b,...c){
-            //   console.log(`${a} ${b}`); //Mukul Latiyan
-            //   console.log(c); //[ 'Lionel', 'Messi', 'Barcelona' ]
-            //   console.log(c[0]); //Lionel
-            //   console.log(c.length); //3
-            //   console.log(c.indexOf('Lionel')); //0
-            // }
-            // fun('Mukul','Latiyan','Lionel','Messi','Barcelona');
+}else{
+    console.log("This is not string")
+}
 
 
         </script>

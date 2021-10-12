@@ -31,13 +31,6 @@ The Arrow function doesn't define it's own execution context. The arrow function
 
 ## 2. How would you create all permutations of a string?
 
-
-Algorithm : 
-
-step 1: start the program.
-
-step 2: 
-
 Source Code : 👉 
 
 	FUNCTION permutation(string) 
@@ -56,27 +49,30 @@ Source Code : 👉
 
 Both the functions are differ based on `this` keyword working nature. let's see the examples.
 
-- The function hoisting is only applicable in calassic function not in arrow function.
-- If the arrow function hoisted then shows the error like "Cannot access 'ArrowFunctioncheck' before initialization".
-
 Source Code : 👉 
 
 `classic function :`
 
-	function check() {
-		console.log("classic function");
-		console.log(this);
-	}
-	document.addEventListener('onChange',check());
+- The classic function refers to the target elemeents.
+
+		function check() {
+			console.log("classic function");
+			console.log(this);
+		}
+		document.addEventListener('onChange',check());
 
 
 `Arrow function :`
 
-	let ArrowFunctioncheck = () => {
-		console.log("Arrow function");
-		console.log(this);
-	}
-	document.addEventListener('onChange',ArrowFunctioncheck());
+- The function hoisting is only applicable in calassic function not in arrow function.
+- If the arrow function hoisted then shows the error like "Cannot access 'ArrowFunctioncheck' before initialization".
+- It refers window property.
+
+		let ArrowFunctioncheck = () => {
+			console.log("Arrow function");
+			console.log(this);
+		}
+		document.addEventListener('onChange',ArrowFunctioncheck());
 
 ## 4. Look at the code below, you have a for loop if you have setTimeout inside it. If log the loop counter inside setTimeout, what will be logged?
 
@@ -193,7 +189,7 @@ step 6: stop the program.
 
 `Super :`
 
-- javascript does not allow the constructor in a same problem (derived class or extented class) that's where the `super` keyword comes into picture.
+- javascript does not allow the multiple constructor in a same class (derived class or extented class) that's where the `super` keyword comes into picture.
 - The super keyword is used to access and call functions on an object's parent.
 - Super keyword used to call the parent constructor.
 
