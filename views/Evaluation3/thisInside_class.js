@@ -1,13 +1,27 @@
 class Rectangle {
-  constructor(height, width) {
-    this.height = height;
-    this.width = width;
+  constructor(name, age) {
+    this.name = name;
+    this.age = age;
   }
-  calcArea = function(){
-    // this.height = 20;
-    return this.height * this.width;
+  // calculate = function(){
+  //   // this.name = 20;
+  //   return this.name * this.age;
+  // }
+  calculate = () => {
+  	console.log(this.name);
   }
 }
-const square = new Rectangle(10, 10);
+const square = new Rectangle("javascript", 10);
+console.log(square.calculate()); // 100
 
-console.log(square.calcArea()); // 100
+
+
+// var object = {
+// 	name : "winston",
+
+// 	data : function() {
+// 		console.log(this.name);
+// 	}
+// }
+
+// object.data();

@@ -2,7 +2,8 @@
 
 solution :
 
-The Arrow function doesn't define it's own execution context. The arrow function refers the value in `lexical` manner.
+- In the strict mode, JavaScript sets the this to undefined.
+- The Arrow function doesn't define it's own execution context. The arrow function refers the value in `lexical` manner.
 "this" keyword doesn't work in nested function in object. Example
 
 `"this" in object :`
@@ -33,59 +34,32 @@ The Arrow function doesn't define it's own execution context. The arrow function
 
 Algorithm : 
 
-step 1: use strict mode in global manner and declare input variable.
-
-step 2: create a function definition for permutation with parameter of string and result.
-
-step 3: check string length is equal to zero if it is true then go to next step.
-
-step 4: increment the count and display result.
-
-step 5: Inside for loop initialize i = 0 execute until i < string.length-1.
-
-step 6: using substrin split the string value and store in remain variable.
-
-step 7: call the permutation function with argument remain and result+string[i].this execute recursively and terminate when for condition fails.
-
-step 8: check type of input is equal to string. if it string then go to next step. else go to 13.
-
-step 9: check input is empty string or not. if it not empty then go to next step. else go to step 12.
-
-step 10: initailze the count value equal to zero and call the permutation function with string as argument.goto step 3.afetr execute functio go to next step.
-
-step 11: print the number of combination.
-
-step 12: print this is empty string.go to step 14.
-
-step 13: print this not string.go to next step.
+step 1: use strict mode in global manner and define function declaration with the name of permutation.
 
 step 14: stop the program.
 
 Source Code : 👉 
 	
-	 "use strict"
-	  DECLARE string = "abc"
-	  FUNCTION permutation( string, result){
-	      IF (string.length === 0){
-	          count++;
-	          PRINT (result);
-	      }
-	      for(let i = 0; i < string.length ; i++ ){
-	          let remain = string.slice( 0, i) + string.slice( i + 1 );
-	          permutation( remain, result + string[i]);			// RECURSIVE FUNCTION CALL
-	      }
-	  }
-	  IF (typeof string === "string"){
-	      IF (string.length > 0){
-	          var count = 0;
-	          permutation( string, "");
-	          PRINT ("Total number of permutation are :",count);
-	      }ELSE {
-	          PRINT ("This is empty string");
-	      }
-	  }ELSE {
-	      console.log("This is not string")
-	  } 
+	"use strict"
+	 FUNCTION permutation(string) {
+	  	IF (!string || typeof string !== "string"){
+	    	RETURN "Please enter a string";
+	  	} ELSE IF (string.length < 2 ){
+	    	RETURN string;
+	  	}
+	  	INITIALIZE permutations = []; 
+	  	for (i = 0; i < string.length; i++) {
+	    	INITIALIZE char = string[i];
+	    	INITIALIZE remainingString = string.slice(0, i) + string.slice(i + 1, string.length); 
+	    	FOR (subPermutation of permutation(remainingString))
+	      		permutations.push(char + subPermutation)
+	  		}
+	  	RETURN permutations;
+	}
+	PRINT(permutation("abc"));				// Function invoked
+
+
+
 
 Another Method :
 

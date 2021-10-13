@@ -4,25 +4,29 @@
 
 class instanceClass {
 	name = "sundhar";
-	getDetail = function() {
+	static getDetail = function() {
 		console.log(`classic function`);
+	}
+	viewDetail = function() {
+		this.getDetail();
+		// console.log(`classic function`);
 	}
 }
 
 let object = new instanceClass();
-console.log(object.getDetail());
+console.log(object.viewDetail());
 
 
 // ================================================================================
 // static classes
 // ================================================================================
 
-class staticClass {
-	name = "sundhar";
-	static getDetail = function() {
-		console.log(`static function`);
-	}
-}
+// class staticClass {
+// 	name = "sundhar";
+// 	static getDetail = function() {
+// 		console.log(`static function`);
+// 	}
+// }
 
-// let objects = new staticClass();
-console.log(staticClass.getDetail());
+// // let objects = new staticClass();
+// console.log(staticClass.getDetail());
