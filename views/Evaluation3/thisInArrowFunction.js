@@ -1,7 +1,7 @@
-// var name = "Javascript";
+// this.name = "Javascript";
 // var object = {
 // 	arrow : () => {
-//  		this.name = "check",
+//  		// this.name = "check",
 // 		console.log(this.name);
 // 	},
 // 	// arrow : function() {
@@ -9,21 +9,27 @@
 // 	// }
 // }
 
-
-// // let object = new User();
 // console.log(object.arrow());
 
 // ==============================================================
 // Another Example
 // ==============================================================
 
-var john = {
+let john = {
 	    name: 'John',
-	    greet: function(people) {
-	      // const that = this;
-	        people.forEach(function (person) {
-	            console.log('Hi ' + person + '. My name is ' + this.name);
-	        });
+	    greet : () =>  {
+	    	this.name = "sundhar";
+      		console.log(this.name);
+	        // people.forEach(function (person) {
+	        //     console.log('Hi ' + person + '. My name is ' + that.name);
+	        // });
 	    }
+
 }
-john.greet(['javascript', 'react', 'Angular']); 
+let call = john.greet.bind(john); 
+call();
+
+
+// ==================================================================
+
+

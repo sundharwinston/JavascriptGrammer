@@ -1,5 +1,5 @@
 for(var i = 0; i < 10; i++) {
-	setTimeout(function() {
-		console.log(i);
-	}, 10);
+	setTimeout(function(a) {
+		console.log(a);
+	}, 10, i);
 }

@@ -11,3 +11,9 @@ let ArrowFunctioncheck = () => {
 }
 
 document.addEventListener('onChange',ArrowFunctioncheck());
+
+
+// ======================================================================
+// Another Method
+// ======================================================================
+
