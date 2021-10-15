@@ -5,5 +5,8 @@
 }
 const obj = generatorFunc();
 
+// for( let data of obj)
+// 	console.log(data);
+
 let next = obj.next();
 console.log(next);

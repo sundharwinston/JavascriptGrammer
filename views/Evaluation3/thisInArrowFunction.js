@@ -19,12 +19,8 @@ let john = {
 	    name1: 'John',
 	    greet : () =>  {
 	    	this.name = "sundhar";
-      		console.log(this.name);
-	        // people.forEach(function (person) {
-	        //     console.log('Hi ' + person + '. My name is ' + that.name);
-	        // });
-	    }
-
+			    
+	}
 }
 
 let man = {
@@ -43,9 +39,13 @@ let man = {
 let call = man.greet1.bind(john); 
 call();
 
+
+// ===================================================
+// Another example
+// ======================================================
 let human = {
-	hey : () => {
-	 console.log(this);
+	hey : () => {	
+	 console.log(this);						// its refer window object
    }
  
  }

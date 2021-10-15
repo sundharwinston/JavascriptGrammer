@@ -2007,8 +2007,8 @@ Remember: the JavaScript engine creates the global execution context before it s
     </div>
 </div>
 
-## call method
-## call, apply :
+
+## call, apply Method:
 
 The call() method calls a function with a given this value and arguments provided individually.
 

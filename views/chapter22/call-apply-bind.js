@@ -15,6 +15,6 @@ let employeeDetail = function(fname,lname){
 language.call(employee,'javascript', 'React'); 
 language.apply(employee,['javascript', 'React']); 
 
-let bindMethod = employeeDetail.bind(employee,'javascript', 'React'); 
+let bindMethod = employeeDetail.bind(employee); 
 console.log(bindMethod);
 console.log(bindMethod());

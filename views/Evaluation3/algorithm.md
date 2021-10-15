@@ -30,11 +30,39 @@ solution :
 	}
 	console.log(object.arrow());
 
+`IIFE (Immediately Invoked Function Expression) :`
+
+The first is the anonymous function with lexical scope enclosed within the `Grouping Operator ()`. This prevents accessing variables within the IIFE idiom as well as polluting the global scope.
+
+	( function(){
+	  name = "sundhar";
+	  console.log(name);
+	}() )
+
+
 ## 2. How would you create all permutations of a string?
 
 Algorithm : 
 
 step 1: use strict mode in global manner and define function declaration with the name of permutation.
+
+step 2: check if the given string is string or not if ture then return a error message. if false go to next step.
+
+step 3: check if the string length is less than 2 if true return a string else go to next step.
+
+step 4: declare a empty array with name of permutations.
+
+step 5: initialize a for loop with the condition of i < string length and i is incremented by 1.
+
+step 5.1: inside a for loop initialize a variable char and assisn string[i].
+
+step 5.2: initialize a variable remainingString and assign slicing output i.e string.slice(0, i) + string.slice(i + 1, string.length).
+
+step 5.3: define for of with variable subPermutation and callback function of permutation(remainingString as argument).
+
+step 5.3.1: push the concatenated value of char and subPermutation into permutations array.
+
+step 6: finally print the array.
 
 step 14: stop the program.
 
@@ -57,22 +85,6 @@ Source Code : 👉
 	  	RETURN permutations;
 	}
 	PRINT(permutation("abc"));				// Function invoked
-
-
-
-
-Another Method :
-
-	FUNCTION permutation(string) 
-	  INITIALIZE permutations = []; 
-	  FOR (var i = 0; i < string.length; i++) 
-	    INITIALIZE char = string[i];
-	    INITIALIZE remainingString = string.slice(0, i) + string.slice(i + 1, string.length); 
-	    FOR (var subPermutation OF permutation(remainingString))
-	      permutations.push(char + subPermutation)
-	  return permutations;
-	END FUNCTION
-	PRINT (permutation("abc")) 
 
 
 ## 3.What is the difference between when classic and arrow functions are used as event callbacks?
@@ -136,8 +148,10 @@ Solution :
 
 `static Method:`
 
+- If you want to use the object instance inside the static method, you can send it as a parameter.
+- you can call the static function only by class name not to call directly by function name or this.function name.
 - The static members/variables are not accepted in instance method.
-- we can a static method in directly not by object.
+- we can call a static method in directly not by object.
 
 		class staticClass {
 			name = "sundhar";
@@ -146,6 +160,22 @@ Solution :
 			}
 		}
 		console.log(staticClass.getDetail());
+
+`Pass object parameter in static method :`
+
+	class instanceClass {
+	  	constructor(x) {
+	    	this.name =x; 
+	    	console.log(x);
+	  	}
+		name = "sundhar";
+		static getDetail = function(y) {
+			console.log(`classic function ${y.name}`);
+		}
+	}
+	let object = new instanceClass("hey");
+	console.log(instanceClass.getDetail(object));
+
 
 Source Code : 👉 
 
@@ -179,11 +209,11 @@ Source Code : 👉
 
 `Solution :`
 
-step 1: The function ex execute first.
+step 1: The function `ex` execute first.
 
-step 2: the function ex2 execute second.
+step 2: the function `ex2` execute second.
 
-step 3: The functon ex1 execute third because of the setTimeout functon. Here the setTimeout method allows to execute the function after 1 seconds
+step 3: The functon `ex1 execute third` because of the setTimeout functon. Here the setTimeout method allows to execute the function after 1 seconds
 
 ## 8.Event Loop 
 
@@ -229,14 +259,16 @@ step 6: stop the program.
 
 		class name {
 			constructor(fname,lname) {
-			    this.name = "sundhar";
-			    this.last = "winston";
-			    console.log("super constructor "+fname + lname);
+			    this.fname = fname;
+			    this.last = lname;
+			    console.log("super constructor "+this.fname + this.last);
 			}
 		    getDetail(){
 		    	console.log("super function");
 			}
 		}
+    	let obj = new name("sundhar","winston");
+    
 
 
 
