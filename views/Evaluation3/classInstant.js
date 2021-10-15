@@ -4,7 +4,7 @@
 
 class instanceClass {
 	name = "sundhar";
-	static getDetail = function() {
+	 getDetail = function() {
 		console.log(`classic function`);
 	}
 	viewDetail = function() {

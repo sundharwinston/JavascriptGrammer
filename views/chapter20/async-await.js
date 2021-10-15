@@ -5,6 +5,11 @@ async function checkFunction() {
 	 	}, 3000);
   	});
    console.log(await myPromise);
+
+// myPromise.then(function(data){
+// 	console.log(data);
+// })
+
 }
 
 checkFunction();
@@ -14,7 +19,6 @@ checkFunction();
 async function check() {
 	let x =  Promise.resolve(1);
 	console.log(await x);
-
 }
 check();
 

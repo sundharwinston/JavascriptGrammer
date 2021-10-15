@@ -17,8 +17,7 @@
 
 let john = {
 	    name: 'John',
-	    greet : () =>  {
-	    	this.name = "sundhar";
+	    greet : function()  {
       		console.log(this.name);
 	        // people.forEach(function (person) {
 	        //     console.log('Hi ' + person + '. My name is ' + that.name);
@@ -26,7 +25,8 @@ let john = {
 	    }
 
 }
-let call = john.greet.bind(john); 
+// let ob = {name : "sundhar"}
+ let call = john.greet.bind(john); 
 call();
 
 
