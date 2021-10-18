@@ -253,6 +253,28 @@ step 6: stop the program.
 - The super keyword is used to access and call functions on an object's parent.
 - Super keyword used to call the parent constructor.
 
+		class name {
+			constructor(fname,lname) {
+				this.name = "sundhar";
+				this.last = "winston";
+				console.log(`super constructor ${fname} ${lname}`);
+			}
+			getDetail(){
+				console.log(`super function`);
+			}
+		}
+		class detail extends name {
+			constructor(fname,lname){
+				super(fname,lname);
+				console.log(this.name);
+			}
+			result = function() {
+				return this.getDetail();
+			}
+		}
+		let obj = new detail("hey","you");
+		console.log(obj.result());
+
 `Constructor :`
 
 - In every class the javascript will generate empty constructor. For example

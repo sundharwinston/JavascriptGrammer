@@ -1743,6 +1743,21 @@ Let’s create a synthetic event :
 
 ## Event Capture And Event Bubbling
 
+`Event Capture :`
+
+- Event capturing is one of two ways to do event propagation in the HTML DOM. In event capturing, an event propagates from the outermost element to the target element.
+- Its is the opposite of Event Bubbbling.
+
+Source Code : 👉 
+
+`Event Bubbling :`
+- Event bubling is opposite of Event Capture.
+- In event bubbling, the event is first captured and handled by the innermost element and then propagated to outer elements.
+
+
+Source Code : 👉 
+
+
 ## setTimeout
 
 The setTimeout() function is actually exposed by the browser's window object as as such they aren't necessarily defined in the ECMAScript specification because `they're not JavaScript features, they are features of the browser itself.`

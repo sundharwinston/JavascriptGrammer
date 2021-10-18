@@ -1,0 +1,21 @@
+<html>
+    <title>Event Bubbling</title>
+    <body>
+        <div id="parent">
+            parent
+            <p id="parent1">I am child1 component</p>
+            <p id="child">I am child2 component</p>
+
+        </div>
+    </body>
+</html>
+
+
+<script>
+    document.getElementById("parent").addEventListener('click',function() {
+        console.log("i am child1 component");
+    },true)                 // change true to false for Event Bubbling
+    document.getElementById("child").addEventListener('click',function() {
+        console.log("i am child2 component");
+    },true)                 // change true to false for Event Bubbling
+</script>

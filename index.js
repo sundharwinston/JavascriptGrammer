@@ -163,13 +163,19 @@ app.get('/compare-array', (req, res)=>{
 app.get('/dynamic-html', (req, res)=>{
 	res.render('chapter16/dynamic-html');
 });
+app.get('/dynamic-html', (req, res)=>{
+	res.render('chapter16/dynamic-html');
+});
+
+//Chapter 19
+app.get('/eventBubbling.ejs', (req, res)=>{
+	res.render('chapter19/eventBubbling.ejs');
+});
 
 //Chater 20
 app.get('/promise', (req, res)=>{
 	res.render('chapter20/promise');
 });
-
-
 
 
 //Evaluation 1

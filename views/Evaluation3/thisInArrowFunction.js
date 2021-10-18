@@ -43,6 +43,9 @@ call();
 // ===================================================
 // Another example
 // ======================================================
+
+//Refer : https://stackoverflow.com/questions/33308121/can-you-bind-this-in-an-arrow-function
+
 let human = {
 	hey : () => {	
 	 console.log(this);						// its refer window object
